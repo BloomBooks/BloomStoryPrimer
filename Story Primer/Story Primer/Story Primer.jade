@@ -6,6 +6,14 @@ mixin adjustableImageRight
     +image.imageAdjustable.floatRight.bloom-resizable
         block
 
+mixin field-bubble(bubbleText)
+    +field(data-hint=bubbleText, attributes)
+        block
+
+mixin image-bubble(bubbleText)
+    +image(data-hint=bubbleText, attributes)
+        block
+
 //- string constants for bubbles
 - var spaceIndent = 'Indent using space bar.'
 - var asterisk = '*'
@@ -36,56 +44,25 @@ html
             div(data-book='topic', lang='en') Primer
             div(data-book='originalAcknowledgements', lang='en') Template creation: Jim Albright (SIL International) based on work by Glenys Waters and Karen Hopping
         +page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
-            +image.bloom-resizable
-                label.bubble=imageImport
-        +page-choice('(float) Story start with title and sub-title')#1118decc-25b9-4013-a0de-6512441b3783
-            +field.mainTitle
-                label.bubble=sTitle
-            +field.title
-                label.bubble=sSubtitle
-            +image.floatRight
-            +field.halfWidth.story
-                label.bubble=asterisk + besideImage + addPara
-            +field.story
-                label.bubble=asterisk + followingImage + addPara
-        +page-choice('Story start with title and sub-title')#2298decc-25b9-4013-a0de-6512441b3783
-            +field.mainTitle
-                label.bubble=sTitle
-            +field.title
-                label.bubble=sSubtitle
-            table
-                tr
-                    td.paragraphNextToImageTop
-                        +field.paraByImage.story
-                            label.bubble=asterisk + besideImage + addPara
-                    td.imageAtTheTop
-                        +image
-            +field.story
-                label.bubble=asterisk + followingImage + addPara
+            +image-bubble(imageImport).bloom-resizable
         +page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
-            +field.mainTitle
-                label.bubble=sTitle
-            +field.title
-                label.bubble=sSubtitle
+            +field-bubble(sTitle).mainTitle
+            +field-bubble(sSubtitle).title
             +adjustableImageRight
-            +field.story
-                label.bubble=asterisk + addPara
+            +field-bubble(asterisk + addPara).story
         +page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
-            +field.story
-                label.bubble=asterisk + addPara
+            +field-bubble(asterisk + addPara).story
             +adjustableImageRight
-            +field.story
-                label.bubble=asterisk + addPara
+            +field-bubble(asterisk + addPara).story
         +page-choice('Lesson, story and activity')#4298333c-45b9-4013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxIcon
-                        +field.lessonNumber
-                            label.bubble *Your word for lesson, followed by a number (or Lesson word and Lesson number)
+                        +field-bubble('*Your word for lesson, followed by a number (or Lesson word and Lesson number)').lessonNumber
                         +image.icon
                     td.boxLessonTitle
-                        +field.lessonTitle
-                            label.bubble *Word work title
+                        +field-bubble('*Word work title').lessonTitle
             +adjustableImageRight
-            +field.story
-                label.bubble=asterisk + addPara
+            +field-bubble(asterisk + addPara).story
+            .divider
+            +image-bubble('You may change the activity icon here.').icon.floatLeft
