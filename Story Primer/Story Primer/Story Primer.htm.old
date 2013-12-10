@@ -59,64 +59,7 @@
         <div class="marginBox">
             <div style="" class="bloom-imageContainer bloom-resizable" data-hint="You can also use this page to import an image of a page with a complex layout developed in another program. File formats that work well: png (preferred), jpeg, or tiff."><img style="width: 406px; height: 398px; margin-left: 0px; margin-top: 4px;" alt="This picture, placeHolder.png, is missing or was loading too slowly." class="largeImage" src="placeHolder.png" height="398" width="406"></div>
         </div>
-    </div><!-- page end  --><!-- Glenys  --><!-- 
-    <div class="bloom-page numberedPage A5Portrait" data-page="extra" id="1118decc-25b9-4013-a0de-6512441b3783">
-      <div class="pageLabel" lang="en">(float) Story start with title and sub-title</div>
-      <div class="marginBox">
-        <div class="bloom-translationGroup">
-          <div class=" mainTitle bloom-editable bloom-content1" data-hint="*Title, capitalise first word and names only, no full stop">Wat nao HIV na AIDS</div>
-        </div>
-        <div class="bloom-translationGroup">
-          <div class="title bloom-editable bloom-content1" data-hint="*Sub-title, capitalise first word and names only, no full stop">Stori abaotem laef bloong Didi</div>
-        </div>
-        <div class="bloom-imageContainer floatRight">
-            <img alt="missing image" class="largeImage" src="placeHolder.png" />
-            </div>
-        <div class="bloom-translationGroup halfWidth">
-          <div class="story bloom-editable bloom-content1" data-hint="*text beside image - create additional paragraphs with /Enter/ key. Indent using space bar.">Nem blong mi Didi, mi blong Solomon Aelan. Mi sore tumas abaotem wat nao hem hapen long laerf blong mi. Mi laek searem lelebet abaotem laer blong mi, mekem yu save gud abaotem disfala siki.</div>
-        </div>
-        <div class="bloom-translationGroup">
-          <div class="story bloom-editable bloom-content1" data-hint="*text following image - create additional paragraphs with /Enter/ key. Indent using space bar.">Evride mi save duim olketa sameting olsem you save duim tu. Mi save waka had fo garem gtud gaden an mi hapi taem famili kaikaim gud kaikai rom had waka blong mi. Mi barava hapi teumas fo singsing an waka wetem terifala smol gele blong mi.</div>
-        </div>
-      </div>
-    </div>
-   --><!-- page end  --><!-- Glenys  --><!--
-      <div class="bloom-page numberedPage A5Portrait bloom-monolingual" data-page="extra"
-      id="2298decc-25b9-4013-a0de-6512441b3783">
-      <div class="pageLabel" lang="en">Story start with title and sub-title</div>
-      <div class="marginBox">
-        <div class="bloom-translationGroup">
-          <div class="mainTitle bloom-editable bloom-content1"
-            data-hint="*Title, capitalise first word and names only, no full stop"></div>
-        </div>
-        <div class="bloom-translationGroup">
-          <div class="title bloom-editable bloom-content1"
-            data-hint="*Sub-title, capitalise first word and names only, no full stop"></div>
-        </div>
-        <table>
-          <tr>
-            <td class=" paragraphNextToImageTop">
-              <div class="bloom-translationGroup paraByImage">
-                <div class="story bloom-editable bloom-content1"
-                  data-hint="*text beside image - create additional paragraphs with /Enter/ key. Indent using space bar."
-                ></div>
-              </div>
-            </td>
-            <td class="imageAtTheTop">
-              <div class="bloom-imageContainer">
-                <img alt="missing image" class="largeImage" src="placeHolder.png" />
-              </div>
-            </td>
-          </tr>
-        </table>
-        <div class="bloom-translationGroup">
-          <div class="story bloom-editable bloom-content1"
-            data-hint="*text following image - create additional paragraphs with /Enter/ key. Indent using space bar."
-          ></div>
-        </div>
-      </div>
-    </div>
-    --><!-- page end  --><!-- Glenys  -->
+    </div><!-- page end  --><!-- Glenys  -->
 
     <div class="bloom-page numberedPage A5Portrait bloom-monolingual" data-page="extra" id="2233decc-25b9-4013-a0de-6512441b3783">
         <div class="pageLabel" lang="en">
@@ -154,21 +97,7 @@
                 <div class="bloom-editable story bloom-content1" data-hint="*create additional paragraphs with /Enter/ key. Indent using space bar." lang="en"></div>
             </div>
         </div>
-    </div><!-- page end --><!-- Glenys  --><!-- <div class="bloom-page numberedPage  A5Portrait " data-page="extra"
-      id="5598decc-55b9-4013-a0de-6512441b3783">
-      <div class="pageLabel" lang="en">Story continues with full width image bottom</div>
-      <div class="marginBox">
-        <div class="bloom-translationGroup">
-          <div class="bloom-editable bloom-content1 story"
-            data-hint="*Text for this lesson - create additional paragraphs with /Enter/ key. Indent using space bar."
-          ></div>
-        </div>
-        <div class="imageOnBottom bloom-imageContainer">
-          <img alt="missing image" class="imageOnBottom" src="placeHolder.png" />
-        </div>
-      </div>
-    </div>
- --><!-- page end --><!-- Glenys  -->
+    </div><!-- page end --><!-- Glenys  -->
 
     <div class="bloom-page numberedPage A5Portrait bloom-monolingual" data-page="extra" id="4298333c-45b9-4013-a0de-6512441b3783">
         <div class="pageLabel" lang="en">
@@ -514,189 +443,7 @@
                 <div class="bloom-editable activity bloom-content1" data-hint="*create additional paragraphs with /Enter/ key. Indent using space bar." lang="en"></div>
             </div>
         </div>
-    </div><!-- page end  --><!-- Glenys  --><!--  <div class="bloom-page numberedPage A5Portrait" data-page="extra" id="7298decc-55b9-4013-a0de-6512441b3783">
-        <div class="pageLabel" lang="en">(x add box x) Word work, writing, and activity</div>
-        <div class="marginBox">
-          <table class="primerTableTitleLine">
-            <tr>
-              <td class="boxIcon">
-                <div class="bloom-imageContainer icon">
-                  <img alt="missing icon" src="primer_word.png" data-copyright="Copyright � 2012, SIL International" data-creator="Glenys Waters" data-license="by-nc-sa" />
-                </div>
-              </td>
-              <td class="boxLessonTitle">
-                <div class="bloom-translationGroup bloom-editable bloom-content1 lessonTitle" data-hint="*Word work title"></div>
-              </td>
-              <td class="boxSampleLetterRight">
-                <div class="sampleLetterRight">
-                  <table>
-                    <tr>
-                      <td>
-                        <div class="bloom-translationGroup bloom-editable bloom-content1" data-hint="*Sound in focus, capital and small"></div>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </td>
-            </tr>
-          </table>
-          <div class="bloom-translationGroup bloom-editable bloom-content1 sampleSentence" data-hint="*Key sentence"></div>
-          <table class="primerTableNoBorder">
-            <tr>
-              <td>
-                <table class="borders">
-                  <tr>
-                    <td>
-                      <div>
-                        <img alt="missing image" class="smallImageInTable" src="placeHolder.png" />
-                      </div>
-                    </td>
-                    <td>
-                      <table>
-                        <tr>
-                          <td>
-                            <div class="bloom-translationGroup">
-                              <div class="bloom-editable bloom-content1"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="bloom-translationGroup bloom-editable bloom-content1 letter"></div>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td class="blank"></td>
-              <td>
-                <table class="borders">
-                  <tr>
-                    <td class="right">
-                      <div class="bloom-translationGroup">
-                        <div class="bloom-editable bloom-content1"></div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="bloom-translationGroup">
-                        <div class="bloom-editable bloom-content1"></div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="right">
-                      <div class="bloom-translationGroup">
-                        <div class="bloom-editable bloom-content1"></div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="bloom-translationGroup">
-                        <div class="bloom-editable bloom-content1"></div>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-          <table class="borders">
-            <tr>
-              <td class="right">
-                <div class="bloom-translationGroup bloom-editable bloom-content1 vowel"></div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup bloom-editable bloom-content1 vowel"></div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup bloom-editable bloom-content1 vowel"></div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup bloom-editable bloom-content1 vowel"></div>
-              </td>
-              <td>
-                <div class="bloom-translationGroup bloom-editable bloom-content1 vowel"></div>
-              </td>
-            </tr>
-            <tr>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td>
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td class="right">
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-              <td>
-                <div class="bloom-translationGroup">
-                  <div class="bloom-editable bloom-content1"></div>
-                </div>
-              </td>
-            </tr>
-          </table>
-          <div class="bloom-translationGroup bloom-editable bloom-content1 instructions" data-hint="*Think of other words that start with the letter"></div>
-          <div class="divider"></div>
-          <div>
-            <div class="icon borders">
-              <img alt="missing icon" src="primer_writing.png" data-copyright="Copyright � 2012, SIL International" data-creator="Glenys Waters" data-license="by-nc-sa" />
-            </div>
-            <div class="bloom-translationGroup bloom-editable bloom-content1 instructions" data-hint="*Write the letters and words below in your exercise book"></div>
-            <div class="bloom-translationGroup bloom-editable bloom-content1 underlined" data-hint="*write this"></div>
-            <div class="bloom-translationGroup bloom-editable bloom-content1 underlined"></div>
-            <div class="bloom-translationGroup bloom-editable bloom-content1 activity"></div>
-            <div class="bloom-translationGroup bloom-editable bloom-content1 activity"></div>
-          </div>
-          <div class="divider"></div>
-          <div>
-            <div class="bloom-imageContainer icon" data-hint="You may change the activity icon here.">
-              <img alt="missing icon" src="primer_did_you_know.png" data-copyright="Copyright � 2012, SIL International" data-creator="Glenys Waters" data-license="by-nc-sa" />
-            </div>
-            <div class="bloom-translationGroup bloom-editable bloom-content1 sectionHead" data-hint="*section head"></div>
-            <div class="bloom-translationGroup bloom-editable bloom-content1 activity" data-hint="*text"></div>
-          </div>
-        </div>
-      </div>
-     --><!-- page end  --><!-- Glenys  -->
+    </div><!-- page end  --><!-- Glenys  -->
 
     <div class="bloom-page numberedPage A5Portrait bloom-monolingual" data-page="extra" id="9298decc-95b9-4013-a0de-6512441b3783">
         <div class="pageLabel" lang="en">
@@ -3404,7 +3151,7 @@
                 </tr>
             </table>
         </div>
-    </div><!-- page end  --><!-- Glenys  --><!-- Glenys  -->
+    </div><!-- page end  --><!-- Glenys  -->
 
     <div class="bloom-page numberedPage A5Portrait bloom-monolingual" data-page="extra" id="1298decc-55b9-5013-a0de-2712441b39a3">
         <div class="pageLabel" lang="en">
@@ -5680,7 +5427,7 @@
                 </tr>
             </table>
         </div>
-    </div><!-- page end --><!-- paga start -->
+    </div><!-- page end --><!-- page start -->
 
     <div class="bloom-page numberedPage bloom-monolingual" data-page="extra" title="foo" id="77cd48df-e9ab-4a07-afd4-6a24d0398382">
         <div class="pageLabel" lang="en">
