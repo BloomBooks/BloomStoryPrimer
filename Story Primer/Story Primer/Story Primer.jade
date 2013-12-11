@@ -1,18 +1,35 @@
 include ../../bloom-foundation-mixins
 
-!!!
+doctype html
 
 mixin adjustableImageRight
     +image.imageAdjustable.floatRight.bloom-resizable
         block
 
-mixin field-bubble(bubbleText)
-    +field(data-hint=bubbleText, attributes)
-        block
+//- generates a translationGroup with bubble text and optional classes on the internal div
+mixin field-bubble-attributesOnChild(bubbleText)
+    .bloom-translationGroup
+        +editable(data-hint=bubbleText, attributes=attributes)
 
+//- generates an image with 'placeHolder.png', standard 'missing' alt text and no copyright/license data
 mixin image-bubble(bubbleText)
     +image(data-hint=bubbleText, attributes)
         block
+
+//- generates an image with a specified default src image and embedded copyright/license data
+mixin image-specific(src, altText, creator, copyright, license)
+    .bloom-imageContainer(data-hint=bubbleText)
+        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
+
+//- generates an image with a specified default src image and embedded copyright/license data and bubble text
+mixin image-specific-bubble(bubbleText, src, altText, creator, copyright, license)
+    .bloom-imageContainer(data-hint=bubbleText)
+        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
+
+//- generates a fixed icon image (no bloom-imageContainer)
+mixin fixedIcon(altText, src, creator, copyright, license)
+    .icon
+        img(alt=altText, src=src, data-creator=creator, data-copyright=copyright, data-license=license)
 
 //- string constants for bubbles
 - var spaceIndent = 'Indent using space bar.'
@@ -25,6 +42,7 @@ mixin image-bubble(bubbleText)
 - var followingImage = 'text following image - '
 - var imageImport = 'You can also use this page to import an image of a page with a complex layout developed in another program.'
 -     imageImport += ' File formats that work well: png (preferred), jpeg, or tiff.'
+- var wordWork = 'Word work title'
 
 html
     head
@@ -35,9 +53,10 @@ html
         meta(name='defaultNameForDerivedBooks', content='Story Primer')
         meta(name='lockedDownAsShell', content='false')
         meta(name='pageTemplateSource', content='Story Primer')
-        +stylesheets('Story Primer')
-        +stylesheet('Factory-XMatter')
-        +stylesheet('../settingsCollectionStyles')
+        title Story Primer
+        +stylesheets('Story Primer.css')
+        +stylesheet('Factory-XMatter.css')
+        +stylesheet('../settingsCollectionStyles.css')
     body
         +dataDiv
             +bookVariable-title('en', 'Story Primer')
@@ -46,23 +65,126 @@ html
         +page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
             +image-bubble(imageImport).bloom-resizable
         +page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
-            +field-bubble(sTitle).mainTitle
-            +field-bubble(sSubtitle).title
+            +field-bubble-attributesOnChild(sTitle).mainTitle
+            +field-bubble-attributesOnChild(sSubtitle).title
             +adjustableImageRight
-            +field-bubble(asterisk + addPara).story
+            +field-bubble-attributesOnChild(asterisk + addPara).story
         +page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
-            +field-bubble(asterisk + addPara).story
+            +field-bubble-attributesOnChild(asterisk + addPara).story
             +adjustableImageRight
-            +field-bubble(asterisk + addPara).story
+            +field-bubble-attributesOnChild(asterisk + addPara).story
         +page-choice('Lesson, story and activity')#4298333c-45b9-4013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxIcon
-                        +field-bubble('*Your word for lesson, followed by a number (or Lesson word and Lesson number)').lessonNumber
-                        +image.icon
+                        +field-bubble-attributesOnChild('*Your word for lesson, followed by a number (or Lesson word and Lesson number)').lessonNumber
+                        +fixedIcon("book icon", "primer_read_together.png", "Glenys Waters", "Copyright &#65533; 2012, SIL International", "by-nc-sa")
                     td.boxLessonTitle
-                        +field-bubble('*Word work title').lessonTitle
+                        +field-bubble-attributesOnChild(asterisk + wordWork).lessonTitle
+                    td.boxBlankMatchingIconBook
             +adjustableImageRight
-            +field-bubble(asterisk + addPara).story
+            +field-bubble-attributesOnChild(asterisk + addPara).story
             .divider
-            +image-bubble('You may change the activity icon here.').icon.floatLeft
+            +image-specific-bubble('You may change the activity icon here.', 'sil-discuss.png', 'activity icon', 'Glenys Waters', 'Copyright &#65533; 2012, SIL International', 'by-nc-sa').icon.floatLeft
+            +field-bubble-attributesOnChild(asterisk + addPara).activity
+        +page-choice('Word work and writing')#6698decc-55b9-5013-a0de-6512441b3783
+            table.primerTableTitleLine
+                tr
+                    td.boxIcon
+                        +fixedIcon('missing icon', 'primer_word.png', 'Glenys Waters', 'Copyright &#65533; 2012, SIL International', 'by-nc-sa')
+                    td.boxLessonTitle
+                        +field-bubble-attributesOnChild(asterisk + wordWork).lessonTitle
+                    td
+                        table.sampleLetterRight
+                            tr
+                                td
+                                    +field-bubble-attributesOnChild('*Sound in focus, capital and small').soundInFocus
+            +field-bubble-attributesOnChild('*key sentence').sampleSentence
+            table.primerTableTitleLine
+                tr
+                    td
+                        table.primerTableWithBorder
+                            tr
+                                td
+                                    .bloom-imageContainer.bloom-resizable
+                                        img(alt='missing image', class='smallImage', src='placeHolder.png')
+                                td
+                                    table
+                                        tr
+                                            td
+                                                +field-bubble-attributesOnChild('*Key word')
+                                        tr
+                                            td
+                                                +field-bubble-attributesOnChild('*Sound in focus')
+                    td.blank
+                    td
+                        table.primerTableWithBorder
+                            tr
+                                td.right
+                                    +field
+                                td
+                                    +field
+                            tr
+                                td.right
+                                    +field
+                                td
+                                    +field
+            table.primerTableNoBorder
+                tr
+                    td
+                        table.primerTableWithBorder
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                    td
+                        table.primerTableWithBorder
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                    td
+                        table.primerTableWithBorder
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                    td
+                        table.primerTableWithBorder
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                    td
+                        table.primerTableWithBorder
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+                            tr
+                                td
+                                    +field
+            +field-bubble-attributesOnChild('*(Instructions)').instructions
+            .divider
