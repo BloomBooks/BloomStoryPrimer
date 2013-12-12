@@ -1,35 +1,7 @@
 include ../../bloom-foundation-mixins
+include mixins/story-primer-mixins
 
 doctype html
-
-mixin adjustableImageRight
-    +image.imageAdjustable.floatRight.bloom-resizable
-        block
-
-//- generates a translationGroup with bubble text and optional classes on the internal div
-mixin field-bubble-attributesOnChild(bubbleText)
-    .bloom-translationGroup
-        +editable(data-hint=bubbleText, attributes=attributes)
-
-//- generates an image with 'placeHolder.png', standard 'missing' alt text and no copyright/license data
-mixin image-bubble(bubbleText)
-    +image(data-hint=bubbleText, attributes)
-        block
-
-//- generates an image with a specified default src image and embedded copyright/license data
-mixin image-specific(src, altText, creator, copyright, license)
-    .bloom-imageContainer(data-hint=bubbleText)
-        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
-
-//- generates an image with a specified default src image and embedded copyright/license data and bubble text
-mixin image-specific-bubble(bubbleText, src, altText, creator, copyright, license)
-    .bloom-imageContainer(data-hint=bubbleText)
-        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
-
-//- generates a fixed icon image (no bloom-imageContainer)
-mixin fixedIcon(altText, src, creator, copyright, license)
-    .icon
-        img(alt=altText, src=src, data-creator=creator, data-copyright=copyright, data-license=license)
 
 //- string constants for bubbles
 - var spaceIndent = 'Indent using space bar.'
@@ -43,6 +15,12 @@ mixin fixedIcon(altText, src, creator, copyright, license)
 - var imageImport = 'You can also use this page to import an image of a page with a complex layout developed in another program.'
 -     imageImport += ' File formats that work well: png (preferred), jpeg, or tiff.'
 - var wordWork = 'Word work title'
+- var silCopy = 'Copyright &#65533; 2012, SIL International'
+- var changeIcon = 'You may change the activity icon here.'
+- var actIcon = 'activity icon'
+- var gw = 'Glenys Waters'
+- var bns = 'by-nc-sa'
+- var sounds = 'Sounds in our alphabet'
 
 html
     head
@@ -78,20 +56,20 @@ html
                 tr
                     td.boxIcon
                         +field-bubble-attributesOnChild('*Your word for lesson, followed by a number (or Lesson word and Lesson number)').lessonNumber
-                        +fixedIcon("book icon", "primer_read_together.png", "Glenys Waters", "Copyright &#65533; 2012, SIL International", "by-nc-sa")
+                        +fixedIcon("book icon", "primer_read_together.png", gw, silCopy, bns)
                     td.boxLessonTitle
                         +field-bubble-attributesOnChild(asterisk + wordWork).lessonTitle
                     td.boxBlankMatchingIconBook
             +adjustableImageRight
             +field-bubble-attributesOnChild(asterisk + addPara).story
             .divider
-            +image-specific-bubble('You may change the activity icon here.', 'sil-discuss.png', 'activity icon', 'Glenys Waters', 'Copyright &#65533; 2012, SIL International', 'by-nc-sa').icon.floatLeft
+            +image-specific-bubble(changeIcon, 'sil-discuss.png', actIcon, gw, silCopy, bns).icon.floatLeft
             +field-bubble-attributesOnChild(asterisk + addPara).activity
         +page-choice('Word work and writing')#6698decc-55b9-5013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxIcon
-                        +fixedIcon('missing icon', 'primer_word.png', 'Glenys Waters', 'Copyright &#65533; 2012, SIL International', 'by-nc-sa')
+                        +fixedIcon('missing icon', 'primer_word.png', gw, silCopy, bns)
                     td.boxLessonTitle
                         +field-bubble-attributesOnChild(asterisk + wordWork).lessonTitle
                     td
@@ -119,72 +97,175 @@ html
                     td.blank
                     td
                         table.primerTableWithBorder
-                            tr
-                                td.right
-                                    +field
-                                td
-                                    +field
-                            tr
-                                td.right
-                                    +field
-                                td
-                                    +field
+                            +repeat(2)
+                                tr
+                                    td.right
+                                        +field
+                                    td
+                                        +field
+            table.primerTableNoBorder
+                tr
+                    +repeat(5)
+                        td
+                            table.primerTableWithBorder
+                                tr
+                                    td
+                                        +field
+                                tr
+                                    td
+                                        +field
+                                tr
+                                    td
+                                        +field
+            +field-bubble-attributesOnChild('*(Instructions)').instructions
+            .divider
+            +fixedIcon(actIcon, 'primer_writing.png', gw, silCopy, bns)
+            +field-bubble-attributesOnChild('*Instructions: Write the letters and words below in your exercise book').instructions
+            +field-bubble-attributesOnChild('*write this (underlined) - ' + addPara).activity.underlined
+            +field-bubble-attributesOnChild(asterisk + addPara).activity
+            .divider
+            +image-specific-bubble(changeIcon, 'primer_did_you_know.png', actIcon, gw, silCopy, bns)
+            +field-bubble-attributesOnChild('*title').title
+            +field-bubble-attributesOnChild(asterisk + addPara).activity
+        +page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
+            +field-bubble-attributesOnChild('*Text continues here - ' + addPara).story
+            .divider
+            +image-specific-bubble(changeIcon, 'sil-discuss.png', actIcon, gw, silCopy, bns)
+            +field-bubble-attributesOnChild(asterisk + addPara).activity
+        //- TODO: Redo with placeholders
+        +page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
+            +field-bubble-attributesOnChild('*instructions').instructions
+            table.primerTableWordFind
+                tr
+                    td
+                        +field-bubble-attributesOnChild('*letter')
+                    +repeat(9)
+                        td
+                            +field
+                +repeat(9)
+                    tr
+                        +repeat(10)
+                            td
+                                +field
             table.primerTableNoBorder
                 tr
                     td
-                        table.primerTableWithBorder
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
+                        +field-bubble-attributesOnChild('*Words to find')
+                    +repeat(3)
+                        td
+                            +field
+                tr
                     td
-                        table.primerTableWithBorder
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
+                        +field
                     td
-                        table.primerTableWithBorder
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
+                        +field-bubble-attributesOnChild('*Words to find')
+                    +repeat(2)
+                        td
+                            +field
+                tr
+                    +repeat(2)
+                        td
+                            +field
                     td
-                        table.primerTableWithBorder
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
+                        +field-bubble-attributesOnChild('*Words to find')
                     td
-                        table.primerTableWithBorder
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
-                            tr
-                                td
-                                    +field
-            +field-bubble-attributesOnChild('*(Instructions)').instructions
+                        +field
+                tr
+                    +repeat(3)
+                        td
+                            +field
+                    td
+                        +field-bubble-attributesOnChild('*Words to find')
+        +page-choice('Alphabet chart (4x3)')#1298decc-55b9-5013-a0de-1212441b34a3
+            +field-bubble-attributesOnChild(asterisk + sounds).title
+            table.primerTableMatrixMedium.letters4x3
+                +alphabetChart(4)
+        +page-choice('Alphabet chart (5x3)')#1298decc-55b9-5013-a0de-1512441b35a3
+            +field-bubble-attributesOnChild(asterisk + sounds).title
+            table.primerTableMatrixMedium.letters5x3
+                +alphabetChart(5)
+        +page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
+            +field-bubble-attributesOnChild(asterisk + sounds).title
+            table.primerTableMatrixMedium.letters6x3
+                +alphabetChart(6)
+        +page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
+            +field-bubble-attributesOnChild(asterisk + sounds).title
+            table.primerTableMatrixMedium.letters7x3
+                +alphabetChart(7)
+        +page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
+            +field-bubble-attributesOnChild(asterisk + sounds).title
+            table.primerTableMatrixMedium.letters8x3
+                +alphabetChart(8)
+        +page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
+            +field-bubble-attributesOnChild(asterisk + sounds).title
+            table.primerTableMatrixMedium.letters9x3
+                +alphabetChart(9)
+        +page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
+            +fixedIcon-bubble(changeIcon, actIcon, 'sil-discuss.png', gw, silCopy, bns)
+            +field(data-hint=asterisk + addPara)
             .divider
+            +fixedIcon-bubble(changeIcon, actIcon, 'primer_did_you_know.png', gw, silCopy, bns)
+            +field(data-hint=asterisk + addPara)
+        +page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
+            +fixedIcon-bubble(changeIcon, actIcon, 'sil-discuss.png', gw, silCopy, bns)
+            +field(data-hint=asterisk + addPara)
+            .divider
+            +fixedIcon-bubble(changeIcon, actIcon, 'primer_did_you_know.png', gw, silCopy, bns)
+            +field(data-hint=asterisk + addPara)
+            .divider
+            +fixedIcon-bubble(changeIcon, actIcon, 'primer_perform.png', gw, silCopy, bns)
+            +field(data-hint=asterisk + addPara)
+        +page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783
+            table.primerTableTitleLine
+                tr
+                    td.boxIcon
+                        +fixedIcon('missing icon', 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
+                    td.boxLessonTitle
+                        +field-bubble-attributesOnChild('*Word work title').lessonTitle
+                    td.boxSampleLetterRight
+                        .sampleLetterRight
+                            table
+                                tr
+                                    td
+                                        +field(data-hint="*Your word for 'revise'/'review'")
+                                tr
+                                    td
+                                        +field(data-hint='*Sounds in focus')
+            +form-6cells
+            +field(data-hint='*instructions').instructions
+            table.primerTableFixed
+                +repeat(3)
+                    tr
+                        td
+                            +field-bubble-attributesOnChild('*word broken into syllables').word
+                        td(data-hint='*word').blank
+                        td
+                            +field-attributesOnChild.word
+                        td.blank
+                        td
+                            +field-attributesOnChild.word
+                    tr
+                        td.bottom
+                            +field-bubble-attributesOnChild('*word').word
+                        td.blank
+                        td.bottom
+                            +field-attributesOnChild.word
+                        td.blank
+                        td.bottom
+                            +field-attributesOnChild.word
+            .divider
+            div
+                +fixedIcon('missing icon', 'primer_writing.png', gw, silCopy, bns)
+                +field-bubble-attributesOnChild('*Instructions: Write the letters and words below in your exercise book').instructions
+                +field-bubble-attributesOnChild('*write this').underlined
+            table.primerTableFixed
+                tr
+                    td
+                        +field-bubble-attributesOnChild('*(Instructions)').instructions
+                    td
+                        table.primerTableMatrix
+                            +repeat(3)
+                                tr
+                                    +repeat(3)
+                                        td
+                                            +field

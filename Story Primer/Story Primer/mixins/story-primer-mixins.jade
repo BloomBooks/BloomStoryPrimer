@@ -1,0 +1,89 @@
+//- Story Primer mixins
+
+mixin adjustableImageRight
+    - requireZeroArguments('adjustableImageRight', arguments)
+    +image.imageAdjustable.floatRight.bloom-resizable
+        block
+
+//- generates a translationGroup with optional classes on the internal div
+mixin field-attributesOnChild
+    - requireZeroArguments('field-attributesOnChild', arguments)
+    .bloom-translationGroup
+        +editable(attributes=attributes)
+
+//- generates a translationGroup with bubble text and optional classes on the internal div
+mixin field-bubble-attributesOnChild(bubbleText)
+    - requireOneArgument('field-bubble-attributesOnChild', arguments)
+    .bloom-translationGroup
+        +editable(data-hint=bubbleText, attributes=attributes)
+
+//- generates an image with 'placeHolder.png', standard 'missing' alt text and no copyright/license data
+mixin image-bubble(bubbleText)
+    - requireOneArgument('image-bubble', arguments)
+    +image(data-hint=bubbleText, attributes)
+        block
+
+//- generates an image with a specified default src image and embedded copyright/license data
+mixin image-specific(src, altText, creator, copyright, license)
+    .bloom-imageContainer
+        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
+
+//- generates an image with a specified default src image and embedded copyright/license data and bubble text
+mixin image-specific-bubble(bubbleText, src, altText, creator, copyright, license)
+    .bloom-imageContainer(data-hint=bubbleText)
+        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
+
+//- generates a fixed icon image (no bloom-imageContainer)
+mixin fixedIcon(altText, src, creator, copyright, license)
+    .icon(attributes)
+        img(alt=altText, src=src, data-creator=creator, data-copyright=copyright, data-license=license)
+
+//- generates a fixed icon image with bubble text in a bloom-imageContainer
+mixin fixedIcon-bubble(bubbleText, altText, src, creator, copyright, license)
+    .bloom-imageContainer.icon(data-hint=bubbleText)
+        img(alt=altText, src=src, data-creator=creator, data-copyright=copyright, data-license=license)
+
+//- generates an alphabet chart matrix 3 wide with variable number of rows
+//- this goes under the table element with a special class for this size chart
+mixin alphabetChart(rows)
+    - requireOneArgument('alphabetChart', arguments)
+    +repeat(rows)
+        tr
+            td
+                table.alphabet
+                    tr
+                        td
+                            +field-bubble-attributesOnChild('*letter')
+                        td
+                            +image.bloom-resizable.alphabet
+            +repeat(2)
+                td
+                    table.alphabet
+                        tr
+                            td
+                                +field
+                            td
+                                +image.bloom-resizable.alphabet
+
+//- Revision form; table with 6 cells
+mixin form-6cells
+    - requireZeroArguments('form-6cells', arguments)
+    table.primerTableFixed
+        tr
+            td.top.left.right
+                +field
+            td.blank
+            td.top.left.right
+                +field
+            td.blank
+            td.top.left.right
+                +field
+        tr
+            td.bottom.left.right
+                +field
+            td.blank
+            td.bottom.left.right
+                +field
+            td.blank
+            td.bottom.left.right
+                +field
