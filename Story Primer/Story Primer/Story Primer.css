@@ -1,6 +1,10 @@
 
 /* 
- 2013-11-05
+ 2013-12-03 changed 
+.A4Portrait .bloom-editable{font-size: 200%  from 140%
+.A5Portrait .icon {border: 2pt solid pink; float: left; width: 3.5pc; height: 3.5pc; z-index: 5; margin: 2pt 3pt 0 2pt ; padding: 0 ; }  right margin changed from 0 to 3pt
+.A4Portrait .icon {border: 2pt solid black; float: left; width: 5.0pc; height: 5.0pc; z-index: 5; margin: 2pt 3pt 0 2pt ; padding: 0 ; } right margin changed from 0 to 3pt
+ 
  hand created - jaa 2012-01-02 
  Story Primer.CSS 
  */
@@ -13,8 +17,8 @@
 .blank {width: 2pc ; }
 .bloom-editable {overflow:visible !important;   ; margin-left: 2pt; margin-right: 2pt; ;  /*line-height: 150%  130% caused descender clipping error in Daughter of the King */ }
 .bloom-content1 {margin-left: 2pt; margin-right: 2pt ; }
-.A5Portrait .bloom-editable{font-size: 140% ;   }
-.A4Portrait .bloom-editable{font-size: 140% ;   }
+.A5Portrait .bloom-editable{font-size: 140% ; background: white;  }
+.A4Portrait .bloom-editable{font-size: 200% ; background: white;  }
 .bloom-imageContainer {z-index:10 ;  }
 .borders {border: black 1pt solid ; width: 100% ; table-layout:fixed;}
 .bottom {border-bottom: solid black 1pt}
@@ -37,8 +41,8 @@
 .halfWidth {width: 160pt; height:auto ; }
 .halfWidthImage {width: 153pt; height:auto ;  }
 .icon img{width: 100%; height: auto ; }
-.A5Portrait .icon {border: 2pt solid pink; float: left; width: 3.5pc; height: 3.5pc; z-index: 5; margin: 2pt 0 0 2pt ; padding: 0 ; }
-.A4Portrait .icon {border: 2pt solid black; float: left; width: 5.0pc; height: 5.0pc; z-index: 5; margin: 2pt 0 0 2pt ; padding: 0 ; }
+.A5Portrait .icon {border: 2pt solid pink; float: left; width: 3.5pc; height: 3.5pc; z-index: 5; margin: 2pt 3pt 0 2pt ; padding: 0 ; }
+.A4Portrait .icon {border: 2pt solid black; float: left; width: 5.0pc; height: 5.0pc; z-index: 5; margin: 2pt 3pt 0 2pt ; padding: 0 ; }
 /*.icons img{width: 100%; height: auto ; }*/
 /*.icons {float: left; width: 3.5pc; height: 3.5pc; z-index: 5; margin: 0 2pc 0 2pt ; padding: 0 ; }*/
 .imageAdjustable {vertical-align:top; width:50% ;}
@@ -48,8 +52,8 @@
 .keyWord {clear: both; text-align: center ; margin-left: 2pt }/* clear both forces p to start below the graphics */
 .largeImage {width: 100%; height:auto ; z-index: -500 ; }
 .left {border-left: solid black 1pt}
-.A5Portrait .lessonNumber {font-size: 80%  !important;   }
-.A4Portrait .lessonNumber {font-size: 80%  !important;  }
+.A5Portrait .lessonNumber {font-size: 80%  !important; background: pink;  }
+.A4Portrait .lessonNumber {font-size: 80%  !important; background: white !important ; }
 .lessonTitle {margin-left: 2pt; margin-top: 0pc ; text-align: center ; font-weight: bold; font-size: 10pt ;  }
 .mainTitle {font-weight: bold; text-align: center ; }
 .cover .marginBox {overflow-x:hidden; overflow-y:hidden; height: 180mm; width: 109mm; border: none ;  z-index: 100000;   }
@@ -92,7 +96,7 @@
 /*.sam-lepleLetterRight {z-index: 5; font-weight: bold; margin: 6pt 11pt ; border: black 1pt solid; }*/
 .sampleLetterRight {z-index: 5; font-weight: bold; border: black 1pt solid; margin: auto; padding-left: 6pt; padding-right: 6pt  }
 .sampleSentence {font-size:200% !important; clear: both; margin-left: 2pt; text-indent: 0; margin-top: 1pc ; text-align: left ; }
-.scripture {font-weight: bold !important;   }
+.scripture {font-weight: bold !important; background-color: white;  }
 .sectionHead {font-weight: bold ; text-align: left ; }
 .sentence {margin-left: 2pt; margin-top: 1pc ; text-align: left ; text-indent: 2pc }
 .smallImage { width: 20% ; border: red solid 2pt; }
@@ -137,13 +141,15 @@ DIV.A4Portrait DIV.margin-box:nth-of-type(2n+1):after {
     content: counter(pageNumber, decimal);
     text-align: center !important;
     font-size: 100% !important;
+    background: pink !important; 
 }
 DIV.A4Portrait DIV.margin-box:nth-of-type(2n):after {
      bottom: 15pt !important;
      content: counter(pageNumber, decimal);
     font-size: 100%;
     text-align: center;
+    background: lime !important; 
 }
 
-#originalAcknowledgments{height: 300px !important;	width: 100%; }
+#originalAcknowledgments{height: 300px !important;	width: 100%; background: orange !important;}
     
