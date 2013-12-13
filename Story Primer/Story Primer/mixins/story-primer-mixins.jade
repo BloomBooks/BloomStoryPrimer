@@ -5,12 +5,6 @@ mixin adjustableImageRight
     +image.imageAdjustable.floatRight.bloom-resizable
         block
 
-//- generates a translationGroup with optional classes on the internal div
-mixin field-attributesOnChild
-    - requireZeroArguments('field-attributesOnChild', arguments)
-    .bloom-translationGroup
-        +editable('en')(attributes=attributes)
-
 //- generates a translationGroup with bubble text and optional classes on the internal div
 mixin field-bubble-attributesOnChild(bubbleText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)

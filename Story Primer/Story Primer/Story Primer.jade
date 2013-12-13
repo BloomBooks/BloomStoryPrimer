@@ -21,6 +21,7 @@ doctype html
 - var gw = 'Glenys Waters'
 - var bns = 'by-nc-sa'
 - var sounds = 'Sounds in our alphabet'
+- var focusSound = 'Sound in focus'
 
 html
     head
@@ -40,17 +41,26 @@ html
             +bookVariable-title('en', 'Story Primer')
             div(data-book='topic', lang='en') Primer
             div(data-book='originalAcknowledgements', lang='en') Template creation: Jim Albright (SIL International) based on work by Glenys Waters and Karen Hopping
+
+        //- Template page #1
         +page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
-            +image-bubble(imageImport).bloom-resizable
+            +image.bloom-resizable
+                label.bubble=imageImport
+
+        //- Template page #2
         +page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild(sTitle).mainTitle
             +field-bubble-attributesOnChild(sSubtitle).title
             +adjustableImageRight
             +field-bubble-attributesOnChild(asterisk + addPara).story
+
+        //- Template page #3
         +page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild(asterisk + addPara).story
             +adjustableImageRight
             +field-bubble-attributesOnChild(asterisk + addPara).story
+
+        //- Template page #4
         +page-choice('Lesson, story and activity')#4298333c-45b9-4013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
@@ -65,6 +75,8 @@ html
             .divider
             +image-specific-bubble(changeIcon, 'sil-discuss.png', actIcon, gw, silCopy, bns).icon.floatLeft
             +field-bubble-attributesOnChild(asterisk + addPara).activity
+
+        //- Template page #5
         +page-choice('Word work and writing')#6698decc-55b9-5013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
@@ -76,7 +88,7 @@ html
                         table.sampleLetterRight
                             tr
                                 td
-                                    +field-bubble-attributesOnChild('*Sound in focus, capital and small').soundInFocus
+                                    +field-bubble-attributesOnChild(asterisk + focusSound).soundInFocus
             +field-bubble-attributesOnChild('*key sentence').sampleSentence
             table.primerTableTitleLine
                 tr
@@ -93,7 +105,7 @@ html
                                                 +field-bubble-attributesOnChild('*Key word')
                                         tr
                                             td
-                                                +field-bubble-attributesOnChild('*Sound in focus')
+                                                +field-bubble-attributesOnChild(asterisk + focusSound)
                     td.blank
                     td
                         table.primerTableWithBorder
@@ -127,12 +139,16 @@ html
             +image-specific-bubble(changeIcon, 'primer_did_you_know.png', actIcon, gw, silCopy, bns)
             +field-bubble-attributesOnChild('*title').title
             +field-bubble-attributesOnChild(asterisk + addPara).activity
+
+        //- Template page #6
         +page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild('*Text continues here - ' + addPara).story
             .divider
             +image-specific-bubble(changeIcon, 'sil-discuss.png', actIcon, gw, silCopy, bns)
             +field-bubble-attributesOnChild(asterisk + addPara).activity
+
         //- TODO: Redo with placeholders
+        //- Template page #7
         +page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild('*instructions').instructions
             table.primerTableWordFind
@@ -176,36 +192,52 @@ html
                             +field
                     td
                         +field-bubble-attributesOnChild('*Words to find')
+
+        //- Template page #8
         +page-choice('Alphabet chart (4x3)')#1298decc-55b9-5013-a0de-1212441b34a3
             +field-bubble-attributesOnChild(asterisk + sounds).title
             table.primerTableMatrixMedium.letters4x3
                 +alphabetChart(4)
+
+        //- Template page #9
         +page-choice('Alphabet chart (5x3)')#1298decc-55b9-5013-a0de-1512441b35a3
             +field-bubble-attributesOnChild(asterisk + sounds).title
             table.primerTableMatrixMedium.letters5x3
                 +alphabetChart(5)
+
+        //- Template page #10
         +page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
             +field-bubble-attributesOnChild(asterisk + sounds).title
             table.primerTableMatrixMedium.letters6x3
                 +alphabetChart(6)
+
+        //- Template page #11
         +page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
             +field-bubble-attributesOnChild(asterisk + sounds).title
             table.primerTableMatrixMedium.letters7x3
                 +alphabetChart(7)
+
+        //- Template page #12
         +page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
             +field-bubble-attributesOnChild(asterisk + sounds).title
             table.primerTableMatrixMedium.letters8x3
                 +alphabetChart(8)
+
+        //- Template page #13
         +page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
             +field-bubble-attributesOnChild(asterisk + sounds).title
             table.primerTableMatrixMedium.letters9x3
                 +alphabetChart(9)
+
+        //- Template page #14
         +page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
             +fixedIcon-bubble(changeIcon, actIcon, 'sil-discuss.png', gw, silCopy, bns)
             +field(data-hint=asterisk + addPara)
             .divider
             +fixedIcon-bubble(changeIcon, actIcon, 'primer_did_you_know.png', gw, silCopy, bns)
             +field(data-hint=asterisk + addPara)
+
+        //- Template page #15
         +page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
             +fixedIcon-bubble(changeIcon, actIcon, 'sil-discuss.png', gw, silCopy, bns)
             +field(data-hint=asterisk + addPara)
@@ -215,30 +247,41 @@ html
             .divider
             +fixedIcon-bubble(changeIcon, actIcon, 'primer_perform.png', gw, silCopy, bns)
             +field(data-hint=asterisk + addPara)
+
+        //- Template page #16
         +page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxIcon
                         +fixedIcon('missing icon', 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
                     td.boxLessonTitle
-                        +field-bubble-attributesOnChild('*Word work title').lessonTitle
+                        +field-prototypeDeclaredExplicity
+                            +editable('en').lessonTitle
+                            label.bubble *Word work title
                     td.boxSampleLetterRight
                         .sampleLetterRight
                             table
                                 tr
                                     td
-                                        +field(data-hint="*Your word for 'revise'/'review'")
+                                        +field
+                                            label.bubble *Your word for 'revise'/'review'"
                                 tr
                                     td
-                                        +field(data-hint='*Sounds in focus')
+                                        +field
+                                            label.bubble=asterisk + focusSound
             +form-6cells
-            +field(data-hint='*instructions').instructions
+            +field.instructions
+                label.bubble *instructions
             +syllableTable
             .divider
             div
                 +fixedIcon('missing icon', 'primer_writing.png', gw, silCopy, bns)
-                +field-bubble-attributesOnChild('*Instructions: Write the letters and words below in your exercise book').instructions
-                +field-bubble-attributesOnChild('*write this').underlined
+                +field-prototypeDeclaredExplicity
+                    +editable('en').instructions
+                    label.bubble *Instructions: Write the letters and words below in your exercise book
+                +field-prototypeDeclaredExplicity
+                    +editable('en').underlined
+                    label.bubble *write this
             table.primerTableFixed
                 tr
                     td
@@ -250,6 +293,8 @@ html
                                     +repeat(3)
                                         td
                                             +field
+
+        //- Template page #17
         +page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
@@ -288,10 +333,16 @@ html
                 +field-prototypeDeclaredExplicity
                     +editable('en').activity
                         label.bubble *write this
+
+        //- Template page #18
         +page-choice('Glossary (3 language - 22 words per page)')#18a8decc-55b9-5013-a0de-6512441b3783
             +glossary(3,22)
+
+        //- Template page #19
         +page-choice('Glossary (2 language - 22 words per page)')#19a8decc-55b9-5013-a0de-6512441b3783
             +glossary(2, 22)
+
+        //- Template page #20
         +page-choice('Translation of text by page number with Title')#10a8decc-55b9-4013-a0de-6512441b3783(data-pagelineage='7e215937-a062-41af-a91d-6f8f7938be03')
             +field.mainTitle
                 label.bubble *Title of the text
@@ -315,6 +366,8 @@ html
                     td.translation
                         +field
                             label.bubble Use as many rows as you need. What you don't want, just leave blank. If you need more rows, add another page.
+
+        //- Template page #21
         +page-choice('Translation of text by page number')#11a8decc-55b9-4013-a0de-6512441b3783(data-pagelineage='7e215937-a062-41af-a91d-6f8f7938be03')
             table
                 tr.translation
@@ -332,6 +385,8 @@ html
                         td.translation
                             +field
                                 label.bubble *translation
+
+        //- Template page #22
         +page-choice('Text, (Scripture)')#77cd48df-e9ab-4a07-afd4-6a24d0398382
             +field
                 label.bubble=asterisk + addPara
@@ -343,6 +398,8 @@ html
                 label.bubble *optional - scripture
             +field
                 label.bubble="*optional - " + addPara
+
+        //- Template page #23
         +page-choice('Image, (Text), (Scripture)')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
             +image.bloom-resizable
             +field
