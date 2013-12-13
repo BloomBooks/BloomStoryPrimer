@@ -233,26 +233,7 @@ html
                                         +field(data-hint='*Sounds in focus')
             +form-6cells
             +field(data-hint='*instructions').instructions
-            table.primerTableFixed
-                +repeat(3)
-                    tr
-                        td
-                            +field-bubble-attributesOnChild('*word broken into syllables').word
-                        td(data-hint='*word').blank
-                        td
-                            +field-attributesOnChild.word
-                        td.blank
-                        td
-                            +field-attributesOnChild.word
-                    tr
-                        td.bottom
-                            +field-bubble-attributesOnChild('*word').word
-                        td.blank
-                        td.bottom
-                            +field-attributesOnChild.word
-                        td.blank
-                        td.bottom
-                            +field-attributesOnChild.word
+            +syllableTable
             .divider
             div
                 +fixedIcon('missing icon', 'primer_writing.png', gw, silCopy, bns)
@@ -269,3 +250,108 @@ html
                                     +repeat(3)
                                         td
                                             +field
+        +page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783
+            table.primerTableTitleLine
+                tr
+                    td.boxIcon
+                        +fixedIcon('missing icon', 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
+                    td.boxLessonTitle
+                        +field-bubble-attributesOnChild('*Word work title').lessonTitle
+                    td.boxSampleLetterRight
+                        .sampleLetterRight
+                            table
+                                tr
+                                    td
+                                        +field(data-hint="*Your word for 'revise'/'review'")
+                                tr
+                                    td
+                                        +field(data-hint='*Sounds in focus')
+            +form-6cells
+            +field(data-hint='*instructions').instructions
+            .divider
+            +syllableTable
+            div
+                +fixedIcon('missing icon', 'primer_writing.png', gw, silCopy, bns)
+                +field-prototypeDeclaredExplicity
+                    +editable('en').instructions
+                        label.bubble *Write the letters and words below in your exercise book
+                +field-prototypeDeclaredExplicity
+                    +editable('en').underlined
+                        label.bubble *write this
+                +field-prototypeDeclaredExplicity
+                    +editable('en').underlined
+                +image-specific('missing icon', 'primer_did_you_know.png', gw, silCopy, bns)
+                    label.bubble=changeIcon
+                +field-prototypeDeclaredExplicity
+                    +editable('en').sectionHead
+                        label.bubble *Did you know?
+                +field-prototypeDeclaredExplicity
+                    +editable('en').activity
+                        label.bubble *write this
+        +page-choice('Glossary (3 language - 22 words per page)')#18a8decc-55b9-5013-a0de-6512441b3783
+            +glossary(3,22)
+        +page-choice('Glossary (2 language - 22 words per page)')#19a8decc-55b9-5013-a0de-6512441b3783
+            +glossary(2, 22)
+        +page-choice('Translation of text by page number with Title')#10a8decc-55b9-4013-a0de-6512441b3783(data-pagelineage='7e215937-a062-41af-a91d-6f8f7938be03')
+            +field.mainTitle
+                label.bubble *Title of the text
+            table
+                tr.translation
+                    td.pageNumber
+                        label.bubble *page number
+                        +field
+                    td.translation
+                        label.bubble *translation
+                        +field
+                +repeat(6)
+                    tr.translation
+                        td.pageNumber
+                            +field
+                        td.translation
+                            +field
+                tr.translation
+                    td.pageNumber
+                        +field
+                    td.translation
+                        +field
+                            label.bubble Use as many rows as you need. What you don't want, just leave blank. If you need more rows, add another page.
+        +page-choice('Translation of text by page number')#11a8decc-55b9-4013-a0de-6512441b3783(data-pagelineage='7e215937-a062-41af-a91d-6f8f7938be03')
+            table
+                tr.translation
+                    td.pageNumber
+                        +field
+                            label.bubble *page number
+                    td.translation
+                        +field
+                            label.bubble *translation
+                +repeat(7)
+                    tr.translation
+                        td.pageNumber
+                            +field
+                                label.bubble *page number
+                        td.translation
+                            +field
+                                label.bubble *translation
+        +page-choice('Text, (Scripture)')#77cd48df-e9ab-4a07-afd4-6a24d0398382
+            +field
+                label.bubble=asterisk + addPara
+            +field
+                label.bubble *optional - scripture
+            +field
+                label.bubble="*optional - " + addPara
+            +field
+                label.bubble *optional - scripture
+            +field
+                label.bubble="*optional - " + addPara
+        +page-choice('Image, (Text), (Scripture)')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
+            +image.bloom-resizable
+            +field
+                label.bubble=asterisk + addPara
+            +field
+                label.bubble *optional - scripture
+            +field
+                label.bubble="*optional - " + addPara
+            +field
+                label.bubble *optional - scripture
+            +field
+                label.bubble="*optional - " + addPara

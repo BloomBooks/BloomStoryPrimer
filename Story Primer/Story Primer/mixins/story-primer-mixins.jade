@@ -9,13 +9,13 @@ mixin adjustableImageRight
 mixin field-attributesOnChild
     - requireZeroArguments('field-attributesOnChild', arguments)
     .bloom-translationGroup
-        +editable(attributes=attributes)
+        +editable('en')(attributes=attributes)
 
 //- generates a translationGroup with bubble text and optional classes on the internal div
 mixin field-bubble-attributesOnChild(bubbleText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
     .bloom-translationGroup
-        +editable(data-hint=bubbleText, attributes=attributes)
+        +editable('en')(data-hint=bubbleText, attributes=attributes)
 
 //- generates an image with 'placeHolder.png', standard 'missing' alt text and no copyright/license data
 mixin image-bubble(bubbleText)
@@ -27,6 +27,7 @@ mixin image-bubble(bubbleText)
 mixin image-specific(src, altText, creator, copyright, license)
     .bloom-imageContainer
         img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
+        block
 
 //- generates an image with a specified default src image and embedded copyright/license data and bubble text
 mixin image-specific-bubble(bubbleText, src, altText, creator, copyright, license)
@@ -87,3 +88,57 @@ mixin form-6cells
             td.blank
             td.bottom.left.right
                 +field
+
+//- Generates a 6 x 3 table for words broken into syllables
+mixin syllableTable
+    - requireZeroArguments('syllableTable', arguments)
+    table.primerTableFixed
+        +repeat(3)
+            tr
+                td
+                    +field.word
+                        label.bubble *word broken into syllables
+                td.blank
+                td
+                    +field.word
+                td.blank
+                td
+                    +field.word
+            tr
+                td.bottom
+                    +field.word
+                        label.bubble *word
+                td.blank
+                td.bottom
+                    +field.word
+                td.blank
+                td.bottom
+                    +field.word
+
+//- Generate a Glossary for multiple languages 'numberOfLanguages'=columns and
+//- several words per page ('numberOfWordsOnPage')
+mixin glossary(numberOfLanguages, numberOfWordsOnPage)
+    - requireTwoArguments('glossary', arguments)
+    +field.title
+        label.bubble *Glossary title
+    table
+        tr
+            - var loopCounter = 1
+            td
+                +field
+                    label.bubble *word in language #1
+
+            +repeat(numberOfLanguages - 1)
+                - loopCounter++
+                td.blank
+                td
+                    +field
+                        label.bubble='*word in language #' + loopCounter
+        +repeat(numberOfWordsOnPage - 1)
+            tr
+                td
+                    +field
+                +repeat(numberOfLanguages - 1)
+                    td.blank
+                    td
+                        +field
