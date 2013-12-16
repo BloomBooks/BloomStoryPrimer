@@ -9,8 +9,15 @@ mixin adjustableImageRight
 mixin field-bubble-attributesOnChild(bubbleText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
     .bloom-translationGroup
+        label.bubble=bubbleText
         +editable('en')(attributes=attributes)
-            label.bubble=bubbleText
+
+//- generates a translationGroup with placeholder text and optional classes on the internal div
+mixin field-placeholder-attributesOnChild(placeholderText)
+    - requireOneArgument('field-bubble-attributesOnChild', arguments)
+    .bloom-translationGroup
+        label.placeholder=placeholderText
+        +editable('en')(attributes=attributes)
 
 //- generates an image with 'placeHolder.png', standard 'missing' alt text and no copyright/license data
 mixin image-bubble(bubbleText)

@@ -152,46 +152,17 @@ html
         +page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild('*instructions').instructions
             table.primerTableWordFind
-                tr
-                    td
-                        +field-bubble-attributesOnChild('*letter')
-                    +repeat(9)
-                        td
-                            +field
-                +repeat(9)
+                +repeat(10)
                     tr
                         +repeat(10)
                             td
-                                +field
+                                +field-placeholder-attributesOnChild('A')
             table.primerTableNoBorder
-                tr
-                    td
-                        +field-bubble-attributesOnChild('*Words to find')
-                    +repeat(3)
-                        td
-                            +field
-                tr
-                    td
-                        +field
-                    td
-                        +field-bubble-attributesOnChild('*Words to find')
-                    +repeat(2)
-                        td
-                            +field
-                tr
-                    +repeat(2)
-                        td
-                            +field
-                    td
-                        +field-bubble-attributesOnChild('*Words to find')
-                    td
-                        +field
-                tr
-                    +repeat(3)
-                        td
-                            +field
-                    td
-                        +field-bubble-attributesOnChild('*Words to find')
+                +repeat(4)
+                    tr
+                        +repeat(4)
+                            td
+                                +field-placeholder-attributesOnChild('*Word to find')
 
         // Template page #8
         +page-choice('Alphabet chart (4x3)')#1298decc-55b9-5013-a0de-1212441b34a3
@@ -255,9 +226,7 @@ html
                     td.boxIcon
                         +fixedIcon('missing icon', 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
                     td.boxLessonTitle
-                        +field-prototypeDeclaredExplicity
-                            +editable('en').lessonTitle
-                            label.bubble *Word work title
+                        +field-bubble-attributesOnChild('*Word work title').lessonTitle
                     td.boxSampleLetterRight
                         .sampleLetterRight
                             table
@@ -276,12 +245,8 @@ html
             .divider
             div
                 +fixedIcon('missing icon', 'primer_writing.png', gw, silCopy, bns)
-                +field-prototypeDeclaredExplicity
-                    +editable('en').instructions
-                    label.bubble *Instructions: Write the letters and words below in your exercise book
-                +field-prototypeDeclaredExplicity
-                    +editable('en').underlined
-                    label.bubble *write this
+                +field-bubble-attributesOnChild('*Instructions: Write the letters and words below in your exercise book').instructions
+                +field-bubble-attributesOnChild('*write this').underlined
             table.primerTableFixed
                 tr
                     td
@@ -340,11 +305,11 @@ html
             table
                 tr.translation
                     td.pageNumber
-                        label.bubble *page number
                         +field
+                            label.bubble *page number
                     td.translation
-                        label.bubble *translation
                         +field
+                            label.bubble *translation
                 +repeat(6)
                     tr.translation
                         td.pageNumber
