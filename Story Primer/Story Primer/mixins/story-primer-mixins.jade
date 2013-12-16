@@ -9,12 +9,14 @@ mixin adjustableImageRight
 mixin field-bubble-attributesOnChild(bubbleText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
     .bloom-translationGroup
-        +editable('en')(data-hint=bubbleText, attributes=attributes)
+        +editable('en')(attributes=attributes)
+            label.bubble=bubbleText
 
 //- generates an image with 'placeHolder.png', standard 'missing' alt text and no copyright/license data
 mixin image-bubble(bubbleText)
     - requireOneArgument('image-bubble', arguments)
-    +image(data-hint=bubbleText, attributes)
+    +image(attributes=attributes)
+        label.bubble=bubbleText
         block
 
 //- generates an image with a specified default src image and embedded copyright/license data
@@ -25,7 +27,8 @@ mixin image-specific(src, altText, creator, copyright, license)
 
 //- generates an image with a specified default src image and embedded copyright/license data and bubble text
 mixin image-specific-bubble(bubbleText, src, altText, creator, copyright, license)
-    .bloom-imageContainer(data-hint=bubbleText)
+    .bloom-imageContainer
+        label.bubble=bubbleText
         img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
 
 //- generates a fixed icon image (no bloom-imageContainer)
@@ -35,7 +38,8 @@ mixin fixedIcon(altText, src, creator, copyright, license)
 
 //- generates a fixed icon image with bubble text in a bloom-imageContainer
 mixin fixedIcon-bubble(bubbleText, altText, src, creator, copyright, license)
-    .bloom-imageContainer.icon(data-hint=bubbleText)
+    .bloom-imageContainer.icon
+        label.bubble=bubbleText
         img(alt=altText, src=src, data-creator=creator, data-copyright=copyright, data-license=license)
 
 //- generates an alphabet chart matrix 3 wide with variable number of rows
@@ -135,4 +139,4 @@ mixin glossary(numberOfLanguages, numberOfWordsOnPage)
                 +repeat(numberOfLanguages - 1)
                     td.blank
                     td
-                        +field
+                        +field)
