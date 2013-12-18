@@ -16,7 +16,6 @@ doctype html
 -     imageImport += ' File formats that work well: png (preferred), jpeg, or tiff.'
 - var wordWork = 'Word work title'
 - var silCopy = 'Copyright &#65533; 2012, SIL International'
-- var changeIcon = 'You may change the activity icon here.'
 - var actIcon = 'activity icon'
 - var gw = 'Glenys Waters'
 - var bns = 'by-nc-sa'
@@ -65,14 +64,14 @@ html
                 tr
                     td.boxIcon
                         +field-bubble-attributesOnChild(wordForLesson).lessonNumber
-                        +fixedIcon("book icon", "primer_read_together.png", gw, silCopy, bns)
+                        +fixedIcon('book icon', 'primer_read_together.png', gw, silCopy, bns)
                     td.boxLessonTitle
                         +field-bubble-attributesOnChild(asterisk + wordWork).lessonTitle
                     td.boxBlankMatchingIconBook
             +adjustableImageRight
             +field-bubble-attributesOnChild(asterisk + addPara).story
             .divider
-            +image-specific-bubble(changeIcon, 'sil-discuss.png', actIcon, gw, silCopy, bns).icon.floatLeft
+            +fixedIcon(actIcon, 'sil-discuss.png', gw, silCopy, bns)
             +field-bubble-attributesOnChild(asterisk + addPara).activity
 
         // Template page #5
@@ -95,8 +94,7 @@ html
                         table.primerTableWithBorder
                             tr
                                 td
-                                    .bloom-imageContainer.bloom-resizable
-                                        img(alt='missing image', class='smallImage', src='placeHolder.png')
+                                    +image.bloom-resizable.smallImageInTable
                                 td
                                     table
                                         tr
@@ -135,7 +133,7 @@ html
             +field-bubble-attributesOnChild('*write this (underlined) - ' + addPara).activity.underlined
             +field-bubble-attributesOnChild(asterisk + addPara).activity
             .divider
-            +image-specific-bubble(changeIcon, 'primer_did_you_know.png', actIcon, gw, silCopy, bns)
+            +fixedIcon(actIcon, 'primer_know.png', gw, silCopy, bns)
             +field-bubble-attributesOnChild('*title').title
             +field-bubble-attributesOnChild(asterisk + addPara).activity
 
@@ -143,7 +141,7 @@ html
         +page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild('*Text continues here - ' + addPara).story
             .divider
-            +image-specific-bubble(changeIcon, 'sil-discuss.png', actIcon, gw, silCopy, bns)
+            +fixedIcon(actIcon, 'sil-discuss.png', gw, silCopy, bns)
             +field-bubble-attributesOnChild(asterisk + addPara).activity
 
         // Template page #7
@@ -200,29 +198,34 @@ html
 
         // Template page #14
         +page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
-            +fixedIcon-bubble(changeIcon, actIcon, 'sil-discuss.png', gw, silCopy, bns)
-            +field(data-hint=asterisk + addPara)
+            +fixedIcon(actIcon, 'sil-discuss.png', gw, silCopy, bns)
+            +field
+                label.bubble=asterisk + addPara
             .divider
-            +fixedIcon-bubble(changeIcon, actIcon, 'primer_did_you_know.png', gw, silCopy, bns)
-            +field(data-hint=asterisk + addPara)
+            +fixedIcon(actIcon, 'primer_know.png', gw, silCopy, bns)
+            +field
+                label.bubble=asterisk + addPara
 
         // Template page #15
         +page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
-            +fixedIcon-bubble(changeIcon, actIcon, 'sil-discuss.png', gw, silCopy, bns)
-            +field(data-hint=asterisk + addPara)
+            +fixedIcon(actIcon, 'sil-discuss.png', gw, silCopy, bns)
+            +field
+                label.bubble=asterisk + addPara
             .divider
-            +fixedIcon-bubble(changeIcon, actIcon, 'primer_did_you_know.png', gw, silCopy, bns)
-            +field(data-hint=asterisk + addPara)
+            +fixedIcon(actIcon, 'primer_know.png', gw, silCopy, bns)
+            +field
+                label.bubble=asterisk + addPara
             .divider
-            +fixedIcon-bubble(changeIcon, actIcon, 'primer_perform.png', gw, silCopy, bns)
-            +field(data-hint=asterisk + addPara)
+            +fixedIcon(actIcon, 'primer_perform.png', gw, silCopy, bns)
+            +field
+                label.bubble=asterisk + addPara
 
         // Template page #16
         +page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxIcon
-                        +fixedIcon('missing icon', 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
+                        +fixedIcon(actIcon, 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
                     td.boxLessonTitle
                         +field-bubble-attributesOnChild('*Word work title').lessonTitle
                     td.boxSampleLetterRight
@@ -242,13 +245,13 @@ html
             +syllableTable
             .divider
             div
-                +fixedIcon('missing icon', 'primer_writing.png', gw, silCopy, bns)
+                +fixedIcon(actIcon, 'primer_writing.png', gw, silCopy, bns)
                 +field-bubble-attributesOnChild('*Instructions: Write the letters and words below in your exercise book').instructions
                 +field-bubble-attributesOnChild('*write this').underlined
             table.primerTableFixed
                 tr
                     td
-                        +field-bubble-attributesOnChild('*(Instructions)').instructions
+                        +field-bubble-attributesOnChild('*instructions').instructions
                     td
                         table.primerTableMatrix
                             +repeat(3)
@@ -262,7 +265,7 @@ html
             table.primerTableTitleLine
                 tr
                     td.boxIcon
-                        +fixedIcon('missing icon', 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
+                        +fixedIcon(actIcon, 'primer_word.png', gw, silCopy, bns).bloom-imageContainer
                     td.boxLessonTitle
                         +field-bubble-attributesOnChild('*Word work title').lessonTitle
                     td.boxSampleLetterRight
@@ -270,21 +273,24 @@ html
                             table
                                 tr
                                     td
-                                        +field(data-hint="*Your word for 'revise'/'review'")
+                                        +field
+                                            label.bubble *Your word for 'revise'/'review'
                                 tr
                                     td
-                                        +field(data-hint='*Sounds in focus')
+                                        +field
+                                            label.bubble *Sounds in focus
             +form-6cells
-            +field(data-hint='*instructions').instructions
+            +field.instructions
+                label.bubble *instructions
             .divider
             +syllableTable
             div
-                +fixedIcon('missing icon', 'primer_writing.png', gw, silCopy, bns)
+                +fixedIcon(actIcon, 'primer_writing.png', gw, silCopy, bns)
                 +field-bubble-attributesOnChild('*Write the letters and words below in your exercise book').instructions
                 +field-bubble-attributesOnChild('*write this').underlined
                 +field-prototypeDeclaredExplicity
-                    +editable('en').underlined
-                +image-specific-bubble(changeIcon, 'missing icon', 'primer_did_you_know.png', gw, silCopy, bns)
+                    +editable(kLanguageForPrototypeOnly).underlined
+                +fixedIcon(actIcon, 'primer_know.png', gw, silCopy, bns)
                 +field-bubble-attributesOnChild('*Did you know?').sectionHead
                 +field-bubble-attributesOnChild('*write this').activity
 
@@ -301,22 +307,18 @@ html
             +field.mainTitle
                 label.bubble *Title of the text
             table
-                tr.translation
-                    td.pageNumber
-                        +field
-                            label.bubble *page number
-                    td.translation
-                        +field
-                            label.bubble *translation
-                +repeat(6)
+                +repeat(7)
                     tr.translation
                         td.pageNumber
                             +field
+                                label.placeholder 99
                         td.translation
                             +field
+                                label.bubble *translation
                 tr.translation
                     td.pageNumber
                         +field
+                            label.placeholder 99
                     td.translation
                         +field
                             label.bubble Use as many rows as you need. What you don't want, just leave blank. If you need more rows, add another page.
@@ -324,45 +326,22 @@ html
         // Template page #21
         +page-choice('Translation of text by page number')#11a8decc-55b9-4013-a0de-6512441b3783(data-pagelineage='7e215937-a062-41af-a91d-6f8f7938be03')
             table
-                tr.translation
-                    td.pageNumber
-                        +field
-                            label.bubble *page number
-                    td.translation
-                        +field
-                            label.bubble *translation
-                +repeat(7)
+                +repeat(8)
                     tr.translation
                         td.pageNumber
                             +field
-                                label.bubble *page number
+                                label.placeholder 99
                         td.translation
                             +field
                                 label.bubble *translation
 
         // Template page #22
-        +page-choice('Text, (Scripture)')#77cd48df-e9ab-4a07-afd4-6a24d0398382
+        +page-choice('Freeform Text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
             +field
                 label.bubble=asterisk + addPara
-            +field
-                label.bubble *optional - scripture
-            +field
-                label.bubble="*optional - " + addPara
-            +field
-                label.bubble *optional - scripture
-            +field
-                label.bubble="*optional - " + addPara
 
         // Template page #23
-        +page-choice('Image, (Text), (Scripture)')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
+        +page-choice('Image and freeform Text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
             +image.bloom-resizable
             +field
                 label.bubble=asterisk + addPara
-            +field
-                label.bubble *optional - scripture
-            +field
-                label.bubble="*optional - " + addPara
-            +field
-                label.bubble *optional - scripture
-            +field
-                label.bubble="*optional - " + addPara

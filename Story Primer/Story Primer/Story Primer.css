@@ -7,11 +7,6 @@
 hand created - jaa 2012-01-02
 Story Primer.CSS
  */
-#funding
-{
-	padding-top: 36pc !important;
-}
-/*add space above to move funding down the page/*/
 .activity
 {
 	padding: 0 6pt !important;
@@ -45,7 +40,7 @@ Story Primer.CSS
 }
 .A5Portrait .bloom-editable
 {
-	/*[disabled]font-size:140%;*/
+	font-size: 100%;
 }
 .A4Portrait .bloom-editable
 {
@@ -127,14 +122,16 @@ Story Primer.CSS
 }
 .floatLeft
 {
-	width: auto;
+	/*was width: auto;*/
+	width: 50%;
 	height: auto;
 	float: left;
 	border: 3pt solid #FFC0CB;
 }
 .floatRight
 {
-	width: auto;
+	width: 50%;
+	/*was width: auto;*/
 	height: auto;
 	float: right;
 }
@@ -254,6 +251,7 @@ Story Primer.CSS
 {
 	font-weight: bold;
 	text-align: center;
+	font-size: 150%;
 }
 .cover .marginBox
 {
@@ -383,7 +381,12 @@ Story Primer.CSS
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin: 6pt;
+	/*[disabled]margin:6pt;*/
+	font-size: smaller;
+}
+.primerTableNoBorder TD
+{
+	font-size: 6.5pt;
 }
 .primerTableWithBorder
 {
@@ -421,6 +424,7 @@ Story Primer.CSS
 	width: 100%;
 	border-collapse: collapse;
 	margin-top: 1pc;
+	font-size: 8pt;
 }
 .primerTableWords TD
 {
@@ -467,7 +471,7 @@ Story Primer.CSS
 	padding: 6pt 11pt;
 	border: 1pt solid #000000;
 }
-/*.sam-lepleLetterRight {z-index: 5; font-weight: bold; margin: 6pt 11pt ; border: black 1pt solid; }*/
+/*.sampleLetterRight {z-index: 5; font-weight: bold; margin: 6pt 11pt ; border: black 1pt solid; }*/
 .sampleLetterRight
 {
 	z-index: 5;
@@ -545,6 +549,7 @@ Story Primer.CSS
 	text-align: center;
 	margin-left: 2pt;
 	margin-right: 0;
+	font-size: 125%;
 }
 .top
 {

@@ -10,14 +10,14 @@ mixin field-bubble-attributesOnChild(bubbleText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
     .bloom-translationGroup
         label.bubble=bubbleText
-        +editable('en')(attributes=attributes)
+        +editable(kLanguageForPrototypeOnly)(attributes=attributes)
 
 //- generates a translationGroup with placeholder text and optional classes on the internal div
 mixin field-placeholder-attributesOnChild(placeholderText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
     .bloom-translationGroup
         label.placeholder=placeholderText
-        +editable('en')(attributes=attributes)
+        +editable(kLanguageForPrototypeOnly)(attributes=attributes)
 
 //- generates an image with 'placeHolder.png', standard 'missing' alt text and no copyright/license data
 mixin image-bubble(bubbleText)
@@ -93,25 +93,23 @@ mixin syllableTable
     table.primerTableFixed
         +repeat(3)
             tr
+                +repeat(2)
+                    td
+                        +field.word
+                            label.placeholder syl la bles
+                    td.blank
                 td
                     +field.word
-                        label.bubble *word broken into syllables
-                td.blank
-                td
-                    +field.word
-                td.blank
-                td
-                    +field.word
+                        label.placeholder syl la bles
             tr
+                +repeat(2)
+                    td.bottom
+                        +field.word
+                            label.placeholder word
+                    td.blank
                 td.bottom
                     +field.word
-                        label.bubble *word
-                td.blank
-                td.bottom
-                    +field.word
-                td.blank
-                td.bottom
-                    +field.word
+                        label.placeholder word
 
 //- Generate a Glossary for multiple languages 'numberOfLanguages'=columns and
 //- several words per page ('numberOfWordsOnPage')
@@ -124,14 +122,14 @@ mixin glossary(numberOfLanguages, numberOfWordsOnPage)
             - var loopCounter = 1
             td
                 +field
-                    label.bubble *word in language #1
+                    label.placeholder word1
 
             +repeat(numberOfLanguages - 1)
                 - loopCounter++
                 td.blank
                 td
                     +field
-                        label.bubble='*word in language #' + loopCounter
+                        label.placeholder='word' + loopCounter
         +repeat(numberOfWordsOnPage - 1)
             tr
                 td
@@ -139,4 +137,4 @@ mixin glossary(numberOfLanguages, numberOfWordsOnPage)
                 +repeat(numberOfLanguages - 1)
                     td.blank
                     td
-                        +field)
+                        +field
