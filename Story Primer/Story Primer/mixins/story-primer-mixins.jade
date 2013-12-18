@@ -55,19 +55,12 @@ mixin alphabetChart(rows)
     - requireOneArgument('alphabetChart', arguments)
     +repeat(rows)
         tr
-            td
-                table.alphabet
-                    tr
-                        td
-                            +field-placeholder-attributesOnChild('Qq')
-                        td
-                            +image.bloom-resizable.alphabet
-            +repeat(2)
+            +repeat(3)
                 td
                     table.alphabet
                         tr
                             td
-                                +field
+                                +field-placeholder-attributesOnChild('Qq')
                             td
                                 +image.bloom-resizable.alphabet
 
