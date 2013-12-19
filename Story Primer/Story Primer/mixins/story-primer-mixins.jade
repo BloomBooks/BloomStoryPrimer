@@ -9,7 +9,13 @@ mixin adjustableImageRight
 mixin field-bubble-attributesOnChild(bubbleText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
     .bloom-translationGroup
-        label.bubble=bubbleText
+        label.bubble.bloom-showOnlyWhenTargetHasFocus=bubbleText
+        +editable(kLanguageForPrototypeOnly)(attributes=attributes)
+
+//- generates a translationGroup with any classes on the internal div
+mixin field-attributesOnChild
+    - requireZeroArguments('field-attributesOnChild', arguments)
+    .bloom-translationGroup
         +editable(kLanguageForPrototypeOnly)(attributes=attributes)
 
 //- generates a translationGroup with placeholder text and optional classes on the internal div
@@ -23,31 +29,33 @@ mixin field-placeholder-attributesOnChild(placeholderText)
 mixin image-bubble(bubbleText)
     - requireOneArgument('image-bubble', arguments)
     +image(attributes=attributes)
-        label.bubble=bubbleText
+        label.bubble.bloom-showOnlyWhenTargetHasFocus=bubbleText
         block
 
-//- generates an image with a specified default src image and embedded copyright/license data
-mixin image-specific(src, altText, creator, copyright, license)
+//- generates an image with a specified default src image
+mixin image-specific(src, altText)
+    - requireTwoArguments('image-specific', arguments)
     .bloom-imageContainer
-        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
+        img(attributes, alt=altText, src=src)
         block
 
-//- generates an image with a specified default src image and embedded copyright/license data and bubble text
-mixin image-specific-bubble(bubbleText, src, altText, creator, copyright, license)
+//- generates an image with a specified default src image and bubble text
+mixin image-specific-bubble(bubbleText, src, altText)
     .bloom-imageContainer
-        label.bubble=bubbleText
-        img(attributes, alt=altText, src=src, data-copyright=copyright, data-creator=creator, data-license=license)
+        label.bubble.bloom-showOnlyWhenTargetHasFocus=bubbleText
+        img(attributes, alt=altText, src=src)
 
 //- generates a fixed icon image (no bloom-imageContainer)
-mixin fixedIcon(altText, src, creator, copyright, license)
-    .icon(attributes)
-        img(alt=altText, src=src, data-creator=creator, data-copyright=copyright, data-license=license)
+mixin fixedIcon(altText, src)
+    - requireTwoArguments('fixedIcon', arguments)
+    .bloom-imageContainer.icon(attributes)
+        img(alt=altText, src=src)
 
 //- generates a fixed icon image with bubble text in a bloom-imageContainer
-mixin fixedIcon-bubble(bubbleText, altText, src, creator, copyright, license)
+mixin fixedIcon-bubble(bubbleText, altText, src)
     .bloom-imageContainer.icon
-        label.bubble=bubbleText
-        img(alt=altText, src=src, data-creator=creator, data-copyright=copyright, data-license=license)
+        label.bubble.bloom-showOnlyWhenTargetHasFocus=bubbleText
+        img(alt=altText, src=src)
 
 //- generates an alphabet chart matrix 3 wide with variable number of rows
 //- this goes under the table element with a special class for this size chart
@@ -116,7 +124,7 @@ mixin syllableTable
 mixin glossary(numberOfLanguages, numberOfWordsOnPage)
     - requireTwoArguments('glossary', arguments)
     +field.title
-        label.bubble *Glossary title
+        label.bubble.bloom-showOnlyWhenTargetHasFocus *Glossary title
     table
         tr
             - var loopCounter = 1
