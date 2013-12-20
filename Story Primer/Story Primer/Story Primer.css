@@ -1,11 +1,4 @@
-/*
-2013-12-03 changed
-.A4Portrait .bloom-editable{font-size: 200%  from 140%
-.A5Portrait .icon {border: 2pt solid pink; float: left; width: 3.5pc; height: 3.5pc; z-index: 5; margin: 2pt 3pt 0 2pt ; padding: 0 ; }  right margin changed from 0 to 3pt
-.A4Portrait .icon {border: 2pt solid black; float: left; width: 5.0pc; height: 5.0pc; z-index: 5; margin: 2pt 3pt 0 2pt ; padding: 0 ; } right margin changed from 0 to 3pt
-
-hand created - jaa 2012-01-02
-Story Primer.CSS
+/*Story Primer.CSS
  */
 .activity
 {
@@ -361,8 +354,35 @@ Story Primer.CSS
 }
 .primerTableMatrixMedium IMG
 {
-	height: 45pt;
 	float: left;
+}
+.A5Portrait .letters4x3 .bloom-imageContainer.alphabet
+{
+	height: 149px;
+}
+.A5Portrait .letters5x3 .bloom-imageContainer.alphabet
+{
+	height: 118px;
+}
+.A5Portrait .letters6x3 .bloom-imageContainer.alphabet
+{
+	height: 97px;
+}
+.A5Portrait .letters7x3 .bloom-imageContainer.alphabet
+{
+	height: 82px;
+}
+.A5Portrait .letters8x3 .bloom-imageContainer.alphabet
+{
+	height: 71px;
+}
+.A5Portrait .letters9x3 .bloom-imageContainer.alphabet
+{
+	height: 62px;
+}
+.A5Portrait .bloom-imageContainer.alphabet
+{
+	width: 74px;
 }
 .primerTableMatrixMedium TD
 {
@@ -618,42 +638,6 @@ TABLE.alphabet DIV.alphabet
 {
 	border: none;
 	margin: 0pt;
-}
-TABLE.letters4x3 IMG
-{
-	padding-bottom: 22pt !important;
-	width: 6.3pc !important;
-	height: auto;
-}
-TABLE.letters5x3 IMG
-{
-	padding-bottom: 15.3pt !important;
-	width: 5.5pc !important;
-	height: auto;
-}
-TABLE.letters6x3 IMG
-{
-	padding-bottom: 10.8pt !important;
-	width: 4.8pc !important;
-	height: auto;
-}
-TABLE.letters7x3 IMG
-{
-	padding-bottom: 6.6pt !important;
-	width: 4.5pc !important;
-	height: auto;
-}
-TABLE.letters8x3 IMG
-{
-	padding-bottom: 5.5pt !important;
-	width: 4pc !important;
-	height: auto;
-}
-TABLE.letters9x3 IMG
-{
-	padding-bottom: 4.7pt !important;
-	width: 3.5pc !important;
-	height: auto;
 }
 TABLE.letters5x4 IMG
 {
