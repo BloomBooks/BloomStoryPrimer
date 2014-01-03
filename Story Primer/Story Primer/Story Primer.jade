@@ -108,7 +108,7 @@ html
                 tr
                     +repeat(5)
                         td
-                            table.primerTableWithBorder
+                            table.primerTableWithBorder.wordWorkWords
                                 tr
                                     td
                                         +field
@@ -121,9 +121,8 @@ html
             +field-bubble-attributesOnChild('Instructions').instructions
             .divider
             +fixedIcon(actIcon, 'writing.png')
-            +field-bubble-attributesOnChild('Instructions: Write the letters and words below in your exercise book').instructions
-            +field-bubble-attributesOnChild('Write this').activity.underlined
-            +field-attributesOnChild.activity
+            +field-bubble-attributesOnChild('Writing activity instructions').instructions
+            +field-bubble-attributesOnChild('Underlined text to write').activity.underlined
             .divider
             +fixedIcon(actIcon, 'know.png')
             +field-bubble-attributesOnChild('Title').title
@@ -145,7 +144,7 @@ html
                         +repeat(10)
                             td
                                 +field-placeholder-attributesOnChild('Q')
-            table.primerTableNoBorder
+            table.primerTableNoBorder.wordFindWords
                 +repeat(4)
                     tr
                         +repeat(4)

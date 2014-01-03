@@ -39,6 +39,10 @@
 {
 	font-size: 100%;
 }
+.primerTableWithBorder.wordWorkWords .bloom-editable
+{
+	font-size: 80%;
+}
 .A4Portrait .bloom-editable
 {
 	font-size: 200%;
@@ -408,10 +412,6 @@
 	/*[disabled]margin:6pt;*/
 	font-size: smaller;
 }
-.primerTableNoBorder TD
-{
-	font-size: 6.5pt;
-}
 .primerTableWithBorder
 {
 	width: auto;
@@ -436,11 +436,12 @@
 	table-layout: fixed;
 	width: 100%;
 }
-.primerTableWordFind TD
+.primerTableWordFind TD .bloom-editable
 {
 	border: 1pt solid #000000;
 	text-align: center;
-	padding: 6pt 3pt;
+	font-size: 110%;
+	padding: 4px 4px 4px 0px;
 }
 .primerTableWordFind
 {
@@ -448,7 +449,10 @@
 	width: 100%;
 	border-collapse: collapse;
 	margin-top: 1pc;
-	font-size: 8pt;
+}
+.wordFindWords TD .bloom-editable
+{
+	font-size: 100%;
 }
 .primerTableWords TD
 {
