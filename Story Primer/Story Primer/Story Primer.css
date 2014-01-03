@@ -159,7 +159,7 @@
 }
 .A5Portrait .icon
 {
-	border: 2pt solid #FFC0CB;
+	border: none;
 	float: left;
 	width: 3.5pc;
 	height: 3.5pc;
@@ -197,7 +197,7 @@
 {
 	line-height: 1.2em !important;
 	margin: 2pt 2pt 0 !important;
-	font-size: 50% !important;
+	font-size: smaller !important;
 	font-style: italic !important;
 	font-weight: normal !important;
 }
