@@ -268,18 +268,16 @@ html
                                             label.bubble.bloom-showOnlyWhenTargetHasFocus=focusSound
             +form-6cells
             +field.instructions
-                label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
+                label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions
             .divider
             +syllableTable
             div
                 +fixedIcon(actIcon, 'writing.png')
-                +field-bubble-attributesOnChild('Write the letters and words below in your exercise book').instructions
-                +field-bubble-attributesOnChild('Write this').underlined
-                +field-prototypeDeclaredExplicity
-                    +editable(kLanguageForPrototypeOnly).underlined
+                +field-bubble-attributesOnChild('Activity instructions').instructions
+                +field-bubble-attributesOnChild('Underlined text for writing activity').underlined
                 +fixedIcon(actIcon, 'know.png')
-                +field-bubble-attributesOnChild('Did you know?').sectionHead
-                +field-bubble-attributesOnChild('Write this').activity
+                +field-bubble-attributesOnChild('Activity title').sectionHead
+                +field-attributesOnChild.activity
 
         // Template page #18
         +page-choice('Glossary (3 language - 22 words per page)')#18a8decc-55b9-5013-a0de-6512441b3783

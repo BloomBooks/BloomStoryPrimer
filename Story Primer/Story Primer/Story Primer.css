@@ -31,6 +31,10 @@
 	margin-left: 2pt;
 	margin-right: 2pt;
 }
+.bloom-translationGroup.title .bloom-content1
+{
+	font-size: 150%;
+}
 .A5Portrait .bloom-editable
 {
 	font-size: 100%;
