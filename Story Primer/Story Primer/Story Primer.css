@@ -235,7 +235,7 @@
 .A5Portrait .lessonNumber
 {
 	font-size: 80% !important;
-	background: #FFC0CB;
+	/*[disabled]background:#FFC0CB;*/
 }
 .A4Portrait .lessonNumber
 {
