@@ -54,7 +54,7 @@ html
         +page-choice('Lesson, story and activity')#4298333c-45b9-4013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
-                    td.boxIcon
+                    td.boxLessonNumber
                         +field-placeholder-attributesOnChild("Lesson 99").lessonNumber
                         +fixedIcon('book icon', 'read.png')
                     td.boxLessonTitle
@@ -80,9 +80,9 @@ html
                                 td
                                     +field-bubble-attributesOnChild(focusSound).soundInFocus
             +field-bubble-attributesOnChild('Key sentence').sampleSentence
-            table.primerTableTitleLine
+            table
                 tr
-                    td
+                    td.primerTableKeyWordWork
                         table.primerTableWithBorder
                             tr
                                 td
