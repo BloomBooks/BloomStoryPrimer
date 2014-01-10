@@ -1,11 +1,5 @@
 /*Story Primer.CSS
-
-Override "width: 100%;" in basePage.css*/
-.bloom-editable, TD, TEXTAREA
-{
-	width: auto !important;
-}
-/* */
+ */
 .activity
 {
 	padding: 0 6pt !important;
@@ -24,18 +18,25 @@ Override "width: 100%;" in basePage.css*/
 }
 .blank
 {
-	width: 2pc;
+	min-width: 6px;
+	width: auto;
 }
-.bloom-editable
+/*Override "width: 100%;" in basePage.css*/
+TEXTAREA, DIV.bloom-editable
 {
 	overflow: visible !important;
 	margin-left: 2pt;
 	margin-right: 2pt;
+	width: auto !important;
 }
-.bloom-content1
+/*Reapply "width: 100%" to XMatter*/
+.bloom-frontMatter .bloom-editable
 {
-	margin-left: 2pt;
-	margin-right: 2pt;
+	width: 100% !important;
+}
+.bloom-backMatter .bloom-editable
+{
+	width: 100% !important;
 }
 .bloom-translationGroup.title .bloom-content1
 {
@@ -88,7 +89,7 @@ Override "width: 100%;" in basePage.css*/
 }
 .boxIcon
 {
-	width: 15%;
+	width: 15% !important;
 }
 .boxLessonNumber
 {
@@ -176,7 +177,7 @@ Override "width: 100%;" in basePage.css*/
 	width: 3.5pc;
 	height: 3.5pc;
 	z-index: 5;
-	margin: 2pt 3pt 0 2pt;
+	margin: 2px 3px 1px 2px;
 	padding: 0;
 }
 .A4Portrait .icon
@@ -186,7 +187,7 @@ Override "width: 100%;" in basePage.css*/
 	width: 5pc;
 	height: 5pc;
 	z-index: 5;
-	margin: 2pt 3pt 0 2pt;
+	margin: 2px 3px 1px 2px;
 	padding: 0;
 }
 /*.icons img{width: 100%; height: auto ; }
@@ -208,7 +209,7 @@ Override "width: 100%;" in basePage.css*/
 .A5Portrait .instructions
 {
 	line-height: 1.2em !important;
-	margin: 2pt 2pt 0 !important;
+	margin: 2px 2px 0 !important;
 	font-size: smaller !important;
 	font-style: italic !important;
 	font-weight: normal !important;
@@ -242,6 +243,7 @@ Override "width: 100%;" in basePage.css*/
 {
 	font-size: 80% !important;
 	/*[disabled]background:#FFC0CB;*/
+	min-width: 80px;
 }
 .A4Portrait .lessonNumber
 {
@@ -250,7 +252,7 @@ Override "width: 100%;" in basePage.css*/
 }
 .lessonTitle
 {
-	margin-left: 2pt;
+	/*[disabled]margin-left:2pt;*/
 	margin-top: 0px;
 	text-align: center;
 	font-weight: bold;
@@ -421,10 +423,10 @@ Override "width: 100%;" in basePage.css*/
 }
 .primerTableWithBorder
 {
-	width: auto;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin: 4pt;
+	/*[disabled]margin:4pt;*/
 	border: 1pt solid #000000;
 }
 .primerTableSplitJoin TD
@@ -581,7 +583,7 @@ Override "width: 100%;" in basePage.css*/
 }
 .story
 {
-	margin-left: 2pt;
+	/*[disabled]margin-left:2pt;*/
 	text-indent: 0;
 	/*indent using space bar -- new paragraph with Enter*/
 }
@@ -589,7 +591,7 @@ Override "width: 100%;" in basePage.css*/
 {
 	font-weight: bold;
 	text-align: center;
-	margin-left: 2pt;
+	/*[disabled]margin-left:2pt;*/
 	margin-right: 0;
 	font-size: 125%;
 }
@@ -612,11 +614,6 @@ Override "width: 100%;" in basePage.css*/
 }
 /*.boxContainer { overflow-x:hidden; overflow-y:hidden; height: 180mm; width: 109mm; border: black 1pt solid ; margin: 15mm 15mm 0cm 15mm; padding: 1pc 1pc ; z-index: 7; }
 div {line-height: 1.5em !important ; }*/
-DIV
-{
-	min-height: 1em;
-	min-width: 1em;
-}
 TABLE + TABLE TD
 {
 	padding: 2pt;
