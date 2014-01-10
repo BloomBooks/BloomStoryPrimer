@@ -11,7 +11,7 @@ doctype html
 - var wordWork = 'Word work title'
 - var actIcon = 'Activity icon'
 - var sounds = 'Sounds in our alphabet'
-- var focusSound = 'Sound in focus'
+- var focusSound = 'Qq'
 - var wordForLesson = 'Your word for lesson, followed by a number (or Lesson word and Lesson number)'
 - var wordForReview = "Your word for 'revise'/'review'"
 
@@ -78,7 +78,7 @@ html
                         table.sampleLetterRight
                             tr
                                 td
-                                    +field-bubble-attributesOnChild(focusSound).soundInFocus
+                                    +field-placeholder-attributesOnChild(focusSound).soundInFocus
                     td.blank
             +field-bubble-attributesOnChild('Key sentence').sampleSentence
             table.bloom-hideLanguageNameDisplay
@@ -95,7 +95,7 @@ html
                                                 +field-bubble-attributesOnChild('Key word')
                                         tr
                                             td
-                                                +field-bubble-attributesOnChild(focusSound)
+                                                +field-placeholder-attributesOnChild(focusSound)
                     td.blank
                     td
                         table.primerTableWithBorder
@@ -220,12 +220,13 @@ html
                             table
                                 tr
                                     td
-                                        +field
-                                            label.bubble.bloom-showOnlyWhenTargetHasFocus=wordForReview
+                                        div(data-book='reviewWord').bloom-translationGroup
+                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
+                                            +editable(kLanguageForPrototypeOnly)
                                 tr
                                     td
                                         +field
-                                            label.bubble.bloom-showOnlyWhenTargetHasFocus=focusSound
+                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
             +form-6cells
             +field.instructions
                 label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
@@ -246,6 +247,7 @@ html
                                     +repeat(3)
                                         td
                                             +field
+                                                label.placeholder='Q'
 
         // Template page #17
         +page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
@@ -260,12 +262,13 @@ html
                             table
                                 tr
                                     td
-                                        +field
-                                            label.bubble.bloom-showOnlyWhenTargetHasFocus=wordForReview
+                                        div(data-book='reviewWord').bloom-translationGroup
+                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
+                                            +editable(kLanguageForPrototypeOnly)
                                 tr
                                     td
                                         +field
-                                            label.bubble.bloom-showOnlyWhenTargetHasFocus=focusSound
+                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
             +form-6cells
             +field.instructions
                 label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions

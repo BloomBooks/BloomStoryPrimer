@@ -22,7 +22,7 @@
 	width: auto;
 }
 /*Override "width: 100%;" in basePage.css*/
-TEXTAREA, DIV.bloom-editable
+TEXTAREA, DIV.bloom-editable, TD
 {
 	overflow: visible !important;
 	margin-left: 2pt;
@@ -97,7 +97,7 @@ TEXTAREA, DIV.bloom-editable
 }
 .boxLessonTitle
 {
-	width: 60%;
+	width: 75% !important;
 }
 .boxNoBorder
 {
@@ -263,23 +263,9 @@ TEXTAREA, DIV.bloom-editable
 	text-align: center;
 	font-size: 150%;
 }
-.cover .marginBox
+.margin-box TABLE
 {
-	overflow-x: hidden;
-	overflow-y: hidden;
-	height: 180mm;
-	width: 109mm;
-	border: none;
-	z-index: 100000;
-}
-.marginBox
-{
-	overflow-x: hidden;
-	overflow-y: hidden;
-	height: 180mm;
-	width: 109mm;
-	border: 1pt solid #0000FF;
-	z-index: 100000;
+	max-width: 100% !important;
 }
 .pageNumber
 {
@@ -572,6 +558,7 @@ TEXTAREA, DIV.bloom-editable
 {
 	margin-left: auto;
 	margin-right: auto;
+	min-width: 20px;
 }
 .space
 {
@@ -605,6 +592,10 @@ TEXTAREA, DIV.bloom-editable
 	text-decoration: underline;
 	text-align: left;
 	margin-bottom: 0pt;
+}
+.wordGrid
+{
+	width: 100%;
 }
 .write
 {
@@ -705,4 +696,8 @@ DIV.A4Portrait DIV.margin-box:nth-of-type(2n):after
 	height: 300px !important;
 	width: 100%;
 	background: #FFA500 !important;
+}
+TD + TD.translation
+{
+	width: 100% !important;
 }

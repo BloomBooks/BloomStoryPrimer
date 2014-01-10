@@ -75,7 +75,7 @@ mixin alphabetChart(rows)
 //- Revision form; table with 6 cells
 mixin form-6cells
     - requireZeroArguments('form-6cells', arguments)
-    table.primerTableFixed
+    table.wordGrid
         tr
             td.top.left.right
                 +field
@@ -98,7 +98,7 @@ mixin form-6cells
 //- Generates a 6 x 3 table for words broken into syllables
 mixin syllableTable
     - requireZeroArguments('syllableTable', arguments)
-    table.primerTableFixed
+    table.wordGrid
         +repeat(3)
             tr
                 +repeat(2)
