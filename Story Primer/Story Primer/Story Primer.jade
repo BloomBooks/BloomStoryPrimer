@@ -54,7 +54,7 @@ html
         +page-choice('Lesson, story and activity')#4298333c-45b9-4013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
-                    td.boxLessonNumber
+                    td.boxLessonNumber.bloom-hideLanguageNameDisplay
                         +field-placeholder-attributesOnChild("Lesson 99").lessonNumber
                         +fixedIcon('book icon', 'read.png')
                     td.boxLessonTitle
@@ -80,7 +80,7 @@ html
                                 td
                                     +field-bubble-attributesOnChild(focusSound).soundInFocus
             +field-bubble-attributesOnChild('Key sentence').sampleSentence
-            table
+            table.bloom-hideLanguageNameDisplay
                 tr
                     td.primerTableKeyWordWork
                         table.primerTableWithBorder
@@ -104,7 +104,7 @@ html
                                         +field
                                     td
                                         +field
-            table.primerTableNoBorder
+            table.primerTableNoBorder.bloom-hideLanguageNameDisplay
                 tr
                     +repeat(5)
                         td
@@ -138,7 +138,7 @@ html
         // Template page #7
         +page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild('Instructions').instructions
-            table.primerTableWordFind
+            table.primerTableWordFind.bloom-hideLanguageNameDisplay
                 +repeat(10)
                     tr
                         +repeat(10)
