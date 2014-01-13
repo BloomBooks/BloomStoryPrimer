@@ -28,6 +28,7 @@ TEXTAREA, DIV.bloom-editable, TD
 	margin-left: 2pt;
 	margin-right: 2pt;
 	width: auto !important;
+	min-height: 1.2em;
 }
 /*Reapply "width: 100%" to XMatter*/
 .bloom-frontMatter .bloom-editable
@@ -252,6 +253,7 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	width: 10%;
 	vertical-align: top;
+	text-align: right;
 }
 .paraByImage
 {
