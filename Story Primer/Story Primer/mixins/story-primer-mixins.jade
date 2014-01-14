@@ -118,31 +118,3 @@ mixin syllableTable
                 td.bottom
                     +field.word
                         label.placeholder word
-
-//- Generate a Glossary for multiple languages 'numberOfLanguages'=columns and
-//- several words per page ('numberOfWordsOnPage')
-mixin glossary(numberOfLanguages, numberOfWordsOnPage)
-    - requireTwoArguments('glossary', arguments)
-    +field.title
-        label.bubble.bloom-showOnlyWhenTargetHasFocus *Glossary title
-    table.glossaryTableNoBorder
-        tr
-            - var loopCounter = 1
-            td
-                +field
-                    label.placeholder word1
-
-            +repeat(numberOfLanguages - 1)
-                - loopCounter++
-                td.blank
-                td
-                    +field
-                        label.placeholder='word' + loopCounter
-        +repeat(numberOfWordsOnPage - 1)
-            tr
-                td
-                    +field
-                +repeat(numberOfLanguages - 1)
-                    td.blank
-                    td
-                        +field
