@@ -1,11 +1,7 @@
-/*Story Primer.CSS
- */
+/* Story Primer.CSS */
 .activity
 {
 	padding: 0 6pt !important;
-}
-.alphabet
-{
 }
 .answer
 {
@@ -44,18 +40,9 @@ TEXTAREA, DIV.bloom-editable, TD
 	font-size: 140%;
 	margin-left: 0pt;
 }
-.A5Portrait .bloom-editable
-{
-	font-size: 100%;
-}
 .primerTableWithBorder.wordWorkWords .bloom-editable
 {
 	font-size: 80%;
-}
-.A4Portrait .bloom-editable
-{
-	font-size: 200%;
-	background: #FFFFFF;
 }
 .borders
 {
@@ -118,10 +105,6 @@ TEXTAREA, DIV.bloom-editable, TD
 	border-bottom: 1pt solid #000000 !important;
 	margin: 0 -1pc;
 }
-/*add space but no line with white*/
-.editYes
-{
-}
 .floatLeft
 {
 	/*was width: auto;*/
@@ -162,27 +145,6 @@ TEXTAREA, DIV.bloom-editable, TD
 	width: 100%;
 	height: auto;
 }
-.A5Portrait .icon
-{
-	border: none;
-	float: left;
-	clear: left;
-	width: 3.5pc;
-	height: 3.5pc;
-	/*z-index: 5;*/
-	margin: 2px 3px 1px 2px;
-	padding: 0;
-}
-.A4Portrait .icon
-{
-	border: 2pt solid #000000;
-	float: left;
-	width: 5pc;
-	height: 5pc;
-	z-index: 5;
-	margin: 2px 3px 1px 2px;
-	padding: 0;
-}
 .imageAdjustable
 {
 	vertical-align: top;
@@ -196,22 +158,6 @@ TEXTAREA, DIV.bloom-editable, TD
 	left: 0;
 	bottom: 0;
 }
-.A5Portrait .instructions
-{
-	line-height: 1.2em !important;
-	margin: 2px 2px 0 !important;
-	font-size: smaller !important;
-	font-style: italic !important;
-	font-weight: normal !important;
-}
-.A4Portrait .instructions
-{
-	line-height: 1.2em !important;
-	margin: 2pt 2pt 0 !important;
-	font-size: 90% !important;
-	font-style: italic !important;
-	font-weight: normal !important;
-}
 .keyWord
 {
 	clear: both;
@@ -221,17 +167,6 @@ TEXTAREA, DIV.bloom-editable, TD
 .left
 {
 	border-left: 1pt solid #000000;
-}
-.A5Portrait .lessonNumber
-{
-	font-size: 80% !important;
-	/*[disabled]background:#FFC0CB;*/
-	min-width: 80px;
-}
-.A4Portrait .lessonNumber
-{
-	font-size: 80% !important;
-	background: #FFFFFF !important;
 }
 .lessonTitle
 {
@@ -341,34 +276,6 @@ TEXTAREA, DIV.bloom-editable, TD
 .primerTableMatrixMedium IMG
 {
 	float: left;
-}
-.A5Portrait .letters4x3 .bloom-imageContainer.alphabet
-{
-	height: 149px;
-}
-.A5Portrait .letters5x3 .bloom-imageContainer.alphabet
-{
-	height: 118px;
-}
-.A5Portrait .letters6x3 .bloom-imageContainer.alphabet
-{
-	height: 97px;
-}
-.A5Portrait .letters7x3 .bloom-imageContainer.alphabet
-{
-	height: 82px;
-}
-.A5Portrait .letters8x3 .bloom-imageContainer.alphabet
-{
-	height: 71px;
-}
-.A5Portrait .letters9x3 .bloom-imageContainer.alphabet
-{
-	height: 62px;
-}
-.A5Portrait .bloom-imageContainer.alphabet
-{
-	width: 74px;
 }
 .primerTableMatrixMedium TD
 {
@@ -522,17 +429,6 @@ TEXTAREA, DIV.bloom-editable, TD
 	width: 20%;
 	border: 2pt solid #FF0000;
 }
-.A5Portrait .smallImageInTable
-{
-	max-width: 140px;
-	border: 2pt solid #FFA500;
-}
-.A4Portrait .smallImageInTable
-{
-	width: 5.7pc;
-	height: auto;
-	border: 2pt solid #008000;
-}
 .soundInFocus
 {
 	margin-left: auto;
@@ -647,26 +543,6 @@ TABLE.alphabet TD TD
 {
 	padding: 0pt !important;
 }
-.coverBottomBookTopic .bloom-editable, .coverBottomLangName .bloom-editable
-{
-	font-size: 100%;
-}
-DIV.A4Portrait DIV.margin-box:nth-of-type(2n+1):after
-{
-	bottom: 15pt !important;
-	content: counter(pageNumber, decimal);
-	text-align: center !important;
-	font-size: 100% !important;
-	background: #FFC0CB !important;
-}
-DIV.A4Portrait DIV.margin-box:nth-of-type(2n):after
-{
-	bottom: 15pt !important;
-	content: counter(pageNumber, decimal);
-	font-size: 100%;
-	text-align: center;
-	background: #00FF00 !important;
-}
 #originalAcknowledgments
 {
 	height: 300px !important;
@@ -677,9 +553,120 @@ TD + TD.translation
 {
 	width: 100% !important;
 }
-.glossaryTableNoBorder
+
+/* Layout-size specific rules */
+/* A4Portrait */
+.A4Portrait .bloom-editable
 {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+    font-size: 200%;
+    background: #FFFFFF;
+}
+.A4Portrait .icon
+{
+    border: 2pt solid #000000;
+    float: left;
+    width: 5pc;
+    height: 5pc;
+    z-index: 5;
+    margin: 2px 3px 1px 2px;
+    padding: 0;
+}
+.A4Portrait .instructions
+{
+    line-height: 1.2em !important;
+    margin: 2pt 2pt 0 !important;
+    font-size: 90% !important;
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+.A4Portrait .lessonNumber
+{
+    font-size: 80% !important;
+    background: #FFFFFF !important;
+}
+.A4Portrait .smallImageInTable
+{
+    width: 5.7pc;
+    height: auto;
+    border: 2pt solid #008000;
+}
+DIV.A4Portrait DIV.margin-box:nth-of-type(2n+1):after
+{
+    bottom: 15pt !important;
+    content: counter(pageNumber, decimal);
+    text-align: center !important;
+    font-size: 100% !important;
+    background: #FFC0CB !important;
+}
+DIV.A4Portrait DIV.margin-box:nth-of-type(2n):after
+{
+    bottom: 15pt !important;
+    content: counter(pageNumber, decimal);
+    font-size: 100%;
+    text-align: center;
+    background: #00FF00 !important;
+}
+
+/* A5Portrait */
+.A5Portrait .bloom-editable
+{
+    font-size: 100%;
+}
+.A5Portrait .icon
+{
+    border: none;
+    float: left;
+    clear: left;
+    width: 3.5pc;
+    height: 3.5pc;
+    /*z-index: 5;*/
+    margin: 2px 3px 1px 2px;
+    padding: 0;
+}
+.A5Portrait .instructions
+{
+    line-height: 1.2em !important;
+    margin: 2px 2px 0 !important;
+    font-size: smaller !important;
+    font-style: italic !important;
+    font-weight: normal !important;
+}
+.A5Portrait .lessonNumber
+{
+    font-size: 80% !important;
+    /*[disabled]background:#FFC0CB;*/
+    min-width: 80px;
+}
+.A5Portrait .letters4x3 .bloom-imageContainer.alphabet
+{
+    height: 149px;
+}
+.A5Portrait .letters5x3 .bloom-imageContainer.alphabet
+{
+    height: 118px;
+}
+.A5Portrait .letters6x3 .bloom-imageContainer.alphabet
+{
+    height: 97px;
+}
+.A5Portrait .letters7x3 .bloom-imageContainer.alphabet
+{
+    height: 82px;
+}
+.A5Portrait .letters8x3 .bloom-imageContainer.alphabet
+{
+    height: 71px;
+}
+.A5Portrait .letters9x3 .bloom-imageContainer.alphabet
+{
+    height: 62px;
+}
+.A5Portrait .bloom-imageContainer.alphabet
+{
+    width: 74px;
+}
+.A5Portrait .smallImageInTable
+{
+    max-width: 140px;
+    border: 2pt solid #FFA500;
 }
