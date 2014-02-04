@@ -12,8 +12,6 @@ doctype html
 - var actIcon = 'Activity icon'
 - var sounds = 'Sounds in our alphabet'
 - var focusSound = 'Qq'
-- var wordForLesson = 'Your word for lesson, followed by a number (or Lesson word and Lesson number)'
-- var wordForReview = "Your word for 'revise'/'review'"
 
 html
     head
@@ -51,7 +49,7 @@ html
             +field-attributesOnChild.story
 
         // Template page #4
-        +page-choice('Lesson, story and activity')#4298333c-45b9-4013-a0de-6512441b3783
+        +page-choice('Lesson - story page')#4298333c-45b9-4013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxLessonNumber.bloom-hideLanguageNameDisplay
@@ -67,7 +65,7 @@ html
             +field-attributesOnChild.activity
 
         // Template page #5
-        +page-choice('Word work and writing')#6698decc-55b9-5013-a0de-6512441b3783
+        +page-choice('Lesson - word work page')#6698decc-55b9-5013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxIcon
@@ -153,42 +151,30 @@ html
                                 +field-placeholder-attributesOnChild('Word')
 
         // Template page #8
-        +page-choice('Alphabet chart (4x3)')#1298decc-55b9-5013-a0de-1212441b34a3
-            +field-bubble-attributesOnChild(sounds).title
-            table.primerTableMatrixMedium.letters4x3
-                +alphabetChart(4)
-
-        // Template page #9
-        +page-choice('Alphabet chart (5x3)')#1298decc-55b9-5013-a0de-1512441b35a3
-            +field-bubble-attributesOnChild(sounds).title
-            table.primerTableMatrixMedium.letters5x3
-                +alphabetChart(5)
-
-        // Template page #10
         +page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters6x3
                 +alphabetChart(6)
 
-        // Template page #11
+        // Template page #9
         +page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters7x3
                 +alphabetChart(7)
 
-        // Template page #12
+        // Template page #10
         +page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters8x3
                 +alphabetChart(8)
 
-        // Template page #13
+        // Template page #11
         +page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters9x3
                 +alphabetChart(9)
 
-        // Template page #14
+        // Template page #12
         +page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
             +fixedIcon(actIcon, 'discussion.png')
             +field
@@ -196,7 +182,7 @@ html
             +fixedIcon(actIcon, 'know.png')
             +field
 
-        // Template page #15
+        // Template page #13
         +page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
             +fixedIcon(actIcon, 'discussion.png')
             +field
@@ -207,7 +193,7 @@ html
             +fixedIcon(actIcon, 'perform.png')
             +field
 
-        // Template page #16
+        // Template page #14
         +page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
             table.primerTableTitleLine
                 tr
@@ -249,7 +235,7 @@ html
                                             +field
                                                 label.placeholder='Q'
 
-        // Template page #17
+        // Template page #15
         +page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
             table.primerTableTitleLine
                 tr
@@ -282,44 +268,11 @@ html
                 +field-bubble-attributesOnChild('Activity title').sectionHead
                 +field-attributesOnChild.activity
 
-        // Template page #18
-        +page-choice('Translation of text by page number with Title')#10a8decc-55b9-4013-a0de-6512441b3783(data-pagelineage='7e215937-a062-41af-a91d-6f8f7938be03')
-            +field.mainTitle
-                label.bubble.bloom-showOnlyWhenTargetHasFocus Title of the text
-            table
-                +repeat(7)
-                    tr.translation
-                        td.pageNumber
-                            +field
-                                label.placeholder 99
-                        td.translation
-                            +field
-                                label.bubble.bloom-showOnlyWhenTargetHasFocus Translation
-                tr.translation
-                    td.pageNumber
-                        +field
-                            label.placeholder 99
-                    td.translation
-                        +field
-                            label.bubble.bloom-showOnlyWhenTargetHasFocus Use as many rows as you need. What you don't want, just leave blank. If you need more rows, add another page.
-
-        // Template page #19
-        +page-choice('Translation of text by page number')#11a8decc-55b9-4013-a0de-6512441b3783(data-pagelineage='7e215937-a062-41af-a91d-6f8f7938be03')
-            table
-                +repeat(8)
-                    tr.translation
-                        td.pageNumber
-                            +field
-                                label.placeholder 99
-                        td.translation
-                            +field
-                                label.bubble.bloom-showOnlyWhenTargetHasFocus Translation
-
-        // Template page #20
+        // Template page #16
         +page-choice('Freeform Text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
             +field
 
-        // Template page #21
+        // Template page #17
         +page-choice('Image and freeform Text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
             +image.bloom-resizable
             +field
