@@ -34,6 +34,10 @@ TEXTAREA, DIV.bloom-editable, TD
 	font-size: 140%;
 	margin-left: 0pt;
 }
+.bottom
+{
+	border-bottom: 1pt solid #000000;
+}
 .primerTableWithBorder.wordWorkWords .bloom-editable
 {
 	font-size: 80%;
@@ -61,6 +65,13 @@ TEXTAREA, DIV.bloom-editable, TD
 	border-bottom: 1pt solid #000000 !important;
 	margin: 0 -1pc;
 }
+.floatRight
+{
+	width: 50%;
+	/*was width: auto;*/
+	height: auto;
+	float: right;
+}
 .icon IMG
 {
 	width: 100%;
@@ -70,6 +81,10 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	vertical-align: top;
 	width: 50%;
+}
+.left
+{
+	border-left: 1pt solid #000000;
 }
 .lessonTitle
 {
