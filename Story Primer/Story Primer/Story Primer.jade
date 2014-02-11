@@ -12,7 +12,7 @@ doctype html
 - var story = 'Story title'
 - var actIcon = 'Activity icon'
 - var sounds = 'Sounds in our alphabet'
-- var focusSound = 'Qq'
+- var focusSound = 'Q q'
 - var singleSound = 'q'
 
 html
@@ -66,7 +66,7 @@ html
             +field-attributesOnChild.activity
 
         // Template page #5
-        +page-choice('Lesson - word work page')#db4b61d5-d232-437c-8290-9829b9be67cf
+        +page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
             .bloom-hideLanguageNameDisplay.primerTableWithBorder
                 .sampleLetter
                     +field-placeholder-attributesOnChild(focusSound).soundInFocus
@@ -96,12 +96,11 @@ html
                                             +field
                 .primerTableKeyWordWork
                     +repeat(5)
-                        td
-                            table.primerTableWithBorder.wordWorkWords
-                                +repeat(3)
-                                    tr
-                                        td
-                                            +field
+                        table.primerTableWithBorder.wordWorkWords
+                            +repeat(3)
+                                tr
+                                    td
+                                        +field
             +field-bubble-attributesOnChild('Instructions').instructions
             .divider
             +fixedIcon(actIcon, 'writing.png')
