@@ -4,12 +4,10 @@ STARTLAYOUTS
 {"layouts":     ["A5Portrait", "A4Portrait"]  }
 ENDLAYOUTS
 */
-
 .activity
 {
 	padding: 0 6pt !important;
 }
-
 /*Override "width: 100%;" in basePage.css*/
 TEXTAREA, DIV.bloom-editable, TD
 {
@@ -28,7 +26,6 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	width: 100% !important;
 }
-
 /*generic border layout stuff*/
 .bottom
 {
@@ -51,8 +48,7 @@ TEXTAREA, DIV.bloom-editable, TD
 	min-width: 6px;
 	width: auto;
 }
-
-/* Regular content */
+/*Regular content*/
 .bloom-translationGroup.title .bloom-content1
 {
 	font-size: 140%;
@@ -223,7 +219,7 @@ TEXTAREA, DIV.bloom-editable, TD
 }
 .wordBox TD
 {
-	min-width: 25px;
+	min-width: 5em;
 }
 .rightImage
 {
@@ -234,13 +230,17 @@ TEXTAREA, DIV.bloom-editable, TD
 .sampleLetter
 {
 	margin-left: 2pt;
+	font-weight: bold;
+	max-width: 20%;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 .sampleLetterLeft
 {
-	z-index: 5;
+	z-index:5;
 	font-weight: bold;
 	padding: 6pt 11pt;
-	border: 1pt solid #000000;
+	border:1pt solid #000000;
 }
 .sampleLetterRight
 {
@@ -253,7 +253,7 @@ TEXTAREA, DIV.bloom-editable, TD
 }
 .sampleSentence
 {
-	font-size: 150% !important;
+	/*[disabled]font-size:150%;*/
 	clear: both;
 	margin-left: 2pt;
 	text-indent: 0;
@@ -402,6 +402,7 @@ A4Portrait*/
 .A5Portrait .bloom-editable
 {
 	font-size: 100%;
+	padding: 0;
 }
 .A5Portrait .icon
 {

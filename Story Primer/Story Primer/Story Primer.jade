@@ -13,6 +13,7 @@ doctype html
 - var actIcon = 'Activity icon'
 - var sounds = 'Sounds in our alphabet'
 - var focusSound = 'Qq'
+- var singleSound = 'q'
 
 html
     head
@@ -65,58 +66,42 @@ html
             +field-attributesOnChild.activity
 
         // Template page #5
-        +page-choice('Lesson - word work page')#6698decc-55b9-5013-a0de-6512441b3783
-            table.primerTableTitleLine
-                tr
-                    td.boxIcon
-                        +fixedIcon(actIcon, 'word.png')
-                    td.boxLessonTitle
-                        +field-bubble-attributesOnChild(wordWork).lessonTitle
-                    td
-                        table.sampleLetterRight
+        +page-choice('Lesson - word work page')#db4b61d5-d232-437c-8290-9829b9be67cf
+            .bloom-hideLanguageNameDisplay.primerTableWithBorder
+                .sampleLetter
+                    +field-placeholder-attributesOnChild(focusSound).soundInFocus
+                    +field-bubble-attributesOnChild('Key sentence').sampleSentence
+                .primerTableKeyWordWork
+                    .primerTableWithBorder
+                        +image.bloom-resizable.smallImageInTable
+                        table
                             tr
                                 td
-                                    +field-placeholder-attributesOnChild(focusSound).soundInFocus
-                    td.blank
-            +field-bubble-attributesOnChild('Key sentence').sampleSentence
-            table.bloom-hideLanguageNameDisplay.primerTableNoBorder
-                tr
-                    td.primerTableKeyWordWork
-                        table.primerTableWithBorder
+                                    +field-bubble-attributesOnChild('Key word')
                             tr
                                 td
-                                    +image.bloom-resizable.smallImageInTable
-                                td
-                                    table
-                                        tr
-                                            td
-                                                +field-bubble-attributesOnChild('Key word')
-                                        tr
-                                            td
-                                                +field-placeholder-attributesOnChild(focusSound)
-                    td.blank
-                    td
-                        table.primerTableWithBorder.wordBox
-                            +repeat(2)
-                                tr
-                                    td.right
-                                        +field
-                                    td
-                                        +field
-            table.primerTableNoBorder.bloom-hideLanguageNameDisplay
-                tr
+                                    +field-placeholder-attributesOnChild(singleSound)
+                    table.primerTableNoBorder
+                        tr
+                            td(colspan='2')
+                                +field.instructions
+                                    label.bubble instructions
+                        tr
+                            table.primerTableNoBorder.wordBox
+                                +repeat(3)
+                                    tr
+                                        td
+                                            +field
+                                        td
+                                            +field
+                .primerTableKeyWordWork
                     +repeat(5)
                         td
                             table.primerTableWithBorder.wordWorkWords
-                                tr
-                                    td
-                                        +field
-                                tr
-                                    td
-                                        +field
-                                tr
-                                    td
-                                        +field
+                                +repeat(3)
+                                    tr
+                                        td
+                                            +field
             +field-bubble-attributesOnChild('Instructions').instructions
             .divider
             +fixedIcon(actIcon, 'writing.png')
