@@ -76,8 +76,8 @@ html
                             +field-bubble-attributesOnChild('Key sentence').sampleSentence
                 table.primerTableKeyWordWork
                     tr
-                        td
-                            table.primerTableWithBorder
+                        td.keyWordBox
+                            table
                                 tr
                                     td
                                         +image.bloom-resizable.smallImageInTable
@@ -89,20 +89,21 @@ html
                                             tr
                                                 td
                                                     +field-placeholder-attributesOnChild(singleSound)
-                        td
-                            table.primerTableNoBorder
+                        td.keyWordsRight
+                            table.fullWidthTable
                                 tr
                                     td(colspan='2')
                                         +field.instructions
                                             label.bubble instructions
                                 tr
-                                    table.primerTableNoBorder.wordBox
-                                        +repeat(3)
-                                            tr
-                                                td
-                                                    +field
-                                                td
-                                                    +field
+                                    td
+                                        table.primerTableNoBorder.wordBox
+                                            +repeat(3)
+                                                tr
+                                                    td
+                                                        +field
+                                                    td
+                                                        +field
                 table.wordWorkTable
                     tr
                         +repeat(5)

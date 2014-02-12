@@ -1,7 +1,7 @@
 /*Story Primer.CSS
 These tell Bloom what choices to give the use as far as Page, Orientation, & Layout options:
 STARTLAYOUTS
-{"layouts":     ["A5Portrait", "A4Portrait"]  }
+{"layouts":     ["A4Portrait"]  }
 ENDLAYOUTS
 */
 .activity
@@ -52,7 +52,7 @@ TEXTAREA, DIV.bloom-editable, TD
 /*Regular content*/
 .bloom-translationGroup.title .bloom-content1
 {
-	font-size: 140%;
+	font-size: large;
 	margin-left: 0pt;
 }
 .primerTableWithBorder.wordWorkWords .bloom-editable
@@ -88,6 +88,11 @@ TEXTAREA, DIV.bloom-editable, TD
 	height: auto;
 	float: right;
 }
+.fullWidthTable
+{
+	table-layout: fixed;
+	/*[disabled]width:100%;*/
+}
 .icon
 {
 	border: none;
@@ -110,9 +115,19 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	line-height: 1.2em !important;
 	margin: 2pt 2pt 0 !important;
-	font-size: small !important;
+	font-size: 50% !important;
 	font-style: italic !important;
 	font-weight: normal !important;
+}
+.keyWordBox
+{
+	width: 40%;
+    border: 1pt solid #000000;
+}
+.keyWordsRight
+{
+	width: 62% !important;
+	display: table-cell;
 }
 .keyWordTable
 {
@@ -134,7 +149,7 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	font-weight: bold;
 	text-align: center;
-	font-size: 150%;
+	font-size: large;
 }
 .margin-box TABLE
 {
@@ -182,10 +197,10 @@ TEXTAREA, DIV.bloom-editable, TD
 }
 .primerTableNoBorder
 {
-	width: 100%;
+	/*[disabled]width:100%;*/
 	margin-left: auto;
 	margin-right: auto;
-	font-size: smaller;
+	/*[disabled]font-size:smaller;*/
 }
 .primerTableWithBorder
 {
@@ -197,10 +212,6 @@ TEXTAREA, DIV.bloom-editable, TD
 .primerTableTitleLine
 {
 	width: 100%;
-}
-.primerTableKeyWordWork
-{
-	width: 40% !important;
 }
 .primerTableWordFind TD .bloom-editable
 {
@@ -226,6 +237,7 @@ TEXTAREA, DIV.bloom-editable, TD
 .wordBox TD
 {
 	min-width: 5em;
+	font-size: 70%;
 }
 .rightImage
 {
@@ -238,6 +250,7 @@ TEXTAREA, DIV.bloom-editable, TD
 	max-width: 20%;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
+	font-size: large;
 }
 .sampleLetterLeft
 {
@@ -263,6 +276,7 @@ TEXTAREA, DIV.bloom-editable, TD
 	/*[disabled]margin-top:1.1pt;*/
 	text-align: left;
 	min-width: 10em;
+	font-size: 93% !important;
 }
 .sectionHead
 {
@@ -303,7 +317,7 @@ TEXTAREA, DIV.bloom-editable, TD
 	font-weight: bold;
 	text-align: center;
 	margin-right: 0;
-	font-size: 125%;
+	font-size: large;
 }
 .underlined
 {
@@ -357,20 +371,20 @@ TABLE.alphabet TD
 {
 	border: none;
 	margin: auto;
-	font-size: 20pt;
+    /*[disabled]font-size: 20pt;*/
 }
 TABLE.alphabet DIV.alphabet
 {
-	border: none;
-	margin: 0;
+border: none;
+margin: 0;
 }
 TABLE.alphabet TD TD
 {
-	padding: 0 !important;
+padding: 0 !important;
 }
 /*Layout-size specific rules
 A4Portrait*/
-BODY .A4Portrait .bloom-editable
+.A4Portrait .bloom-editable
 {
 	font-size: 190%;
 	/*[disabled]background:#FFFFFF;*/
@@ -386,7 +400,7 @@ BODY .A4Portrait .bloom-editable
 }
 .A4Portrait .smallImageInTable
 {
-	max-width: 200px;
+	max-width: 150px;
 	border: 2pt solid #008000;
 }
 .A4Portrait .letters6x3 .bloom-imageContainer.alphabet
