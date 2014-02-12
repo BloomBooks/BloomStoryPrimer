@@ -68,39 +68,50 @@ html
         // Template page #5
         +page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
             .bloom-hideLanguageNameDisplay.primerTableWithBorder
-                .sampleLetter
-                    +field-placeholder-attributesOnChild(focusSound).soundInFocus
-                    +field-bubble-attributesOnChild('Key sentence').sampleSentence
-                .primerTableKeyWordWork
-                    .primerTableWithBorder
-                        +image.bloom-resizable.smallImageInTable
-                        table
-                            tr
-                                td
-                                    +field-bubble-attributesOnChild('Key word')
-                            tr
-                                td
-                                    +field-placeholder-attributesOnChild(singleSound)
-                    table.primerTableNoBorder
-                        tr
-                            td(colspan='2')
-                                +field.instructions
-                                    label.bubble instructions
-                        tr
-                            table.primerTableNoBorder.wordBox
-                                +repeat(3)
-                                    tr
-                                        td
-                                            +field
-                                        td
-                                            +field
-                .primerTableKeyWordWork
-                    +repeat(5)
-                        table.primerTableWithBorder.wordWorkWords
-                            +repeat(3)
+                table
+                    tr
+                        td.sampleLetter
+                            +field-placeholder-attributesOnChild(focusSound).soundInFocus
+                        td
+                            +field-bubble-attributesOnChild('Key sentence').sampleSentence
+                table.primerTableKeyWordWork
+                    tr
+                        td
+                            table.primerTableWithBorder
                                 tr
                                     td
-                                        +field
+                                        +image.bloom-resizable.smallImageInTable
+                                    td
+                                        table.keyWordTable
+                                            tr
+                                                td
+                                                    +field-bubble-attributesOnChild('Key word')
+                                            tr
+                                                td
+                                                    +field-placeholder-attributesOnChild(singleSound)
+                        td
+                            table.primerTableNoBorder
+                                tr
+                                    td(colspan='2')
+                                        +field.instructions
+                                            label.bubble instructions
+                                tr
+                                    table.primerTableNoBorder.wordBox
+                                        +repeat(3)
+                                            tr
+                                                td
+                                                    +field
+                                                td
+                                                    +field
+                table.wordWorkTable
+                    tr
+                        +repeat(5)
+                            td
+                                table.primerTableWithBorder.wordWorkWords
+                                    +repeat(3)
+                                        tr
+                                            td
+                                                +field
             +field-bubble-attributesOnChild('Instructions').instructions
             .divider
             +fixedIcon(actIcon, 'writing.png')
