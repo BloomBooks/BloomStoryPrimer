@@ -155,6 +155,10 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	max-width: 100% !important;
 }
+.padded
+{
+    padding: 1.5em;
+}
 .pageNumber
 {
 	width: 10%;
