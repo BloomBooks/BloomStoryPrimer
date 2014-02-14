@@ -4,11 +4,14 @@ STARTLAYOUTS
 {"layouts":     ["A4Portrait"]  }
 ENDLAYOUTS
 */
-.activity
+*
 {
-	padding: 0 6pt !important;
+	/*this is overriding the basepage.css version; so any further font-size adjustment must
+be higher precedence and marked important!*/
+	font-size: 20pt !important;
 }
-/*Override "width: 100%;" in basePage.css*/
+/*Override "width: 100%;" in basePage.css. This means that further adjustment of width will have
+to be both higher precedence selector than these AND marked important!*/
 TEXTAREA, DIV.bloom-editable, TD
 {
 	font-family: Andika, sans-serif !important;
@@ -47,33 +50,40 @@ TEXTAREA, DIV.bloom-editable, TD
 .blank
 {
 	min-width: 6px;
-	width: auto;
 }
 /*Regular content*/
+.activity
+{
+	padding: 0 6pt !important;
+}
 .bloom-translationGroup.title .bloom-content1
 {
-	font-size: large;
+	font-size: large !important;
 	margin-left: 0pt;
 }
 .primerTableWithBorder.wordWorkWords .bloom-editable
 {
-	font-size: 80%;
+	font-size: 80% !important;
 }
-.boxBlankMatchingIconBook
+.box
 {
-	width: 10%;
+	border: 1pt solid #000000;
 }
-.boxIcon
+TD.boxBlankMatchingIconBook
+{
+	width: 10% !important;
+}
+TD.boxIcon
 {
 	width: 15% !important;
 }
-.boxLessonTitle
+TD.boxLessonTitle
 {
 	width: 75% !important;
 }
-.boxSampleLetterRight
+TD.boxSampleLetterRight
 {
-	width: 20%;
+	width: 20% !important;
 	padding-top: 1pc;
 	text-align: center;
 }
@@ -81,12 +91,6 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	border-bottom: 1pt solid #000000 !important;
 	margin: 0 -1pc;
-}
-.floatRight
-{
-	width: 50%;
-	height: auto;
-	float: right;
 }
 .fullWidthTable
 {
@@ -103,13 +107,15 @@ TEXTAREA, DIV.bloom-editable, TD
 }
 .icon IMG
 {
-	width: 100%;
+	/*width: 100% !important;*/
 	height: auto;
 }
-.imageAdjustable
+.imageAdjustable.floatRight
 {
+	width: 50% !important;
+	height: auto;
+	float: right;
 	vertical-align: top;
-	width: 50%;
 }
 .instructions
 {
@@ -119,22 +125,21 @@ TEXTAREA, DIV.bloom-editable, TD
 	font-style: italic !important;
 	font-weight: normal !important;
 }
-.keyWordBox
+TD.keyWordBox
 {
-	width: 40%;
-    border: 1pt solid #000000;
+	width: 40% !important;
 }
-.keyWordsRight
+TD.keyWordsRight
 {
 	width: 62% !important;
 	display: table-cell;
 }
-.keyWordTable
+TABLE.keyWordTable
 {
-	font-size: 60%;
+	/*[disabled]font-size:90%;*/
 	min-width: 3em;
 }
-.lessonNumber
+TD > .lessonNumber
 {
 	font-size: 80% !important;
 	min-width: 80px;
@@ -157,18 +162,18 @@ TEXTAREA, DIV.bloom-editable, TD
 }
 .padded
 {
-    padding: 1.5em;
+	padding: 1.5em;
 }
-.pageNumber
+/*.pageNumber
 {
-	width: 10%;
-	vertical-align: top;
-	text-align: right;
-}
-.primerTableFixed
+width: 10%;
+vertical-align: top;
+text-align: right;
+}*/
+TABLE.primerTableFixed
 {
 	table-layout: fixed;
-	width: 100%;
+	width: 100% !important;
 }
 .primerTableMatrix TD
 {
@@ -176,10 +181,10 @@ TEXTAREA, DIV.bloom-editable, TD
 	text-align: center;
 	padding: 6pt 3pt;
 }
-.primerTableMatrix
+TABLE.primerTableMatrix
 {
 	table-layout: fixed;
-	width: 100%;
+	width: 100% !important;
 	border-collapse: collapse;
 	margin-top: 0;
 }
@@ -192,56 +197,46 @@ TEXTAREA, DIV.bloom-editable, TD
 	border: 1pt solid #000000;
 	text-align: center;
 }
-.primerTableMatrixMedium
+TABLE.primerTableMatrixMedium
 {
 	table-layout: fixed;
-	width: 100%;
+	width: 100% !important;
 	border-collapse: collapse;
 	margin-top: 1pt;
 }
-.primerTableNoBorder
+TABLE.primerTableNoBorder
 {
 	/*[disabled]width:100%;*/
 	margin-left: auto;
 	margin-right: auto;
 	/*[disabled]font-size:smaller;*/
 }
-.primerTableWithBorder
+/*.primerTableWithBorder
 {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	border: 1pt solid #000000;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+border: 1pt solid #000000;
 }
 .primerTableTitleLine
 {
-	width: 100%;
-}
+width: 100%;
+}*/
 .primerTableWordFind TD .bloom-editable
 {
 	border: 1pt solid #000000;
 	text-align: center;
-	/*[disabled]font-size:110%;*/
 	padding: 4px 4px 4px 0;
 	margin-left: 0;
 	margin-right: 0;
 }
-.primerTableWordFind
+TABLE.primerTableWordFind
 {
 	border: 1pt solid #000000;
 	table-layout: fixed;
-	width: 100%;
+	width: 100% !important;
 	border-collapse: collapse;
 	margin-top: 12pt;
-}
-.wordFindWords TD .bloom-editable
-{
-	font-size: 100%;
-}
-.wordBox TD
-{
-	min-width: 5em;
-	font-size: 70%;
 }
 .rightImage
 {
@@ -249,12 +244,11 @@ TEXTAREA, DIV.bloom-editable, TD
 	height: auto;
 	padding-left: 6pt;
 }
-.sampleLetter
+TD.sampleLetter
 {
 	max-width: 20%;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
-	font-size: large;
 }
 .sampleLetterLeft
 {
@@ -272,15 +266,15 @@ TEXTAREA, DIV.bloom-editable, TD
 	padding-left: 6pt;
 	padding-right: 6pt;
 }
-.sampleSentence
+TD .sampleSentence
 {
-	clear: both;
 	margin-left: 2pt;
 	text-indent: 0;
-	/*[disabled]margin-top:1.1pt;*/
 	text-align: left;
-	min-width: 10em;
 	font-size: 93% !important;
+	min-width: 71% !important;
+	display: block;
+	width: 70% !important;
 }
 .sectionHead
 {
@@ -294,19 +288,18 @@ TEXTAREA, DIV.bloom-editable, TD
 	text-align: left;
 	text-indent: 24pt;
 }
-.smallImage
-{
-	width: 20%;
-	border: 2pt solid #FF0000;
-}
 .soundInFocus
 {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 18px;
+	/*[disabled]margin-top:18px;*/
 	margin-bottom: 18px;
 	min-width: 2em;
 	font-weight: bold;
+}
+.sampleLetter .soundInFocus
+{
+	font-size: 130% !important;
 }
 .space
 {
@@ -316,12 +309,12 @@ TEXTAREA, DIV.bloom-editable, TD
 {
 	text-indent: 0;
 }
-.title
+.bloom-editable.title
 {
 	font-weight: bold;
 	text-align: center;
 	margin-right: 0;
-	font-size: large;
+	font-size: large !important;
 }
 .underlined
 {
@@ -330,13 +323,23 @@ TEXTAREA, DIV.bloom-editable, TD
 	text-align: left;
 	margin-bottom: 0;
 }
-.wordGrid
+.wordBox TD
 {
-	width: 100%;
+	min-width: 5em;
+	font-size: 70% !important;
+	padding-left: 1em;
 }
-.wordWorkTable
+.wordFindWords TD .bloom-editable
 {
-	width: 100%;
+	font-size: 100% !important;
+}
+TABLE.wordGrid
+{
+	width: 100% !important;
+}
+TABLE.wordWorkTable
+{
+	width: 100% !important;
 }
 TABLE + TABLE TD
 {
@@ -375,27 +378,22 @@ TABLE.alphabet TD
 {
 	border: none;
 	margin: auto;
-    /*[disabled]font-size: 20pt;*/
+	/*[disabled]font-size:20pt;*/
 }
 TABLE.alphabet DIV.alphabet
 {
-border: none;
-margin: 0;
+	border: none;
+	margin: 0;
 }
 TABLE.alphabet TD TD
 {
-padding: 0 !important;
+	padding: 0 !important;
 }
 /*Layout-size specific rules
 A4Portrait*/
-.A4Portrait .bloom-editable
-{
-	font-size: 190%;
-	/*[disabled]background:#FFFFFF;*/
-}
 .A4Portrait .icon
 {
-	width: 60pt;
+	width: 60pt !important;
 	height: 60pt;
 }
 .A4Portrait .lessonNumber
@@ -405,7 +403,7 @@ A4Portrait*/
 .A4Portrait .smallImageInTable
 {
 	max-width: 150px;
-	border: 2pt solid #008000;
+	/*[disabled]border:2pt solid #008000;*/
 }
 .A4Portrait .letters6x3 .bloom-imageContainer.alphabet
 {
@@ -430,12 +428,12 @@ A4Portrait*/
 /*A5Portrait*/
 .A5Portrait .bloom-editable
 {
-	font-size: 100%;
+	font-size: 100% !important;
 	padding: 0;
 }
 .A5Portrait .icon
 {
-	width: 42pt;
+	width: 42pt !important;
 	height: 42pt;
 }
 .A5Portrait .lessonNumber
@@ -460,10 +458,14 @@ A4Portrait*/
 }
 .A5Portrait .bloom-imageContainer.alphabet
 {
-	width: 74px;
+	width: 74px !important;
 }
 .A5Portrait .smallImageInTable
 {
 	max-width: 100px;
 	border: 2pt solid #008000;
+}
+.sampleLetter .soundInFocus
+{
+	font-size: 130% !important;
 }

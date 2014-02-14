@@ -67,7 +67,7 @@ html
 
         // Template page #5
         +page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
-            .bloom-hideLanguageNameDisplay.primerTableWithBorder.padded
+            .bloom-hideLanguageNameDisplay.padded.box
                 table
                     tr
                         td.sampleLetter
@@ -76,7 +76,7 @@ html
                             +field-bubble-attributesOnChild('Key sentence').sampleSentence
                 table.primerTableKeyWordWork
                     tr
-                        td.keyWordBox
+                        td.keyWordBox.box
                             table
                                 tr
                                     td
@@ -90,14 +90,14 @@ html
                                                 td
                                                     +field-placeholder-attributesOnChild(singleSound)
                         td.keyWordsRight
-                            table.fullWidthTable
-                                tr
-                                    td(colspan='2')
-                                        +field.instructions
-                                            label.bubble instructions
+                            table.primerTableFixed
                                 tr
                                     td
-                                        table.primerTableNoBorder.wordBox
+                                        +field.instructions
+                                            label.bubble Instructions
+                                tr
+                                    td
+                                        table.primerTableFixed.wordBox
                                             +repeat(3)
                                                 tr
                                                     td
@@ -108,7 +108,7 @@ html
                     tr
                         +repeat(5)
                             td
-                                table.primerTableWithBorder.wordWorkWords
+                                table.primerTableFixed.box.wordWorkWords
                                     +repeat(3)
                                         tr
                                             td
