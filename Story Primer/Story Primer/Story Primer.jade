@@ -133,7 +133,8 @@ html
 
         // Template page #7
         +page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
-            +field-bubble-attributesOnChild('Instructions').instructions
+            +field.instructions
+                label.bubble.bloom-showOnlyWhenTargetHasFocus Wordfind instructions
             table.primerTableWordFind.bloom-hideLanguageNameDisplay
                 +repeat(10)
                     tr
@@ -146,7 +147,6 @@ html
                         +repeat(4)
                             td
                                 +field-placeholder-attributesOnChild('Word')
-
         // Template page #8
         +page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
             +field-bubble-attributesOnChild(sounds).title
