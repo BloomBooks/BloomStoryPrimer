@@ -3,18 +3,13 @@ These tell Bloom what choices to give the use as far as Page, Orientation, & Lay
 STARTLAYOUTS
 {"layouts":     ["A4Portrait"]  }
 ENDLAYOUTS
-*/
-*
-{
-	/*this is overriding the basepage.css version; so any further font-size adjustment must
-be higher precedence and marked important!*/
-	font-size: 20pt !important;
-}
-/*Override "width: 100%;" in basePage.css. This means that further adjustment of width will have
-to be both higher precedence selector than these AND marked important!*/
+
+Override "width: 100%;" in basePage.css. This means that further adjustment of width will have
+to be both higher precedence selector than these AND marked important! The same applies to font-size.*/
 TEXTAREA, DIV.bloom-editable, TD
 {
 	font-family: Andika, sans-serif !important;
+	font-size: 20pt !important;
 	overflow: visible;
 	margin-left: 2pt;
 	margin-right: 2pt;
@@ -117,10 +112,10 @@ TD.boxSampleLetterRight
 	float: right;
 	vertical-align: top;
 }
-.instructions
+.bloom-translationGroup.instructions .bloom-editable
 {
 	margin: 2pt 2pt 0 !important;
-	font-size: 50% !important;
+	font-size: 12pt !important;
 	font-style: italic !important;
 	font-weight: normal !important;
 }
@@ -130,13 +125,13 @@ TD.keyWordBox
 }
 TD.keyWordsRight
 {
-	width: 62% !important;
+	width: auto !important;
 	display: table-cell;
 }
-TABLE.keyWordTable
+TABLE.keyWordTable TD
 {
 	/*[disabled]font-size:90%;*/
-	min-width: 3em;
+	min-width: 2em;
 }
 TD > .lessonNumber
 {
@@ -271,14 +266,16 @@ TD .sampleSentence
 	text-indent: 0;
 	text-align: left;
 	font-size: 93% !important;
-	min-width: 71% !important;
-	display: block;
-	width: 70% !important;
+	min-width: 70% !important;
+}
+.A4Portrait .sampleSentence
+{
+	width: 460px !important;
 }
 .sectionHead
 {
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
 }
 .sentence
 {
@@ -313,7 +310,7 @@ TD .sampleSentence
 	font-weight: bold;
 	text-align: center;
 	margin-right: 0;
-	font-size: large !important;
+	font-size: 200% !important;
 }
 .underlined
 {
@@ -407,19 +404,19 @@ A4Portrait*/
 }
 .A4Portrait .letters6x3 .bloom-imageContainer.alphabet
 {
-	height: 157px;
+	height: 155px;
 }
 .A4Portrait .letters7x3 .bloom-imageContainer.alphabet
 {
-	height: 134px;
+	height: 132px;
 }
 .A4Portrait .letters8x3 .bloom-imageContainer.alphabet
 {
-	height: 116px;
+	height: 115px;
 }
 .A4Portrait .letters9x3 .bloom-imageContainer.alphabet
 {
-	height: 103px;
+	height: 102px;
 }
 .A4Portrait .bloom-imageContainer.alphabet
 {

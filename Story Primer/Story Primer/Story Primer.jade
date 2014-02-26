@@ -9,6 +9,7 @@ doctype html
 - var sSubtitle = 'Sub-title, ' + titleCaps
 - var imageImport = 'You can also use this page to import an image of a page with a complex layout developed in another program.'
 - var wordWork = 'Word work title'
+- var reviewWork = 'Review work title'
 - var story = 'Story title'
 - var actIcon = 'Activity icon'
 - var sounds = 'Sounds in our alphabet'
@@ -94,7 +95,7 @@ html
                                 tr
                                     td
                                         +field.instructions
-                                            label.bubble Instructions
+                                            label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
                                 tr
                                     td
                                         table.primerTableFixed.wordBox
@@ -115,7 +116,8 @@ html
                                                 +field
             .divider
             +fixedIcon(actIcon, 'writing.png')
-            +field-bubble-attributesOnChild('Writing activity instructions').instructions
+            +field.instructions
+                label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
             +field-bubble-attributesOnChild('Underlined text to write').activity.underlined
             .divider
             +fixedIcon(actIcon, 'know.png')
@@ -195,7 +197,7 @@ html
                     td.boxIcon
                         +fixedIcon(actIcon, 'word.png').bloom-imageContainer
                     td.boxLessonTitle
-                        +field-bubble-attributesOnChild(wordWork).lessonTitle
+                        +field-bubble-attributesOnChild(reviewWork).lessonTitle
                     td.boxSampleLetterRight
                         .sampleLetterRight
                             table
@@ -215,12 +217,14 @@ html
             .divider
             div
                 +fixedIcon(actIcon, 'writing.png')
-                +field-bubble-attributesOnChild('Writing activity instructions').instructions
+                +field.instructions
+                    label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
                 +field-bubble-attributesOnChild('Underlined text to write').underlined
             table.primerTableFixed
                 tr
                     td
-                        +field-bubble-attributesOnChild('Word building box instructions').instructions
+                        +field.instructions
+                            label.bubble.bloom-showOnlyWhenTargetHasFocus Word building box  instructions
                     td
                         table.primerTableMatrix
                             +repeat(3)
@@ -237,7 +241,7 @@ html
                     td.boxIcon
                         +fixedIcon(actIcon, 'word.png').bloom-imageContainer
                     td.boxLessonTitle
-                        +field-bubble-attributesOnChild(wordWork).lessonTitle
+                        +field-bubble-attributesOnChild(reviewWork).lessonTitle
                     td.boxSampleLetterRight
                         .sampleLetterRight
                             table
@@ -257,7 +261,8 @@ html
             +syllableTable
             div
                 +fixedIcon(actIcon, 'writing.png')
-                +field-bubble-attributesOnChild('Activity instructions').instructions
+                +field.instructions
+                    label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
                 +field-bubble-attributesOnChild('Underlined text for writing activity').underlined
                 +fixedIcon(actIcon, 'know.png')
                 +field-bubble-attributesOnChild('Activity title').sectionHead
