@@ -158,12 +158,6 @@ TD > .lessonNumber
 {
 	padding: 1.5em;
 }
-/*.pageNumber
-{
-width: 10%;
-vertical-align: top;
-text-align: right;
-}*/
 TABLE.primerTableFixed
 {
 	table-layout: fixed;
@@ -205,17 +199,6 @@ TABLE.primerTableNoBorder
 	margin-right: auto;
 	/*[disabled]font-size:smaller;*/
 }
-/*.primerTableWithBorder
-{
-width: 100%;
-margin-left: auto;
-margin-right: auto;
-border: 1pt solid #000000;
-}
-.primerTableTitleLine
-{
-width: 100%;
-}*/
 .primerTableWordFind TD .bloom-editable
 {
 	border: 1pt solid #000000;
@@ -267,10 +250,6 @@ TD .sampleSentence
 	text-align: left;
 	font-size: 93% !important;
 	min-width: 70% !important;
-}
-.A4Portrait .sampleSentence
-{
-	width: 460px !important;
 }
 .sectionHead
 {
@@ -396,6 +375,10 @@ A4Portrait*/
 {
 	/*[disabled]background:#FFFFFF;*/
 	width: 125px !important;
+}
+.A4Portrait .sampleSentence
+{
+    width: 460px !important;
 }
 .A4Portrait .smallImageInTable
 {

@@ -1,5 +1,12 @@
 //- Story Primer mixins
 
+//- Story Primer defaults to A4Portrait, not A5
+mixin a4page-choice(englishLabel)
+    .bloom-page.numberedPage.A4Portrait(attributes, data-page='extra')
+        +page-label-english(englishLabel)
+        .marginBox
+            block
+
 mixin adjustableImageRight
     - requireZeroArguments('adjustableImageRight', arguments)
     +image.imageAdjustable.floatRight.bloom-resizable

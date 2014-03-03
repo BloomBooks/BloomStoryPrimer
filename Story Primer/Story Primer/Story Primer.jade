@@ -34,24 +34,24 @@ html
             div(data-book='topic', lang='en') Primer
 
         // Template page #1
-        +page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
+        +a4page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
             +image-bubble(imageImport).bloom-resizable
 
         // Template page #2
-        +page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
+        +a4page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild(sTitle).mainTitle
             +field-bubble-attributesOnChild(sSubtitle).title
             +adjustableImageRight
             +field-attributesOnChild.story
 
         // Template page #3
-        +page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
+        +a4page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
             +field-attributesOnChild.story
             +adjustableImageRight
             +field-attributesOnChild.story
 
         // Template page #4
-        +page-choice('Lesson - story page')#4298333c-45b9-4013-a0de-6512441b3783
+        +a4page-choice('Lesson - story page')#4298333c-45b9-4013-a0de-6512441b3783
             table.primerTableTitleLine
                 tr
                     td.boxLessonNumber.bloom-hideLanguageNameDisplay
@@ -67,7 +67,7 @@ html
             +field-attributesOnChild.activity
 
         // Template page #5
-        +page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
+        +a4page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
             .bloom-hideLanguageNameDisplay.padded.box
                 table
                     tr
@@ -125,14 +125,14 @@ html
             +field-attributesOnChild.activity
 
         // Template page #6
-        +page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
+        +a4page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild('Text continues here').story
             .divider
             +fixedIcon(actIcon, 'discussion.png')
             +field-attributesOnChild.activity
 
         // Template page #7
-        +page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
+        +a4page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
             +field.instructions
                 label.bubble.bloom-showOnlyWhenTargetHasFocus Wordfind instructions
             table.primerTableWordFind.bloom-hideLanguageNameDisplay
@@ -148,31 +148,31 @@ html
                             td
                                 +field-placeholder-attributesOnChild('Word')
         // Template page #8
-        +page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
+        +a4page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters6x3
                 +alphabetChart(6)
 
         // Template page #9
-        +page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
+        +a4page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters7x3
                 +alphabetChart(7)
 
         // Template page #10
-        +page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
+        +a4page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters8x3
                 +alphabetChart(8)
 
         // Template page #11
-        +page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
+        +a4page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
             +field-bubble-attributesOnChild(sounds).title
             table.primerTableMatrixMedium.letters9x3
                 +alphabetChart(9)
 
         // Template page #12
-        +page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
+        +a4page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
             +fixedIcon(actIcon, 'discussion.png')
             +field
             .divider
@@ -180,7 +180,7 @@ html
             +field
 
         // Template page #13
-        +page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
+        +a4page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
             +fixedIcon(actIcon, 'discussion.png')
             +field
             .divider
@@ -191,7 +191,7 @@ html
             +field
 
         // Template page #14
-        +page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+        +a4page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
             table.primerTableTitleLine
                 tr
                     td.boxIcon
@@ -235,7 +235,7 @@ html
                                                 label.placeholder='Q'
 
         // Template page #15
-        +page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+        +a4page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
             table.primerTableTitleLine
                 tr
                     td.boxIcon
@@ -269,10 +269,15 @@ html
                 +field-attributesOnChild.activity
 
         // Template page #16
-        +page-choice('Freeform Text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
+        +a4page-choice('Freeform Text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
             +field
 
         // Template page #17
-        +page-choice('Image and freeform Text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
+        +a4page-choice('Image and freeform Text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
             +image.bloom-resizable
             +field
+
+        // Template page #18
+        +a4page-choice('Freeform Text and Image')#43c45351-8258-4545-86d0-11be2bc41d66
+            +field
+            +image.bloom-resizable
