@@ -58,6 +58,12 @@ mixin fixedIcon(altText, src)
     .bloom-imageContainer.icon(attributes)
         img(alt=altText, src=src)
 
+//- generates a fixed icon image (no bloom-imageContainer), that floats to the right side
+mixin fixedIcon-right(altText, src)
+    - requireTwoArguments('fixedIcon-right', arguments)
+    .bloom-imageContainer.icon-right(attributes)
+        img(alt=altText, src=src)
+
 //- generates a fixed icon image with bubble text in a bloom-imageContainer
 mixin fixedIcon-bubble(bubbleText, altText, src)
     .bloom-imageContainer.icon

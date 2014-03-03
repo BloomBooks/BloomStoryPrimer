@@ -56,10 +56,11 @@ html
                 tr
                     td.boxLessonNumber.bloom-hideLanguageNameDisplay
                         +field-placeholder-attributesOnChild("Lesson 99").lessonNumber
-                        +fixedIcon('book icon', 'read.png')
+                tr
                     td.boxLessonTitle
                         +field-bubble-attributesOnChild(story).lessonTitle
                     td.boxBlankMatchingIconBook
+                        +fixedIcon-right('book icon', 'read.png')
             +adjustableImageRight
             +field-attributesOnChild.story
             .divider

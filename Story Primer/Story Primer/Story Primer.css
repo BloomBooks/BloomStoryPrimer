@@ -85,7 +85,7 @@ TD.boxSampleLetterRight
 .divider
 {
 	border-bottom: 1pt solid #000000 !important;
-	margin: 0 -1pc;
+	margin: 5px -1px;
 }
 .fullWidthTable
 {
@@ -102,7 +102,18 @@ TD.boxSampleLetterRight
 }
 .icon IMG
 {
-	/*width: 100% !important;*/
+	height: auto;
+}
+.icon-right
+{
+	border: none;
+	float: right;
+	clear: right;
+	margin: 2px 3px 1px 2px;
+	padding: 0;
+}
+.icon-right IMG
+{
 	height: auto;
 }
 .imageAdjustable.floatRight
@@ -371,6 +382,11 @@ A4Portrait*/
 	width: 60pt !important;
 	height: 60pt;
 }
+.A4Portrait .icon-right
+{
+    width: 60pt !important;
+    height: 60pt;
+}
 .A4Portrait .lessonNumber
 {
 	/*[disabled]background:#FFFFFF;*/
@@ -378,7 +394,7 @@ A4Portrait*/
 }
 .A4Portrait .sampleSentence
 {
-    width: 460px !important;
+	width: 460px !important;
 }
 .A4Portrait .smallImageInTable
 {
