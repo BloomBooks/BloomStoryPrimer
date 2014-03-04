@@ -115,15 +115,15 @@ html
                                         tr
                                             td
                                                 +field
-            .divider
-            +fixedIcon(actIcon, 'writing.png')
-            +field.instructions
-                label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
-            +field-bubble-attributesOnChild('Underlined text to write').activity.underlined
-            .divider
-            +fixedIcon(actIcon, 'know.png')
-            +field-bubble-attributesOnChild('Title').title
-            +field-attributesOnChild.activity
+            .box
+                +fixedIcon(actIcon, 'writing.png')
+                +field.instructions
+                    label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
+                +field-bubble-attributesOnChild('Underlined text to write').activity.underlined
+            .box
+                +fixedIcon(actIcon, 'know.png')
+                +field-bubble-attributesOnChild('Title').title
+                +field-attributesOnChild.activity
 
         // Template page #6
         +a4page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
@@ -134,7 +134,7 @@ html
 
         // Template page #7
         +a4page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
-            +field.instructions
+            +field.instructionsNonItalic
                 label.bubble.bloom-showOnlyWhenTargetHasFocus Wordfind instructions
             table.primerTableWordFind.bloom-hideLanguageNameDisplay
                 +repeat(10)

@@ -63,6 +63,8 @@ TEXTAREA, DIV.bloom-editable, TD
 .box
 {
 	border: 1pt solid #000000;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 TD.boxBlankMatchingIconBook
 {
@@ -129,6 +131,13 @@ TD.boxSampleLetterRight
 	font-size: 12pt !important;
 	font-style: italic !important;
 	font-weight: normal !important;
+}
+.bloom-translationGroup.instructionsNonItalic .bloom-editable
+{
+    margin: 2pt 2pt 0 !important;
+    font-size: 12pt !important;
+    font-style: normal !important;
+    font-weight: normal !important;
 }
 TD.keyWordBox
 {
