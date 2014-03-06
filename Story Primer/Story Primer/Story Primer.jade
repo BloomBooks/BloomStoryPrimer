@@ -56,16 +56,16 @@ html
                 tr
                     td.boxLessonNumber.bloom-hideLanguageNameDisplay
                         +field-placeholder-attributesOnChild("Lesson 99").lessonNumber
-                tr
-                    td.boxLessonTitle
-                        +field-bubble-attributesOnChild(story).lessonTitle
                     td.boxBlankMatchingIconBook
                         +fixedIcon-right('book icon', 'read.png')
-            +adjustableImageRight
-            +field-attributesOnChild.story
-            .divider
-            +fixedIcon(actIcon, 'discussion.png')
-            +field-attributesOnChild.activity
+            .box
+                .boxLessonTitle
+                    +field-bubble-attributesOnChild(story).lessonTitle
+                +adjustableImageRight
+                +field-attributesOnChild.story
+            .box
+                +fixedIcon(actIcon, 'discussion.png')
+                +field-attributesOnChild.activity
 
         // Template page #5
         +a4page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
