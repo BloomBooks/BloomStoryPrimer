@@ -63,8 +63,12 @@ TEXTAREA, DIV.bloom-editable, TD
 .box
 {
 	border: 1pt solid #000000;
-    margin-top: 1px;
-    margin-bottom: 1px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+DIV.box + DIV.box
+{
+	margin-top: 5px;
 }
 TD.boxBlankMatchingIconBook
 {
@@ -134,10 +138,10 @@ TD.boxSampleLetterRight
 }
 .bloom-translationGroup.instructionsNonItalic .bloom-editable
 {
-    margin: 2pt 2pt 0 !important;
-    font-size: 12pt !important;
-    font-style: normal !important;
-    font-weight: normal !important;
+	margin: 2pt 2pt 0 !important;
+	font-size: 12pt !important;
+	font-style: normal !important;
+	font-weight: normal !important;
 }
 TD.keyWordBox
 {
@@ -393,8 +397,8 @@ A4Portrait*/
 }
 .A4Portrait .icon-right
 {
-    width: 60pt !important;
-    height: 60pt;
+	width: 60pt !important;
+	height: 60pt;
 }
 .A4Portrait .lessonNumber
 {
