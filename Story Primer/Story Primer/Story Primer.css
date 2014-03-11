@@ -49,7 +49,8 @@ TEXTAREA, DIV.bloom-editable, TD
 /*Regular content*/
 .activity
 {
-	padding: 0 6pt !important;
+	/*[disabled]padding:0 1em 1em;*/
+	min-height: 3em !important;
 }
 .bloom-translationGroup.title .bloom-content1
 {
@@ -63,10 +64,10 @@ TEXTAREA, DIV.bloom-editable, TD
 .box
 {
 	border: 1pt solid #000000;
-	margin-top: 1px;
+	margin-top: 0;
 	margin-bottom: 1px;
 }
-DIV.box + DIV.box
+DIV + .box
 {
 	margin-top: 5px;
 }
@@ -87,11 +88,6 @@ TD.boxSampleLetterRight
 	width: 20% !important;
 	padding-top: 1pc;
 	text-align: center;
-}
-.divider
-{
-	border-bottom: 1pt solid #000000 !important;
-	margin: 5px -1px;
 }
 .fullWidthTable
 {
@@ -307,6 +303,7 @@ TD .sampleSentence
 .story
 {
 	text-indent: 0;
+	min-height: 3em !important;
 }
 .bloom-editable.title
 {
@@ -321,6 +318,7 @@ TD .sampleSentence
 	text-decoration: underline;
 	text-align: left;
 	margin-bottom: 0;
+	min-height: 3em !important;
 }
 .wordBox TD
 {

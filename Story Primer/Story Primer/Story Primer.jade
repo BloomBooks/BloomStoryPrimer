@@ -58,12 +58,12 @@ html
                         +field-placeholder-attributesOnChild("Lesson 99").lessonNumber
                     td.boxBlankMatchingIconBook
                         +fixedIcon-right('book icon', 'read.png')
-            .box
+            .padded.box
                 .boxLessonTitle
                     +field-bubble-attributesOnChild(story).lessonTitle
                 +adjustableImageRight
                 +field-attributesOnChild.story
-            .box
+            .padded.box
                 +fixedIcon(actIcon, 'discussion.png')
                 +field-attributesOnChild.activity
 
@@ -115,12 +115,12 @@ html
                                         tr
                                             td
                                                 +field
-            .box
+            .padded.box
                 +fixedIcon(actIcon, 'writing.png')
                 +field.instructions
                     label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
-                +field-bubble-attributesOnChild('Underlined text to write').activity.underlined
-            .box
+                +field-bubble-attributesOnChild('Underlined text to write').underlined
+            .padded.box
                 +fixedIcon(actIcon, 'know.png')
                 +field-bubble-attributesOnChild('Title').title
                 +field-attributesOnChild.activity
@@ -128,9 +128,9 @@ html
         // Template page #6
         +a4page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
             +field-bubble-attributesOnChild('Text continues here').story
-            .divider
-            +fixedIcon(actIcon, 'discussion.png')
-            +field-attributesOnChild.activity
+            .padded.box
+                +fixedIcon(actIcon, 'discussion.png')
+                +field-attributesOnChild.activity
 
         // Template page #7
         +a4page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
@@ -174,22 +174,24 @@ html
 
         // Template page #12
         +a4page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
-            +fixedIcon(actIcon, 'discussion.png')
-            +field
-            .divider
-            +fixedIcon(actIcon, 'know.png')
-            +field
+            .padded.box
+                +fixedIcon(actIcon, 'discussion.png')
+                +field-attributesOnChild.activity
+            .padded.box
+                +fixedIcon(actIcon, 'know.png')
+                +field-attributesOnChild.activity
 
         // Template page #13
         +a4page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
-            +fixedIcon(actIcon, 'discussion.png')
-            +field
-            .divider
-            +fixedIcon(actIcon, 'know.png')
-            +field
-            .divider
-            +fixedIcon(actIcon, 'perform.png')
-            +field
+            .padded.box
+                +fixedIcon(actIcon, 'discussion.png')
+                +field-attributesOnChild.activity
+            .padded.box
+                +fixedIcon(actIcon, 'know.png')
+                +field-attributesOnChild.activity
+            .padded.box
+                +fixedIcon(actIcon, 'perform.png')
+                +field-attributesOnChild.activity
 
         // Template page #14
         +a4page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
@@ -215,8 +217,7 @@ html
             +field.instructions
                 label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
             +syllableTable
-            .divider
-            div
+            .padded.box
                 +fixedIcon(actIcon, 'writing.png')
                 +field.instructions
                     label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
@@ -256,15 +257,16 @@ html
                                         +field
                                             label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
             +form-6cells
-            +field.instructions
-                label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions
-            .divider
-            +syllableTable
-            div
+            .padded.box
+                +field.instructions
+                    label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions
+                +syllableTable
+            .padded.box
                 +fixedIcon(actIcon, 'writing.png')
                 +field.instructions
                     label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
                 +field-bubble-attributesOnChild('Underlined text for writing activity').underlined
+            .padded.box
                 +fixedIcon(actIcon, 'know.png')
                 +field-bubble-attributesOnChild('Activity title').sectionHead
                 +field-attributesOnChild.activity
