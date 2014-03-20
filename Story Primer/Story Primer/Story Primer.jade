@@ -17,270 +17,274 @@ doctype html
 - var singleSound = 'q'
 
 html
-    head
-        +metadata-standard
-        meta(name='SuitableForMakingShells', content='true')
-        meta(name='SuitableForMakingVernacularBooks', content='yes')
-        meta(name='BloomBookId', content='156B6F11-4A6C-4942-B2BC-8861E62B03B3')
-        meta(name='defaultNameForDerivedBooks', content='Story Primer')
-        meta(name='lockedDownAsShell', content='false')
-        meta(name='pageTemplateSource', content='Story Primer')
-        title Story Primer
-        +stylesheets('Story Primer.css')
-        +stylesheet('../settingsCollectionStyles.css')
-    body
-        +dataDiv
-            +bookVariable-title('en', 'Story Primer')
-            div(data-book='topic', lang='en') Primer
+	head
+		+metadata-standard
+		meta(name='SuitableForMakingShells', content='true')
+		meta(name='SuitableForMakingVernacularBooks', content='yes')
+		meta(name='BloomBookId', content='156B6F11-4A6C-4942-B2BC-8861E62B03B3')
+		meta(name='defaultNameForDerivedBooks', content='Story Primer')
+		meta(name='lockedDownAsShell', content='false')
+		meta(name='pageTemplateSource', content='Story Primer')
+		title Story Primer
+		+stylesheets('Story Primer.css')
+		+stylesheet('../settingsCollectionStyles.css')
+	body
+		+dataDiv
+			+bookVariable-title('en', 'Story Primer')
+			div(data-book='topic', lang='en') Primer
 
-        // Template page #1
-        +a4page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
-            +image-bubble(imageImport).bloom-resizable
+		// Template page #1
+		+a4page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
+			+image-bubble(imageImport).bloom-resizable
 
-        // Template page #2
-        +a4page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
-            +field-bubble-attributesOnChild(sTitle).mainTitle
-            +field-bubble-attributesOnChild(sSubtitle).title
-            +adjustableImageRight
-            +field-attributesOnChild.story
+		// Template page #2
+		+a4page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
+			+field-bubble-attributesOnChild(sTitle).mainTitle
+			+field-bubble-attributesOnChild(sSubtitle).title
+			+adjustableImageRight
+			+field-attributesOnChild.story
 
-        // Template page #3
-        +a4page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
-            +field-attributesOnChild.story
-            +adjustableImageRight
-            +field-attributesOnChild.story
+		// Template page #3
+		+a4page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
+			+field-attributesOnChild.story
+			+adjustableImageRight
+			+field-attributesOnChild.story
 
-        // Template page #4
-        +a4page-choice('Lesson - story page')#4298333c-45b9-4013-a0de-6512441b3783
-            table.primerTableTitleLine
-                tr
-                    td.boxLessonNumber.bloom-hideLanguageNameDisplay
-                        +field-placeholder-attributesOnChild("Lesson 99").lessonNumber
-                    td.boxBlankMatchingIconBook
-                        +fixedIcon-right('book icon', 'read.png')
-            .padded.box
-                .boxLessonTitle
-                    +field-bubble-attributesOnChild(story).lessonTitle
-                +adjustableImageRight
-                +field-attributesOnChild.story
-            .padded.box
-                +fixedIcon(actIcon, 'discussion.png')
-                +field-attributesOnChild.activity
+		// Template page #4
+		+a4page-choice('Lesson - story page')#4298333c-45b9-4013-a0de-6512441b3783
+			table.primerTableTitleLine
+				tr
+					td.boxLessonNumber.bloom-hideLanguageNameDisplay
+						+field-placeholder-attributesOnChild("Lesson 99").lessonNumber
+					td.boxBlankMatchingIconBook
+						+fixedIcon-right('book icon', 'read.png')
+			.padded.box
+				.boxLessonTitle
+					+field-bubble-attributesOnChild(story).lessonTitle
+				+adjustableImageRight
+				+field-attributesOnChild.story
+			.padded.box
+				+fixedIcon(actIcon, 'discussion.png')
+				+field-attributesOnChild.activity
 
-        // Template page #5
-        +a4page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
-            .bloom-hideLanguageNameDisplay.padded.box
-                table
-                    tr
-                        td.sampleLetter
-                            +field-placeholder-attributesOnChild(focusSound).soundInFocus
-                        td
-                            +field-bubble-attributesOnChild('Key sentence').sampleSentence
-                table.primerTableKeyWordWork
-                    tr
-                        td.keyWordBox.box
-                            table
-                                tr
-                                    td
-                                        +image.bloom-resizable.smallImageInTable
-                                    td
-                                        table.keyWordTable
-                                            tr
-                                                td
-                                                    +field-bubble-attributesOnChild('Key word')
-                                            tr
-                                                td
-                                                    +field-placeholder-attributesOnChild(singleSound)
-                        td.keyWordsRight
-                            table.primerTableFixed
-                                tr
-                                    td
-                                        +field.instructions
-                                            label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
-                                tr
-                                    td
-                                        table.primerTableFixed.wordBox
-                                            +repeat(3)
-                                                tr
-                                                    td
-                                                        +field
-                                                    td
-                                                        +field
-                table.wordWorkTable
-                    tr
-                        +repeat(5)
-                            td
-                                table.primerTableFixed.box.wordWorkWords
-                                    +repeat(3)
-                                        tr
-                                            td
-                                                +field
-            .padded.box
-                +fixedIcon(actIcon, 'writing.png')
-                +field.instructions
-                    label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
-                +field-bubble-attributesOnChild('Underlined text to write').underlined
-            .padded.box
-                +fixedIcon(actIcon, 'know.png')
-                +field-bubble-attributesOnChild('Title').title
-                +field-attributesOnChild.activity
+		// Template page #5
+		+a4page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
+			.bloom-hideLanguageNameDisplay.padded.box
+				table
+					tr
+						td.sampleLetter
+							+field-placeholder-attributesOnChild(focusSound).soundInFocus
+						td
+							+field-bubble-attributesOnChild('Key sentence').sampleSentence
+				table.primerTableKeyWordWork
+					tr
+						td.keyWordBox.box
+							table
+								tr
+									td
+										+image.bloom-resizable.smallImageInTable
+									td
+										table.keyWordTable
+											tr
+												td
+													+field-bubble-attributesOnChild('Key word')
+											tr
+												td
+													+field-placeholder-attributesOnChild(singleSound)
+						td.keyWordsRight
+							table.primerTableFixed
+								tr
+									td
+										+field.instructions
+											label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
+								tr
+									td
+										table.primerTableFixed.wordBox
+											+repeat(3)
+												tr
+													td
+														+field
+													td
+														+field
+				table.wordWorkTable
+					tr
+						+repeat(5)
+							td
+								table.primerTableFixed.box.wordWorkWords
+									+repeat(3)
+										tr
+											td
+												+field
+			.padded.box
+				+fixedIcon(actIcon, 'writing.png')
+				+field.instructions
+					label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
+				+field-bubble-attributesOnChild('Underlined text to write').underlined
+			.padded.box
+				+fixedIcon(actIcon, 'know.png')
+				+field-bubble-attributesOnChild('Title').title
+				+field-attributesOnChild.activity
 
-        // Template page #6
-        +a4page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
-            +field-bubble-attributesOnChild('Text continues here').story
-            .padded.box
-                +fixedIcon(actIcon, 'discussion.png')
-                +field-attributesOnChild.activity
+		// Template page #6
+		+a4page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
+			+field-bubble-attributesOnChild('Text continues here').story
+			.padded.box
+				+fixedIcon(actIcon, 'discussion.png')
+				+field-attributesOnChild.activity
 
-        // Template page #7
-        +a4page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
-            +field.instructionsNonItalic
-                label.bubble.bloom-showOnlyWhenTargetHasFocus Wordfind instructions
-            table.primerTableWordFind.bloom-hideLanguageNameDisplay
-                +repeat(10)
-                    tr
-                        +repeat(10)
-                            td
-                                +field-placeholder-attributesOnChild('Q')
-            table.primerTableNoBorder.wordFindWords
-                +repeat(4)
-                    tr
-                        +repeat(4)
-                            td
-                                +field-placeholder-attributesOnChild('Word')
-        // Template page #8
-        +a4page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
-            +field-bubble-attributesOnChild(sounds).title
-            table.primerTableMatrixMedium.letters6x3
-                +alphabetChart(6)
+		// Template page #7
+		+a4page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
+			+field.instructionsNonItalic
+				label.bubble.bloom-showOnlyWhenTargetHasFocus Wordfind instructions
+			table.primerTableWordFind.bloom-hideLanguageNameDisplay
+				+repeat(10)
+					tr
+						+repeat(10)
+							td
+								+field-placeholder-attributesOnChild('Q')
+			table.wordWorkTable
+				tr
+					+repeat(4)
+						td
+							table.primerTableFixed.box.wordFindWords
+								+repeat(4)
+									tr
+										td
+											+field-placeholder-attributesOnChild('Word')
+		// Template page #8
+		+a4page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
+			+field-bubble-attributesOnChild(sounds).title
+			table.primerTableMatrixMedium.letters6x3
+				+alphabetChart(6)
 
-        // Template page #9
-        +a4page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
-            +field-bubble-attributesOnChild(sounds).title
-            table.primerTableMatrixMedium.letters7x3
-                +alphabetChart(7)
+		// Template page #9
+		+a4page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
+			+field-bubble-attributesOnChild(sounds).title
+			table.primerTableMatrixMedium.letters7x3
+				+alphabetChart(7)
 
-        // Template page #10
-        +a4page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
-            +field-bubble-attributesOnChild(sounds).title
-            table.primerTableMatrixMedium.letters8x3
-                +alphabetChart(8)
+		// Template page #10
+		+a4page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
+			+field-bubble-attributesOnChild(sounds).title
+			table.primerTableMatrixMedium.letters8x3
+				+alphabetChart(8)
 
-        // Template page #11
-        +a4page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
-            +field-bubble-attributesOnChild(sounds).title
-            table.primerTableMatrixMedium.letters9x3
-                +alphabetChart(9)
+		// Template page #11
+		+a4page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
+			+field-bubble-attributesOnChild(sounds).title
+			table.primerTableMatrixMedium.letters9x3
+				+alphabetChart(9)
 
-        // Template page #12
-        +a4page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
-            .padded.box
-                +fixedIcon(actIcon, 'discussion.png')
-                +field-attributesOnChild.activity
-            .padded.box
-                +fixedIcon(actIcon, 'know.png')
-                +field-attributesOnChild.activity
+		// Template page #12
+		+a4page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
+			.padded.box
+				+fixedIcon(actIcon, 'discussion.png')
+				+field-attributesOnChild.activity
+			.padded.box
+				+fixedIcon(actIcon, 'know.png')
+				+field-attributesOnChild.activity
 
-        // Template page #13
-        +a4page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
-            .padded.box
-                +fixedIcon(actIcon, 'discussion.png')
-                +field-attributesOnChild.activity
-            .padded.box
-                +fixedIcon(actIcon, 'know.png')
-                +field-attributesOnChild.activity
-            .padded.box
-                +fixedIcon(actIcon, 'perform.png')
-                +field-attributesOnChild.activity
+		// Template page #13
+		+a4page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
+			.padded.box
+				+fixedIcon(actIcon, 'discussion.png')
+				+field-attributesOnChild.activity
+			.padded.box
+				+fixedIcon(actIcon, 'know.png')
+				+field-attributesOnChild.activity
+			.padded.box
+				+fixedIcon(actIcon, 'perform.png')
+				+field-attributesOnChild.activity
 
-        // Template page #14
-        +a4page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
-            table.primerTableTitleLine
-                tr
-                    td.boxIcon
-                        +fixedIcon(actIcon, 'word.png').bloom-imageContainer
-                    td.boxLessonTitle
-                        +field-bubble-attributesOnChild(reviewWork).lessonTitle
-                    td.boxSampleLetterRight
-                        .sampleLetterRight
-                            table
-                                tr
-                                    td
-                                        div(data-book='reviewWord').bloom-translationGroup
-                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
-                                            +editable(kLanguageForPrototypeOnly)
-                                tr
-                                    td
-                                        +field
-                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
-            +form-6cells
-            +field.instructions
-                label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
-            +syllableTable
-            .padded.box
-                +fixedIcon(actIcon, 'writing.png')
-                +field.instructions
-                    label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
-                +field-bubble-attributesOnChild('Underlined text to write').underlined
-            table.primerTableFixed
-                tr
-                    td
-                        +field.instructions
-                            label.bubble.bloom-showOnlyWhenTargetHasFocus Word building box  instructions
-                    td
-                        table.primerTableMatrix
-                            +repeat(3)
-                                tr
-                                    +repeat(3)
-                                        td
-                                            +field
-                                                label.placeholder='Q'
+		// Template page #14
+		+a4page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+			table.primerTableTitleLine
+				tr
+					td.boxIcon
+						+fixedIcon(actIcon, 'word.png').bloom-imageContainer
+					td.boxLessonTitle
+						+field-bubble-attributesOnChild(reviewWork).lessonTitle
+					td.boxSampleLetterRight
+						.sampleLetterRight
+							table
+								tr
+									td
+										div(data-book='reviewWord').bloom-translationGroup
+											label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
+											+editable(kLanguageForPrototypeOnly)
+								tr
+									td
+										+field
+											label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
+			+form-6cells
+			.padded.box
+				+field.instructions
+					label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
+				+syllableTable
+			.padded.box
+				+fixedIcon(actIcon, 'writing.png')
+				+field.instructions
+					label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
+				+field-bubble-attributesOnChild('Underlined text to write').underlined
+			table.primerTableFixed.padded.box
+				tr
+					td
+						+field.instructions
+							label.bubble.bloom-showOnlyWhenTargetHasFocus Word building box  instructions
+					td
+						table.primerTableMatrix
+							+repeat(3)
+								tr
+									+repeat(3)
+										td
+											+field
+												label.placeholder='Q'
 
-        // Template page #15
-        +a4page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
-            table.primerTableTitleLine
-                tr
-                    td.boxIcon
-                        +fixedIcon(actIcon, 'word.png').bloom-imageContainer
-                    td.boxLessonTitle
-                        +field-bubble-attributesOnChild(reviewWork).lessonTitle
-                    td.boxSampleLetterRight
-                        .sampleLetterRight
-                            table
-                                tr
-                                    td
-                                        div(data-book='reviewWord').bloom-translationGroup
-                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
-                                            +editable(kLanguageForPrototypeOnly)
-                                tr
-                                    td
-                                        +field
-                                            label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
-            +form-6cells
-            .padded.box
-                +field.instructions
-                    label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions
-                +syllableTable
-            .padded.box
-                +fixedIcon(actIcon, 'writing.png')
-                +field.instructions
-                    label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
-                +field-bubble-attributesOnChild('Underlined text for writing activity').underlined
-            .padded.box
-                +fixedIcon(actIcon, 'know.png')
-                +field-bubble-attributesOnChild('Activity title').sectionHead
-                +field-attributesOnChild.activity
+		// Template page #15
+		+a4page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+			table.primerTableTitleLine
+				tr
+					td.boxIcon
+						+fixedIcon(actIcon, 'word.png').bloom-imageContainer
+					td.boxLessonTitle
+						+field-bubble-attributesOnChild(reviewWork).lessonTitle
+					td.boxSampleLetterRight
+						.sampleLetterRight
+							table
+								tr
+									td
+										div(data-book='reviewWord').bloom-translationGroup
+											label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
+											+editable(kLanguageForPrototypeOnly)
+								tr
+									td
+										+field
+											label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
+			+form-6cells
+			.padded.box
+				+field.instructions
+					label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions
+				+syllableTable
+			.padded.box
+				+fixedIcon(actIcon, 'writing.png')
+				+field.instructions
+					label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
+				+field-bubble-attributesOnChild('Underlined text for writing activity').underlined
+			.padded.box
+				+fixedIcon(actIcon, 'know.png')
+				+field-bubble-attributesOnChild('Activity title').sectionHead
+				+field-attributesOnChild.activity
 
-        // Template page #16
-        +a4page-choice('Freeform Text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
-            +field
+		// Template page #16
+		+a4page-choice('Freeform Text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
+			+field
 
-        // Template page #17
-        +a4page-choice('Image and freeform Text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
-            +image.bloom-resizable
-            +field
+		// Template page #17
+		+a4page-choice('Image and freeform Text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
+			+image.bloom-resizable
+			+field
 
-        // Template page #18
-        +a4page-choice('Freeform Text and Image')#43c45351-8258-4545-86d0-11be2bc41d66
-            +field
-            +image.bloom-resizable
+		// Template page #18
+		+a4page-choice('Freeform Text and Image')#43c45351-8258-4545-86d0-11be2bc41d66
+			+field
+			+image.bloom-resizable
