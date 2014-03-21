@@ -120,7 +120,7 @@ TD.boxSampleLetterRight
 }
 .imageAdjustable.floatRight
 {
-	width: 50% !important;
+	/*[disabled]width:50%;*/
 	height: auto;
 	float: right;
 	vertical-align: top;
@@ -145,7 +145,7 @@ TD.keyWordBox
 TD.keyWordsRight
 {
 	width: auto !important;
-	display: table-cell;
+	display: inline;
 }
 TABLE.keyWordTable TD
 {
