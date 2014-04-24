@@ -34,18 +34,19 @@ html
 			div(data-book='topic', lang='en') Primer
 
 		// Template page #1
-		+a4page-choice('Full page image or scan')#1a98decc-55b9-5013-a0de-6512441b3783
-			+image-bubble(imageImport).bloom-resizable
+		+a4page-choice('Full page image')#1a98decc-55b9-5013-a0de-6512441b3783
+			+image.bloom-resizable
+				label.bubble.bloom-showOnlyWhenTargetHasFocus=imageImport
 
 		// Template page #2
-		+a4page-choice('Story start with title and sub-title')#2233decc-25b9-4013-a0de-6512441b3783
+		+a4page-choice('Story start')#2233decc-25b9-4013-a0de-6512441b3783
 			+field-bubble-attributesOnChild(sTitle).mainTitle
 			+field-bubble-attributesOnChild(sSubtitle).title
 			+adjustableImageRight
 			+field-attributesOnChild.story
 
 		// Template page #3
-		+a4page-choice('Story continues - image middle or bottom')#3298decc-55b9-4013-a0de-6512441b3783
+		+a4page-choice('Story continues + image')#3298decc-55b9-4013-a0de-6512441b3783
 			+field-attributesOnChild.story
 			+adjustableImageRight
 			+field-attributesOnChild.story
@@ -126,7 +127,7 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #6
-		+a4page-choice('Story continuation and activity')#2222decc-55b9-4013-a0de-6512441b3783
+		+a4page-choice('Story continues + activity')#2222decc-55b9-4013-a0de-6512441b3783
 			+field-bubble-attributesOnChild('Text continues here').story
 			.padded.box
 				+fixedIcon(actIcon, 'discussion.png')
@@ -197,7 +198,7 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #14
-		+a4page-choice('Revision/review sounds and word building box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+		+a4page-choice('Revision + box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
 			table.primerTableTitleLine
 				tr
 					td.boxIcon
@@ -241,7 +242,7 @@ html
 												label.placeholder='Q'
 
 		// Template page #15
-		+a4page-choice('Revision/review sounds')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+		+a4page-choice('Revision')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
 			table.primerTableTitleLine
 				tr
 					td.boxIcon
@@ -276,15 +277,15 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #16
-		+a4page-choice('Freeform Text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
+		+a4page-choice('Free text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
 			+field
 
 		// Template page #17
-		+a4page-choice('Image and freeform Text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
+		+a4page-choice('Image + text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
 			+image.bloom-resizable
 			+field
 
 		// Template page #18
-		+a4page-choice('Freeform Text and Image')#43c45351-8258-4545-86d0-11be2bc41d66
+		+a4page-choice('Text + image')#43c45351-8258-4545-86d0-11be2bc41d66
 			+field
 			+image.bloom-resizable
