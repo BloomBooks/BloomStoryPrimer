@@ -16,6 +16,10 @@ TEXTAREA, DIV.bloom-editable, TD
 	width: auto !important;
 	min-height: 1.2em;
 }
+.marginBox > .wordGrid TD
+{
+	padding: 0px 0.5em;
+}
 /*Reapply "width: 100%" to XMatter*/
 .bloom-frontMatter .bloom-editable
 {
@@ -44,7 +48,7 @@ TEXTAREA, DIV.bloom-editable, TD
 }
 .blank
 {
-	min-width: 6px;
+	min-width: 0.7em;
 }
 /*Regular content*/
 .activity
