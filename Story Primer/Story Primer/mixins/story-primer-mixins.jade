@@ -52,23 +52,19 @@ mixin image-specific-bubble(bubbleText, src, altText)
         label.bubble.bloom-showOnlyWhenTargetHasFocus=bubbleText
         img(attributes, alt=altText, src=src)
 
-//- generates a fixed icon image (no bloom-imageContainer)
+//- generates a fixed icon image (no bloom-imageContainer) with embedded metadata
+//- NB: This is fixed metadata for the icons used in Story Primer templates ONLY! Don't use this mixin for other pictures!
 mixin fixedIcon(altText, src)
     - requireTwoArguments('fixedIcon', arguments)
     .bloom-imageContainer.icon(attributes)
-        img(alt=altText, src=src)
+        img(alt=altText, src=src, data-copyright='Copyright &copy; 2012, Natashia Curtin', data-creator='Natashia Curtin', data-license='cc-by')
 
-//- generates a fixed icon image (no bloom-imageContainer), that floats to the right side
+//- generates a fixed icon image (no bloom-imageContainer) with embedded metadata, that floats to the right side
+//- NB: This is fixed metadata for the icons used in Story Primer templates ONLY! Don't use this mixin for other pictures!
 mixin fixedIcon-right(altText, src)
     - requireTwoArguments('fixedIcon-right', arguments)
     .bloom-imageContainer.icon-right(attributes)
-        img(alt=altText, src=src)
-
-//- generates a fixed icon image with bubble text in a bloom-imageContainer
-mixin fixedIcon-bubble(bubbleText, altText, src)
-    .bloom-imageContainer.icon
-        label.bubble.bloom-showOnlyWhenTargetHasFocus=bubbleText
-        img(alt=altText, src=src)
+        img(alt=altText, src=src, data-copyright='Copyright &copy; 2012, Natashia Curtin', data-creator='Natashia Curtin', data-license='cc-by')
 
 //- generates an alphabet chart matrix 3 wide with variable number of rows
 //- this goes under the table element with a special class for this size chart
