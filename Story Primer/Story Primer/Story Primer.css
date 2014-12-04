@@ -67,7 +67,7 @@ TEXTAREA, DIV.bloom-editable, TD
 }
 .box
 {
-	border: 1pt solid #000000;
+	border: 1pt solid #000000 !important;
 	margin-top: 0;
 	margin-bottom: 1px;
 }
@@ -145,11 +145,18 @@ TD.boxSampleLetterRight
 TD.keyWordBox
 {
 	width: 40% !important;
+    min-height: 0;
+    max-height: 150px;
 }
 TD.keyWordsRight
 {
 	width: auto !important;
-	display: inline;
+	/*display: inline;*/
+}
+.keyWordsRight .primerTableFixed
+{
+    height: 100% !important;
+    table-layout: auto !important;
 }
 TABLE.keyWordTable TD
 {
@@ -244,11 +251,15 @@ TABLE.primerTableWordFind
 	height: auto;
 	padding-left: 6pt;
 }
-TD.sampleLetter
+.sampleHeader
 {
-	max-width: 20%;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
+    width: 100%;
+}
+.sampleHeader .sampleLetter
+{
+    padding-left: 40%;
+    padding-right: 40%;
+    text-align: center;
 }
 .sampleLetterLeft
 {
@@ -268,11 +279,10 @@ TD.sampleLetter
 }
 TD .sampleSentence
 {
-	margin-left: 2pt;
 	text-indent: 0;
-	text-align: left;
+	text-align: center;
 	font-size: 93% !important;
-	min-width: 70% !important;
+	width: 100% !important;
 }
 .sectionHead
 {
@@ -298,6 +308,8 @@ TD .sampleSentence
 .sampleLetter .soundInFocus
 {
 	font-size: 130% !important;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 .space
 {
@@ -406,13 +418,10 @@ A4Portrait*/
 	/*[disabled]background:#FFFFFF;*/
 	width: 125px !important;
 }
-.A4Portrait .sampleSentence
-{
-	width: 460px !important;
-}
 .A4Portrait .smallImageInTable
 {
 	max-width: 150px;
+    max-height: 145px;
 	/*[disabled]border:2pt solid #008000;*/
 }
 .A4Portrait .letters6x3 .bloom-imageContainer.alphabet

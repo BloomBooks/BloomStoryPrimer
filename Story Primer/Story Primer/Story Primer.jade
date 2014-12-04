@@ -76,10 +76,11 @@ html
 		// Template page #5
 		+a4page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
 			.bloom-hideLanguageNameDisplay.padded.box
-				table
+				table.sampleHeader
 					tr
 						td.sampleLetter
-							+field-placeholder-attributesOnChild(focusSound).soundInFocus
+							+field-placeholder-attributesOnChild(focusSound).soundInFocus.box
+					tr
 						td
 							+field-bubble-attributesOnChild('Key sentence').sampleSentence
 				table.primerTableKeyWordWork
