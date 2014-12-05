@@ -75,7 +75,7 @@ html
 
 		// Template page #5
 		+a4page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
-			.bloom-hideLanguageNameDisplay.padded.box
+			.bloom-hideLanguageNameDisplay.thinpadded.box
 				table.sampleHeader
 					tr
 						td.sampleLetter
@@ -101,18 +101,17 @@ html
 						td.keyWordsRight
 							table.primerTableFixed
 								tr
-									td
-										+field.instructions
+									td(colspan="2")
+										+field.wordworkinstructions.instructions
 											label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
 								tr
-									td
-										table.primerTableFixed.wordBox
-											+repeat(3)
-												tr
-													td
-														+field
-													td
-														+field
+									+repeat(2)
+										td.box
+											table.primerTableFixed.wordBox
+												+repeat(3)
+													tr
+														td
+															+field
 				table.wordWorkTable
 					tr
 						+repeat(5)
@@ -122,14 +121,13 @@ html
 										tr
 											td
 												+field
-			.padded.box
-				+fixedIcon(actIcon, 'writing.png')
-				+field.instructions
+			.thinpadded.box
+				+fixedIcon(actIcon, 'writing.png').adjustedIcon
+				+field.wordworkinstructions.instructions
 					label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
 				+field-bubble-attributesOnChild('Underlined text to write').underlined
-			.padded.box
-				+fixedIcon(actIcon, 'know.png')
-				+field-bubble-attributesOnChild('Title').title
+			.thinpadded.box
+				+fixedIcon(actIcon, 'know.png').adjustedIcon
 				+field-attributesOnChild.activity
 
 		// Template page #6

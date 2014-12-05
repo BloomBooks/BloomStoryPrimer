@@ -56,6 +56,11 @@ TEXTAREA, DIV.bloom-editable, TD
 	/*[disabled]padding:0 1em 1em;*/
 	min-height: 3em !important;
 }
+.adjustedIcon
+{
+    margin-top: -0.5em !important;
+    margin-left: -0.5em !important;
+}
 .bloom-translationGroup.title .bloom-content1
 {
 	font-size: large !important;
@@ -148,6 +153,10 @@ TD.keyWordBox
     min-height: 0;
     max-height: 150px;
 }
+.keyWordBox TABLE
+{
+    width: 100% !important;
+}
 TD.keyWordsRight
 {
 	width: auto !important;
@@ -180,7 +189,7 @@ TD > .lessonNumber
 	text-align: center;
 	font-size: large;
 }
-.margin-box TABLE
+.marginBox TABLE
 {
 	max-width: 100% !important;
 }
@@ -192,6 +201,10 @@ TABLE.primerTableFixed
 {
 	table-layout: fixed;
 	width: 100% !important;
+}
+.primerTableKeyWordWork
+{
+    width: 100% !important;
 }
 .primerTableMatrix TD
 {
@@ -320,6 +333,10 @@ TD .sampleSentence
 	text-indent: 0;
 	min-height: 3em !important;
 }
+.thinpadded
+{
+    padding: 0.6em;
+}
 .bloom-editable.title
 {
 	font-weight: bold;
@@ -339,7 +356,6 @@ TD .sampleSentence
 {
 	min-width: 5em;
 	font-size: 70% !important;
-	padding-left: 1em;
 }
 .wordFindWords TD .bloom-editable
 {
@@ -352,6 +368,11 @@ TABLE.wordGrid
 TABLE.wordWorkTable
 {
 	width: 100% !important;
+}
+.wordworkinstructions
+{
+    margin-top: -7px;
+    margin-bottom: 7px;
 }
 TABLE + TABLE TD
 {
