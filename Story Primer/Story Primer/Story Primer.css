@@ -61,6 +61,11 @@ TEXTAREA, DIV.bloom-editable, TD
     margin-top: -0.5em !important;
     margin-left: -0.5em !important;
 }
+.activityInstructions
+{
+    margin-top: -7px;
+    margin-bottom: 7px;
+}
 .bloom-translationGroup.title .bloom-content1
 {
 	font-size: large !important;
@@ -328,6 +333,10 @@ TD .sampleSentence
 {
 	height: 1cm;
 }
+.spacer
+{
+    width: 1em !important;
+}
 .story
 {
 	text-indent: 0;
@@ -369,7 +378,7 @@ TABLE.wordWorkTable
 {
 	width: 100% !important;
 }
-.wordworkinstructions
+.wordworkInstructions
 {
     margin-top: -7px;
     margin-bottom: 7px;

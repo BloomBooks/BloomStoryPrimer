@@ -101,11 +101,13 @@ html
 						td.keyWordsRight
 							table.primerTableFixed
 								tr
-									td(colspan="2")
-										+field.wordworkinstructions.instructions
+									td.spacer
+									td(colspan="3")
+										+field.wordworkInstructions.instructions
 											label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
 								tr
 									+repeat(2)
+										td.spacer
 										td.box
 											table.primerTableFixed.wordBox
 												+repeat(3)
@@ -123,7 +125,7 @@ html
 												+field
 			.thinpadded.box
 				+fixedIcon(actIcon, 'writing.png').adjustedIcon
-				+field.wordworkinstructions.instructions
+				+field.activityInstructions.instructions
 					label.bubble.bloom-showOnlyWhenTargetHasFocus Writing activity instructions
 				+field-bubble-attributesOnChild('Underlined text to write').underlined
 			.thinpadded.box
