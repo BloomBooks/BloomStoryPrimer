@@ -56,7 +56,12 @@ TEXTAREA, DIV.bloom-editable, TD
 	/*[disabled]padding:0 1em 1em;*/
 	min-height: 3em !important;
 }
-.adjustedIcon
+.padded .adjustedIcon
+{
+    margin-top: -1em !important;
+    margin-left: -1em !important;
+}
+.thinpadded .adjustedIcon
 {
     margin-top: -0.5em !important;
     margin-left: -0.5em !important;
@@ -272,6 +277,7 @@ TABLE.primerTableWordFind
 .sampleHeader
 {
     width: 100%;
+    margin-bottom: 15px;
 }
 .sampleHeader .sampleLetter
 {
@@ -345,6 +351,10 @@ TD .sampleSentence
 .thinpadded
 {
     padding: 0.6em;
+}
+.thinpadded + .thinpadded
+{
+    margin-top: 10px;
 }
 .bloom-editable.title
 {
