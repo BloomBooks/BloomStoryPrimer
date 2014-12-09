@@ -8,7 +8,7 @@ Override "width: 100%;" in basePage.css. This means that further adjustment of w
 to be both higher precedence selector than these AND marked important! The same applies to font-size.*/
 TEXTAREA, DIV.bloom-editable, TD
 {
-	font-family: Andika, sans-serif !important;
+	font-family: Andika !important;
 	font-size: 20pt !important;
 	overflow: visible;
 	margin-left: 2pt;

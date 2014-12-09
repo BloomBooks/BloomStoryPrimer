@@ -15,20 +15,20 @@ mixin adjustableImageRight
 //- generates a translationGroup with bubble text and optional classes on the internal div
 mixin field-bubble-attributesOnChild(bubbleText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
-    .bloom-translationGroup
+    .bloom-translationGroup.normal-style
         label.bubble.bloom-showOnlyWhenTargetHasFocus=bubbleText
         +editable(kLanguageForPrototypeOnly)(attributes=attributes)
 
 //- generates a translationGroup with any classes on the internal div
 mixin field-attributesOnChild
     - requireZeroArguments('field-attributesOnChild', arguments)
-    .bloom-translationGroup
+    .bloom-translationGroup.normal-style
         +editable(kLanguageForPrototypeOnly)(attributes=attributes)
 
 //- generates a translationGroup with placeholder text and optional classes on the internal div
 mixin field-placeholder-attributesOnChild(placeholderText)
     - requireOneArgument('field-bubble-attributesOnChild', arguments)
-    .bloom-translationGroup
+    .bloom-translationGroup.normal-style
         label.placeholder=placeholderText
         +editable(kLanguageForPrototypeOnly)(attributes=attributes)
 
