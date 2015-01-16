@@ -1,530 +1,400 @@
-/*Story Primer.CSS
-These tell Bloom what choices to give the use as far as Page, Orientation, & Layout options:
-STARTLAYOUTS
-{"layouts":     ["A4Portrait"]  }
-ENDLAYOUTS
-
-Override "width: 100%;" in basePage.css. This means that further adjustment of width will have
-to be both higher precedence selector than these AND marked important! The same applies to font-size.*/
-TEXTAREA, DIV.bloom-editable, TD
-{
-	font-family: Andika !important;
-	font-size: 20pt !important;
-	overflow: visible;
-	margin-left: 2pt;
-	margin-right: 2pt;
-	width: auto !important;
-	min-height: 1.2em;
-}
-.marginBox > .wordGrid TD
-{
-	padding: 0px 0.5em;
-}
-/*Reapply "width: 100%" to XMatter*/
-.bloom-frontMatter .bloom-editable
-{
-	width: 100% !important;
-}
-.bloom-backMatter .bloom-editable
-{
-	width: 100% !important;
-}
-/*generic border layout stuff*/
-.bottom
-{
-	border-bottom: 1pt solid #000000;
-}
-.left
-{
-	border-left: 1pt solid #000000;
-}
-.right
-{
-	border-right: 1pt solid #000000;
-}
-.top
-{
-	border-top: 1pt solid #000000;
-}
-.blank
-{
-	min-width: 0.7em;
-}
-/*Regular content*/
-.activity
-{
-	/*[disabled]padding:0 1em 1em;*/
-	min-height: 3em !important;
-}
-.padded .adjustedIcon
-{
-    margin-top: -1em !important;
-    margin-left: -1em !important;
-}
-.thinpadded .adjustedIcon
-{
-    margin-top: -0.5em !important;
-    margin-left: -0.5em !important;
-}
-.activityInstructions
-{
-    margin-top: -7px;
-    margin-bottom: 7px;
-}
-.bloom-translationGroup.title .bloom-content1
-{
-	font-size: large !important;
-	margin-left: 0pt;
-}
-.primerTableWithBorder.wordWorkWords .bloom-editable
-{
-	font-size: 80% !important;
-}
-.box
-{
-	border: 1pt solid #000000 !important;
-	margin-top: 0;
-	margin-bottom: 1px;
-}
-DIV + .box
-{
-	margin-top: 5px;
-}
-TD.boxBlankMatchingIconBook
-{
-	width: 10% !important;
-}
-TD.boxIcon
-{
-	width: 15% !important;
-}
-TD.boxLessonTitle
-{
-	width: 75% !important;
-}
-TD.boxSampleLetterRight
-{
-	width: 20% !important;
-	padding-top: 1pc;
-	text-align: center;
-}
-.fullWidthTable
-{
-	table-layout: fixed;
-	/*[disabled]width:100%;*/
-}
-.icon
-{
-	border: none;
-	float: left;
-	clear: left;
-	margin: 2px 3px 1px 2px;
-	padding: 0;
-}
-.icon IMG
-{
-	height: auto;
-}
-.icon-right
-{
-	border: none;
-	float: right;
-	clear: right;
-	margin: 2px 3px 1px 2px;
-	padding: 0;
-}
-.icon-right IMG
-{
-	height: auto;
-}
-.imageAdjustable.floatRight
-{
-	/*[disabled]width:50%;*/
-	height: auto;
-	float: right;
-	vertical-align: top;
-}
-.bloom-translationGroup.instructions .bloom-editable
-{
-	margin: 2pt 2pt 0 !important;
-	font-size: 12pt !important;
-	font-style: italic !important;
-	font-weight: normal !important;
-}
-.bloom-translationGroup.instructionsNonItalic .bloom-editable
-{
-	margin: 2pt 2pt 0 !important;
-	font-style: normal !important;
-	font-weight: normal !important;
-}
-TD.keyWordBox
-{
-	width: 40% !important;
-    min-height: 0;
-    max-height: 150px;
-}
-.keyWordBox TABLE
-{
-    width: 100% !important;
-}
-TD.keyWordsRight
-{
-	width: auto !important;
-	/*display: inline;*/
-}
-.keyWordsRight .primerTableFixed
-{
-    height: 100% !important;
-    table-layout: auto !important;
-}
-TABLE.keyWordTable TD
-{
-	/*[disabled]font-size:90%;*/
-	min-width: 2em;
-}
-TD > .lessonNumber
-{
-	font-size: 80% !important;
-	min-width: 80px;
-}
-.lessonTitle
-{
-	margin-top: 0;
-	text-align: center;
-	font-weight: bold;
-}
-.mainTitle
-{
-	font-weight: bold;
-	text-align: center;
-	font-size: large;
-}
-.marginBox TABLE
-{
-	max-width: 100% !important;
-}
-.padded
-{
-	padding: 1.5em;
-}
-TABLE.primerTableFixed
-{
-	table-layout: fixed;
-	width: 100% !important;
-}
-.primerTableKeyWordWork
-{
-    width: 100% !important;
-}
-.primerTableMatrix TD
-{
-	border: 1pt solid #000000;
-	text-align: center;
-	padding: 6pt 3pt;
-}
-TABLE.primerTableMatrix
-{
-	table-layout: fixed;
-	width: 100% !important;
-	border-collapse: collapse;
-	margin-top: 0;
-}
-.primerTableMatrixMedium IMG
-{
-	float: left;
-}
-.primerTableMatrixMedium TD
-{
-	border: 1pt solid #000000;
-	text-align: center;
-}
-TABLE.primerTableMatrixMedium
-{
-	table-layout: fixed;
-	width: 100% !important;
-	border-collapse: collapse;
-	margin-top: 1pt;
-}
-TABLE.primerTableNoBorder
-{
-	/*[disabled]width:100%;*/
-	margin-left: auto;
-	margin-right: auto;
-	/*[disabled]font-size:smaller;*/
-}
-.primerTableWordFind TD .bloom-editable
-{
-	border: 1pt solid #000000;
-	text-align: center;
-	padding: 4px 4px 4px 0;
-	margin-left: 0;
-	margin-right: 0;
-}
-TABLE.primerTableWordFind
-{
-	border: 1pt solid #000000;
-	table-layout: fixed;
-	width: 100% !important;
-	border-collapse: collapse;
-	margin-top: 12pt;
-}
-.rightImage
-{
-	max-width: 100pt;
-	height: auto;
-	padding-left: 6pt;
-}
-.sampleHeader
-{
-    width: 100%;
-    margin-bottom: 15px;
-}
-.sampleHeader .sampleLetter
-{
-    padding-left: 40%;
-    padding-right: 40%;
-    text-align: center;
-}
-.sampleLetterLeft
-{
-	z-index: 5;
-	font-weight: bold;
-	padding: 6pt 11pt;
-	border: 1pt solid #000000;
-}
-.sampleLetterRight
-{
-	z-index: 5;
-	font-weight: bold;
-	border: 1pt solid #000000;
-	margin: auto;
-	padding-left: 6pt;
-	padding-right: 6pt;
-}
-TD .sampleSentence
-{
-	text-indent: 0;
-	text-align: center;
-	font-size: 93% !important;
-	width: 100% !important;
-}
-.sectionHead
-{
-	font-weight: bold;
-	text-align: center;
-}
-.sentence
-{
-	margin-left: 2pt;
-	margin-top: 12pt;
-	text-align: left;
-	text-indent: 24pt;
-}
-.soundInFocus
-{
-	margin-left: auto;
-	margin-right: auto;
-	/*[disabled]margin-top:18px;*/
-	margin-bottom: 18px;
-	min-width: 2em;
-	font-weight: bold;
-}
-.sampleLetter .soundInFocus
-{
-	font-size: 130% !important;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-.space
-{
-	height: 1cm;
-}
-.spacer
-{
-    width: 1em !important;
-}
-.story
-{
-	text-indent: 0;
-	min-height: 3em !important;
-}
-.thinpadded
-{
-    padding: 0.6em;
-}
-.thinpadded + .thinpadded
-{
-    margin-top: 10px;
-}
-.bloom-editable.title
-{
-	font-weight: bold;
-	text-align: center;
-	margin-right: 0;
-	font-size: 200% !important;
-}
-.underlined
-{
-	margin-left: 2pt;
-	text-decoration: underline;
-	text-align: left;
-	margin-bottom: 0;
-	min-height: 3em !important;
-}
-.wordBox TD
-{
-	min-width: 5em;
-	font-size: 70% !important;
-}
-.wordFindWords TD .bloom-editable
-{
-	font-size: 100% !important;
-}
-TABLE.wordGrid
-{
-	width: 100% !important;
-}
-TABLE.wordWorkTable
-{
-	width: 100% !important;
-}
-.wordworkInstructions
-{
-    margin-top: -7px;
-    margin-bottom: 7px;
-}
-TABLE + TABLE TD
-{
-	padding: 2pt;
-}
-TABLE + TABLE
-{
-	margin-top: 6pt;
-}
-TABLE + TABLE.alphabet TD
-{
-	padding: 0;
-	border: 3pt solid #FFA500;
-}
-TABLE + TABLE.alphabet
-{
-	margin-top: 0;
-	border: 2pt solid #FF0000;
-}
-TABLE.primerTableTitleLine + TABLE TD
-{
-	padding: 0;
-}
-/*prevent extra padding*/
-TD.alphabet
-{
-	margin-left: auto;
-	margin-right: auto;
-	border: 3pt solid #FF0000;
-}
-TD TD
-{
-	padding: 2pt;
-}
-TABLE.alphabet TD
-{
-	border: none;
-	margin: auto;
-	/*[disabled]font-size:20pt;*/
-}
-TABLE.alphabet DIV.alphabet
-{
-	border: none;
-	margin: 0;
-}
-TABLE.alphabet TD TD
-{
-	padding: 0 !important;
-}
-/*Layout-size specific rules
-A4Portrait*/
-.A4Portrait .icon
-{
-	width: 60pt !important;
-	height: 60pt;
-}
-.A4Portrait .icon-right
-{
-	width: 60pt !important;
-	height: 60pt;
-}
-.A4Portrait .lessonNumber
-{
-	/*[disabled]background:#FFFFFF;*/
-	width: 125px !important;
-}
-.A4Portrait .smallImageInTable
-{
-	max-width: 150px;
-    max-height: 145px;
-	/*[disabled]border:2pt solid #008000;*/
-}
-.A4Portrait .letters6x3 .bloom-imageContainer.alphabet
-{
-	height: 155px;
-}
-.A4Portrait .letters7x3 .bloom-imageContainer.alphabet
-{
-	height: 132px;
-}
-.A4Portrait .letters8x3 .bloom-imageContainer.alphabet
-{
-	height: 115px;
-}
-.A4Portrait .letters9x3 .bloom-imageContainer.alphabet
-{
-	height: 102px;
-}
-.A4Portrait .bloom-imageContainer.alphabet
-{
-	width: 139px;
-}
-/*A5Portrait*/
-.A5Portrait .bloom-editable
-{
-	font-size: 100% !important;
-	padding: 0;
-}
-.A5Portrait .icon
-{
-	width: 42pt !important;
-	height: 42pt;
-}
-.A5Portrait .lessonNumber
-{
-	/*[disabled]background:#FFC0CB;*/
-}
-.A5Portrait .letters6x3 .bloom-imageContainer.alphabet
-{
-	height: 97px;
-}
-.A5Portrait .letters7x3 .bloom-imageContainer.alphabet
-{
-	height: 82px;
-}
-.A5Portrait .letters8x3 .bloom-imageContainer.alphabet
-{
-	height: 71px;
-}
-.A5Portrait .letters9x3 .bloom-imageContainer.alphabet
-{
-	height: 62px;
-}
-.A5Portrait .bloom-imageContainer.alphabet
-{
-	width: 74px !important;
-}
-.A5Portrait .smallImageInTable
-{
-	max-width: 100px;
-	border: 2pt solid #008000;
-}
-.sampleLetter .soundInFocus
-{
-	font-size: 130% !important;
+TEXTAREA,
+DIV.bloom-editable,
+TD {
+  font-family: Andika !important;
+  font-size: 20pt !important;
+  overflow: visible;
+  margin-left: 2pt;
+  margin-right: 2pt;
+  width: auto !important;
+  min-height: 1.2em;
+}
+.marginBox > .wordGrid TD {
+  padding: 0px 0.5em;
+}
+.marginBox TABLE {
+  max-width: 100% !important;
+}
+.bloom-frontMatter .bloom-editable {
+  width: 100% !important;
+}
+.bloom-backMatter .bloom-editable {
+  width: 100% !important;
+}
+.bottom {
+  border-bottom: 1pt solid #000000;
+}
+.left {
+  border-left: 1pt solid #000000;
+}
+.right {
+  border-right: 1pt solid #000000;
+}
+.top {
+  border-top: 1pt solid #000000;
+}
+.blank {
+  min-width: 0.7em;
+}
+.activity {
+  min-height: 3em !important;
+}
+.padded {
+  padding: 1.5em;
+}
+.padded .adjustedIcon {
+  margin-top: -1em !important;
+  margin-left: -1em !important;
+}
+.thinpadded {
+  padding: 0.6em;
+}
+.thinpadded .adjustedIcon {
+  margin-top: -0.5em !important;
+  margin-left: -0.5em !important;
+}
+.thinpadded + .thinpadded {
+  margin-top: 10px;
+}
+.activityInstructions {
+  margin-top: -7px;
+  margin-bottom: 7px;
+}
+.bloom-translationGroup.title .bloom-content1 {
+  font-size: large !important;
+  margin-left: 0pt;
+}
+.bloom-translationGroup.instructions .bloom-editable {
+  margin: 2pt 2pt 0 !important;
+  font-size: 12pt !important;
+  font-style: italic !important;
+  font-weight: normal !important;
+}
+.bloom-translationGroup.instructionsNonItalic .bloom-editable {
+  margin: 2pt 2pt 0 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+}
+.primerTableWithBorder.wordWorkWords .bloom-editable {
+  font-size: 80% !important;
+}
+.box {
+  border: 1pt solid #000000 !important;
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+DIV + .box {
+  margin-top: 5px;
+}
+TD.boxBlankMatchingIconBook {
+  width: 10% !important;
+}
+TD.boxIcon {
+  width: 15% !important;
+}
+TD.boxLessonTitle {
+  width: 75% !important;
+}
+TD.boxSampleLetterRight {
+  width: 20% !important;
+  padding-top: 1pc;
+  text-align: center;
+}
+TD.keyWordBox {
+  width: 40% !important;
+  min-height: 0;
+  max-height: 150px;
+}
+TD.keyWordsRight {
+  width: auto !important;
+}
+TD > .lessonNumber {
+  font-size: 80% !important;
+  min-width: 80px;
+}
+TD .sampleSentence {
+  text-indent: 0;
+  text-align: center;
+  font-size: 93% !important;
+  width: 100% !important;
+}
+TD.alphabet {
+  margin-left: auto;
+  margin-right: auto;
+  border: 3pt solid #FF0000;
+}
+TD TD {
+  padding: 2pt;
+}
+.fullWidthTable {
+  table-layout: fixed;
+}
+.icon {
+  border: none;
+  float: left;
+  clear: left;
+  margin: 2px 3px 1px 2px;
+  padding: 0;
+}
+.icon IMG {
+  height: auto;
+}
+.icon-right {
+  border: none;
+  float: right;
+  clear: right;
+  margin: 2px 3px 1px 2px;
+  padding: 0;
+}
+.icon-right IMG {
+  height: auto;
+}
+.imageAdjustable.floatRight {
+  height: auto;
+  float: right;
+  vertical-align: top;
+}
+.keyWordBox TABLE {
+  width: 100% !important;
+}
+.keyWordsRight .primerTableFixed {
+  height: 100% !important;
+  table-layout: auto !important;
+}
+TABLE.keyWordTable TD {
+  min-width: 2em;
+}
+TABLE.primerTableFixed {
+  table-layout: fixed;
+  width: 100% !important;
+}
+TABLE.primerTableMatrix {
+  table-layout: fixed;
+  width: 100% !important;
+  border-collapse: collapse;
+  margin-top: 0;
+}
+TABLE.primerTableMatrixMedium {
+  table-layout: fixed;
+  width: 100% !important;
+  border-collapse: collapse;
+  margin-top: 1pt;
+}
+TABLE.primerTableNoBorder {
+  margin-left: auto;
+  margin-right: auto;
+}
+TABLE.primerTableWordFind {
+  border: 1pt solid #000000;
+  table-layout: fixed;
+  width: 100% !important;
+  border-collapse: collapse;
+  margin-top: 12pt;
+}
+TABLE.wordGrid {
+  width: 100% !important;
+}
+TABLE.wordWorkTable {
+  width: 100% !important;
+}
+TABLE + TABLE {
+  margin-top: 6pt;
+}
+TABLE + TABLE TD {
+  padding: 2pt;
+}
+TABLE + TABLE.alphabet {
+  margin-top: 0;
+  border: 2pt solid #FF0000;
+}
+TABLE + TABLE.alphabet TD {
+  padding: 0;
+  border: 3pt solid #FFA500;
+}
+TABLE.primerTableTitleLine + TABLE TD {
+  padding: 0;
+}
+TABLE.alphabet TD {
+  border: none;
+  margin: auto;
+}
+TABLE.alphabet TD TD {
+  padding: 0 !important;
+}
+TABLE.alphabet DIV.alphabet {
+  border: none;
+  margin: 0;
+}
+.lessonTitle {
+  margin-top: 0;
+  text-align: center;
+  font-weight: bold;
+}
+.mainTitle {
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+}
+.primerTableKeyWordWork {
+  width: 100% !important;
+}
+.primerTableMatrix TD {
+  border: 1pt solid #000000;
+  text-align: center;
+  padding: 6pt 3pt;
+}
+.primerTableMatrixMedium IMG {
+  float: left;
+}
+.primerTableMatrixMedium TD {
+  border: 1pt solid #000000;
+  text-align: center;
+}
+.primerTableWordFind TD .bloom-editable {
+  border: 1pt solid #000000;
+  text-align: center;
+  padding: 4px 4px 4px 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.rightImage {
+  max-width: 100pt;
+  height: auto;
+  padding-left: 6pt;
+}
+.sampleHeader {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.sampleHeader .sampleLetter {
+  padding-left: 40%;
+  padding-right: 40%;
+  text-align: center;
+}
+.sampleLetterLeft {
+  z-index: 5;
+  font-weight: bold;
+  padding: 6pt 11pt;
+  border: 1pt solid #000000;
+}
+.sampleLetterRight {
+  z-index: 5;
+  font-weight: bold;
+  border: 1pt solid #000000;
+  margin: auto;
+  padding-left: 6pt;
+  padding-right: 6pt;
+}
+.sectionHead {
+  font-weight: bold;
+  text-align: center;
+}
+.sentence {
+  margin-left: 2pt;
+  margin-top: 12pt;
+  text-align: left;
+  text-indent: 24pt;
+}
+.soundInFocus {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
+  min-width: 2em;
+  font-weight: bold;
+}
+.sampleLetter .soundInFocus {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-size: 130% !important;
+}
+.space {
+  height: 1cm;
+}
+.spacer {
+  width: 1em !important;
+}
+.story {
+  text-indent: 0;
+  min-height: 3em !important;
+}
+.bloom-editable.title {
+  font-weight: bold;
+  text-align: center;
+  margin-right: 0;
+  font-size: 200% !important;
+}
+.underlined {
+  margin-left: 2pt;
+  text-decoration: underline;
+  text-align: left;
+  margin-bottom: 0;
+  min-height: 3em !important;
+}
+.wordBox TD {
+  min-width: 5em;
+  font-size: 70% !important;
+}
+.wordFindWords TD .bloom-editable {
+  font-size: 100% !important;
+}
+.wordworkInstructions {
+  margin-top: -7px;
+  margin-bottom: 7px;
+}
+.A4Portrait .icon {
+  width: 60pt !important;
+  height: 60pt;
+}
+.A4Portrait .icon-right {
+  width: 60pt !important;
+  height: 60pt;
+}
+.A4Portrait .lessonNumber {
+  width: 125px !important;
+}
+.A4Portrait .smallImageInTable {
+  max-width: 150px;
+  max-height: 145px;
+}
+.A4Portrait .letters6x3 .bloom-imageContainer.alphabet {
+  height: 155px;
+}
+.A4Portrait .letters7x3 .bloom-imageContainer.alphabet {
+  height: 132px;
+}
+.A4Portrait .letters8x3 .bloom-imageContainer.alphabet {
+  height: 115px;
+}
+.A4Portrait .letters9x3 .bloom-imageContainer.alphabet {
+  height: 102px;
+}
+.A4Portrait .bloom-imageContainer.alphabet {
+  width: 139px;
+}
+.A5Portrait .bloom-editable {
+  font-size: 100% !important;
+  padding: 0;
+}
+.A5Portrait .icon {
+  width: 42pt !important;
+  height: 42pt;
+}
+.A5Portrait .letters6x3 .bloom-imageContainer.alphabet {
+  height: 97px;
+}
+.A5Portrait .letters7x3 .bloom-imageContainer.alphabet {
+  height: 82px;
+}
+.A5Portrait .letters8x3 .bloom-imageContainer.alphabet {
+  height: 71px;
+}
+.A5Portrait .letters9x3 .bloom-imageContainer.alphabet {
+  height: 62px;
+}
+.A5Portrait .bloom-imageContainer.alphabet {
+  width: 74px !important;
+}
+.A5Portrait .smallImageInTable {
+  max-width: 100px;
+  border: 2pt solid #008000;
 }
