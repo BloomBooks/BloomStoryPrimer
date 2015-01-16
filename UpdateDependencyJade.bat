@@ -1,2 +1,2 @@
-copy C:\BloomDesktop\DistFiles\jade\bloom-foundation-mixins.jade .
-copy C:\BloomDesktop\DistFiles\jade\bloom-xmatter-mixins.jade .
+copy ..\BloomDesktop\DistFiles\jade\bloom-foundation-mixins.jade .
+copy ..\BloomDesktop\DistFiles\xmatter\bloom-xmatter-mixins.jade .
