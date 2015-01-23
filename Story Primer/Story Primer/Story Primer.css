@@ -1,25 +1,8 @@
-TEXTAREA,
-DIV.bloom-editable,
-TD {
-  font-family: Andika !important;
-  font-size: 20pt !important;
-  overflow: visible;
-  margin-left: 2pt;
-  margin-right: 2pt;
-  width: auto !important;
-  min-height: 1.2em;
-}
 .marginBox > .wordGrid TD {
   padding: 0px 0.5em;
 }
 .marginBox TABLE {
   max-width: 100% !important;
-}
-.bloom-frontMatter .bloom-editable {
-  width: 100% !important;
-}
-.bloom-backMatter .bloom-editable {
-  width: 100% !important;
 }
 .bottom {
   border-bottom: 1pt solid #000000;
@@ -370,10 +353,6 @@ TABLE.alphabet DIV.alphabet {
 }
 .A4Portrait .bloom-imageContainer.alphabet {
   width: 139px;
-}
-.A5Portrait .bloom-editable {
-  font-size: 100% !important;
-  padding: 0;
 }
 .A5Portrait .icon {
   width: 42pt !important;
