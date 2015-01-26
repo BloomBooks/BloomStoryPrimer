@@ -1,3 +1,9 @@
+/*Story Primer.CSS
+These tell Bloom what choices to give the use as far as Page, Orientation, & Layout options:
+STARTLAYOUTS
+{"layouts":     ["A4Portrait"]  }
+ENDLAYOUTS
+*/
 .marginBox > .wordGrid TD {
   padding: 0px 0.5em;
 }
@@ -85,7 +91,6 @@ TD.boxSampleLetterRight {
 }
 TD.keyWordBox {
   width: 40% !important;
-  min-height: 0;
   max-height: 150px;
 }
 TD.keyWordsRight {
@@ -354,26 +359,52 @@ TABLE.alphabet DIV.alphabet {
 .A4Portrait .bloom-imageContainer.alphabet {
   width: 139px;
 }
-.A5Portrait .icon {
-  width: 42pt !important;
-  height: 42pt;
-}
-.A5Portrait .letters6x3 .bloom-imageContainer.alphabet {
-  height: 97px;
-}
-.A5Portrait .letters7x3 .bloom-imageContainer.alphabet {
-  height: 82px;
-}
-.A5Portrait .letters8x3 .bloom-imageContainer.alphabet {
-  height: 71px;
-}
-.A5Portrait .letters9x3 .bloom-imageContainer.alphabet {
-  height: 62px;
-}
-.A5Portrait .bloom-imageContainer.alphabet {
-  width: 74px !important;
-}
-.A5Portrait .smallImageInTable {
-  max-width: 100px;
-  border: 2pt solid #008000;
-}
+/*.A5Portrait {
+    .bloom-editable {
+//        font-size: 100% !important;
+//        padding: 0;
+    }
+    .icon {
+        width: 42pt !important;
+        height: 42pt;
+    }
+    .lessonNumber {
+    }
+    .letters6x3 {
+        .bloom-imageContainer {
+            &.alphabet {
+                height: 97px;
+            }
+        }
+    }
+    .letters7x3 {
+        .bloom-imageContainer {
+            &.alphabet {
+                height: 82px;
+            }
+        }
+    }
+    .letters8x3 {
+        .bloom-imageContainer {
+            &.alphabet {
+                height: 71px;
+            }
+        }
+    }
+    .letters9x3 {
+        .bloom-imageContainer {
+            &.alphabet {
+                height: 62px;
+            }
+        }
+    }
+    .bloom-imageContainer {
+        &.alphabet {
+            width: 74px !important;
+        }
+    }
+    .smallImageInTable {
+        max-width: 100px;
+        border: 2pt solid #008000;
+    }
+}*/
