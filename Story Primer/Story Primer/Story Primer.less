@@ -72,6 +72,7 @@ ENDLAYOUTS
             font-size: 12pt !important;
             font-style: italic !important;
             font-weight: normal !important;
+            .wrappingText
         }
     }
     &.instructionsNonItalic {
@@ -79,6 +80,7 @@ ENDLAYOUTS
             margin: 2pt 2pt 0 !important;
             font-style: normal !important;
             font-weight: normal !important;
+            .wrappingText
         }
     }
 }
@@ -121,6 +123,9 @@ TD {
     &.keyWordBox {
         width: 40% !important;
         max-height: 150px;
+        & .bloom-editable {
+            font-size: 100%;
+        }
     }
     &.keyWordsRight {
         width: auto !important;
@@ -132,7 +137,7 @@ TD {
     .sampleSentence {
         text-indent: 0;
         text-align: center;
-        font-size: 93% !important;
+        //font-size: 93% !important;
         width: 100% !important;
     }
     &.alphabet {
@@ -188,7 +193,7 @@ TD {
 .keyWordsRight {
     .primerTableFixed {
         height: 100% !important;
-        table-layout: auto !important;
+        table-layout: fixed;
     }
 }
 
@@ -199,7 +204,7 @@ TABLE {
         }
     }
     &.primerTableFixed {
-        table-layout: fixed;
+        //table-layout: fixed;
         width: 100% !important;
     }
     &.primerTableMatrix {
@@ -230,6 +235,8 @@ TABLE {
     }
     &.wordWorkTable {
         width: 100% !important;
+        table-layout: fixed;
+        font-size: 70%;
     }
     & + TABLE {
         margin-top: 6pt;
@@ -369,10 +376,9 @@ TABLE {
 
 .sampleLetter {
     .soundInFocus {
-        font-size: 130% !important;
         padding-bottom: 5px;
         padding-top: 5px;
-        font-size: 130% !important;
+        font-size: 200% !important;
     }
 }
 

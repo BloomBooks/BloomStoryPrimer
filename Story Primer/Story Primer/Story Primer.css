@@ -55,11 +55,13 @@ ENDLAYOUTS
   font-size: 12pt !important;
   font-style: italic !important;
   font-weight: normal !important;
+  overflow: visible;
 }
 .bloom-translationGroup.instructionsNonItalic .bloom-editable {
   margin: 2pt 2pt 0 !important;
   font-style: normal !important;
   font-weight: normal !important;
+  overflow: visible;
 }
 .primerTableWithBorder.wordWorkWords .bloom-editable {
   font-size: 80% !important;
@@ -90,6 +92,9 @@ TD.keyWordBox {
   width: 40% !important;
   max-height: 150px;
 }
+TD.keyWordBox .bloom-editable {
+  font-size: 100%;
+}
 TD.keyWordsRight {
   width: auto !important;
 }
@@ -100,7 +105,6 @@ TD > .lessonNumber {
 TD .sampleSentence {
   text-indent: 0;
   text-align: center;
-  font-size: 93% !important;
   width: 100% !important;
 }
 TD.alphabet {
@@ -144,13 +148,12 @@ TD TD {
 }
 .keyWordsRight .primerTableFixed {
   height: 100% !important;
-  table-layout: auto !important;
+  table-layout: fixed;
 }
 TABLE.keyWordTable TD {
   min-width: 2em;
 }
 TABLE.primerTableFixed {
-  table-layout: fixed;
   width: 100% !important;
 }
 TABLE.primerTableMatrix {
@@ -181,6 +184,8 @@ TABLE.wordGrid {
 }
 TABLE.wordWorkTable {
   width: 100% !important;
+  table-layout: fixed;
+  font-size: 70%;
 }
 TABLE + TABLE {
   margin-top: 6pt;
@@ -291,13 +296,16 @@ TABLE.alphabet DIV.alphabet {
 .sampleLetter .soundInFocus {
   padding-bottom: 5px;
   padding-top: 5px;
-  font-size: 130% !important;
+  font-size: 200% !important;
 }
 .space {
   height: 1cm;
 }
 .spacer {
   width: 1em !important;
+}
+.spacer + .box + .spacer {
+  width: 4em !important;
 }
 .story {
   text-indent: 0;
