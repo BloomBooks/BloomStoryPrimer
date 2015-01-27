@@ -5,16 +5,6 @@ STARTLAYOUTS
 ENDLAYOUTS
 */
 
-TEXTAREA, DIV.bloom-editable, TD {
-//    font-family: Andika !important;
-//    font-size: 20pt !important;
-//    overflow: visible;
-//    margin-left: 2pt;
-//    margin-right: 2pt;
-//    width: auto !important;
-//    min-height: 1.2em;
-}
-
 .marginBox {
     & > .wordGrid {
         TD {
@@ -48,6 +38,7 @@ TEXTAREA, DIV.bloom-editable, TD {
 
 .activity {
     min-height: 3em !important;
+    .wrappingText
 }
 
 .padded {
@@ -75,12 +66,6 @@ TEXTAREA, DIV.bloom-editable, TD {
 }
 
 .bloom-translationGroup {
-    &.title {
-        .bloom-content1 {
-            font-size: large !important;
-            margin-left: 0pt;
-        }
-    }
     &.instructions {
         .bloom-editable {
             margin: 2pt 2pt 0 !important;
@@ -290,10 +275,10 @@ TABLE {
     font-weight: bold;
 }
 
-.mainTitle {
+.mainTitle, .title {
     font-weight: bold;
     text-align: center;
-    font-size: large;
+    margin-right: 0;
 }
 
 .primerTableKeyWordWork {
@@ -402,15 +387,7 @@ TABLE {
 .story {
     text-indent: 0;
     min-height: 3em !important;
-}
-
-.bloom-editable {
-    &.title {
-        font-weight: bold;
-        text-align: center;
-        margin-right: 0;
-        font-size: 200% !important;
-    }
+    .wrappingText
 }
 
 .underlined {
@@ -419,6 +396,7 @@ TABLE {
     text-align: left;
     margin-bottom: 0;
     min-height: 3em !important;
+    .wrappingText
 }
 
 .wordBox {
@@ -439,6 +417,10 @@ TABLE {
 .wordworkInstructions {
     margin-top: -7px;
     margin-bottom: 7px;
+}
+
+.wrappingText {
+    overflow: visible;
 }
 
 .A4Portrait {
@@ -481,7 +463,7 @@ TABLE {
     .letters9x3 {
         .bloom-imageContainer {
             &.alphabet {
-                height: 102px;
+                height: 101px;
             }
         }
     }
@@ -491,53 +473,3 @@ TABLE {
         }
     }
 }
-
-/*.A5Portrait {
-    .bloom-editable {
-//        font-size: 100% !important;
-//        padding: 0;
-    }
-    .icon {
-        width: 42pt !important;
-        height: 42pt;
-    }
-    .lessonNumber {
-    }
-    .letters6x3 {
-        .bloom-imageContainer {
-            &.alphabet {
-                height: 97px;
-            }
-        }
-    }
-    .letters7x3 {
-        .bloom-imageContainer {
-            &.alphabet {
-                height: 82px;
-            }
-        }
-    }
-    .letters8x3 {
-        .bloom-imageContainer {
-            &.alphabet {
-                height: 71px;
-            }
-        }
-    }
-    .letters9x3 {
-        .bloom-imageContainer {
-            &.alphabet {
-                height: 62px;
-            }
-        }
-    }
-    .bloom-imageContainer {
-        &.alphabet {
-            width: 74px !important;
-        }
-    }
-    .smallImageInTable {
-        max-width: 100px;
-        border: 2pt solid #008000;
-    }
-}*/
