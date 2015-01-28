@@ -4,11 +4,19 @@ STARTLAYOUTS
 {"layouts":     ["A4Portrait"]  }
 ENDLAYOUTS
 */
+.bloom-page:not(.bloom-frontMatter) TABLE TD {
+  width: auto;
+}
+.bloom-page:not(.bloom-frontMatter) .bloom-editable {
+  min-height: 1.5em;
+  overflow: visible;
+}
 .marginBox > .wordGrid TD {
   padding: 0px 0.5em;
 }
 .marginBox TABLE {
-  max-width: 100% !important;
+  max-width: 100%;
+  width: 100%;
 }
 .bottom {
   border-bottom: 1pt solid #000000;
@@ -27,7 +35,6 @@ ENDLAYOUTS
 }
 .activity {
   min-height: 3em !important;
-  overflow: visible;
 }
 .padded {
   padding: 1.5em;
@@ -55,13 +62,11 @@ ENDLAYOUTS
   font-size: 12pt !important;
   font-style: italic !important;
   font-weight: normal !important;
-  overflow: visible;
 }
 .bloom-translationGroup.instructionsNonItalic .bloom-editable {
   margin: 2pt 2pt 0 !important;
   font-style: normal !important;
   font-weight: normal !important;
-  overflow: visible;
 }
 .primerTableWithBorder.wordWorkWords .bloom-editable {
   font-size: 80% !important;
@@ -81,12 +86,12 @@ TD.boxIcon {
   width: 15% !important;
 }
 TD.boxLessonTitle {
-  width: 75% !important;
+  width: auto !important;
 }
 TD.boxSampleLetterRight {
-  width: 20% !important;
   padding-top: 1pc;
   text-align: center;
+  width: 23% !important;
 }
 TD.keyWordBox {
   width: 40% !important;
@@ -146,14 +151,17 @@ TD TD {
 .keyWordBox TABLE {
   width: 100% !important;
 }
-.keyWordsRight .primerTableFixed {
+.keyWordsRight > .primerTableNormal {
   height: 100% !important;
-  table-layout: fixed;
 }
 TABLE.keyWordTable TD {
   min-width: 2em;
 }
+TABLE.primerTableNormal {
+  width: 100% !important;
+}
 TABLE.primerTableFixed {
+  table-layout: fixed;
   width: 100% !important;
 }
 TABLE.primerTableMatrix {
@@ -161,6 +169,7 @@ TABLE.primerTableMatrix {
   width: 100% !important;
   border-collapse: collapse;
   margin-top: 0;
+  font-size: medium;
 }
 TABLE.primerTableMatrixMedium {
   table-layout: fixed;
@@ -271,6 +280,7 @@ TABLE.alphabet DIV.alphabet {
 .sampleLetterRight {
   z-index: 5;
   font-weight: bold;
+  font-size: medium;
   border: 1pt solid #000000;
   margin: auto;
   padding-left: 6pt;
@@ -304,13 +314,9 @@ TABLE.alphabet DIV.alphabet {
 .spacer {
   width: 1em !important;
 }
-.spacer + .box + .spacer {
-  width: 4em !important;
-}
 .story {
   text-indent: 0;
   min-height: 3em !important;
-  overflow: visible;
 }
 .underlined {
   margin-left: 2pt;
@@ -318,7 +324,7 @@ TABLE.alphabet DIV.alphabet {
   text-align: left;
   margin-bottom: 0;
   min-height: 3em !important;
-  overflow: visible;
+  font-size: 200%;
 }
 .wordBox TD {
   min-width: 5em;
@@ -330,9 +336,6 @@ TABLE.alphabet DIV.alphabet {
 .wordworkInstructions {
   margin-top: -7px;
   margin-bottom: 7px;
-}
-.wrappingText {
-  overflow: visible;
 }
 .A4Portrait .icon {
   width: 60pt !important;

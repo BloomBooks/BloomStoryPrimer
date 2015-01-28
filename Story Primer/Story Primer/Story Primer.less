@@ -5,6 +5,15 @@ STARTLAYOUTS
 ENDLAYOUTS
 */
 
+.bloom-page:not(.bloom-frontMatter) {
+    & TABLE TD {
+        width: auto;
+    }
+    & .bloom-editable {
+        min-height: 1.5em;
+        overflow: visible;
+    }
+}
 .marginBox {
     & > .wordGrid {
         TD {
@@ -12,7 +21,8 @@ ENDLAYOUTS
         }
     }
     TABLE {
-        max-width: 100% !important;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -38,7 +48,6 @@ ENDLAYOUTS
 
 .activity {
     min-height: 3em !important;
-    .wrappingText
 }
 
 .padded {
@@ -72,7 +81,6 @@ ENDLAYOUTS
             font-size: 12pt !important;
             font-style: italic !important;
             font-weight: normal !important;
-            .wrappingText
         }
     }
     &.instructionsNonItalic {
@@ -80,7 +88,6 @@ ENDLAYOUTS
             margin: 2pt 2pt 0 !important;
             font-style: normal !important;
             font-weight: normal !important;
-            .wrappingText
         }
     }
 }
@@ -113,12 +120,12 @@ TD {
         width: 15% !important;
     }
     &.boxLessonTitle {
-        width: 75% !important;
+        width: auto !important;
     }
     &.boxSampleLetterRight {
-        width: 20% !important;
         padding-top: 1pc;
         text-align: center;
+        width: 23% !important;
     }
     &.keyWordBox {
         width: 40% !important;
@@ -191,9 +198,8 @@ TD {
 }
 
 .keyWordsRight {
-    .primerTableFixed {
+    & > .primerTableNormal {
         height: 100% !important;
-        table-layout: fixed;
     }
 }
 
@@ -203,8 +209,11 @@ TABLE {
             min-width: 2em;
         }
     }
+    &.primerTableNormal {
+        width: 100% !important;
+    }
     &.primerTableFixed {
-        //table-layout: fixed;
+        table-layout: fixed;
         width: 100% !important;
     }
     &.primerTableMatrix {
@@ -212,6 +221,7 @@ TABLE {
         width: 100% !important;
         border-collapse: collapse;
         margin-top: 0;
+        font-size: medium;
     }
     &.primerTableMatrixMedium {
         table-layout: fixed;
@@ -348,6 +358,7 @@ TABLE {
 .sampleLetterRight {
     z-index: 5;
     font-weight: bold;
+    font-size: medium;
     border: 1pt solid #000000;
     margin: auto;
     padding-left: 6pt;
@@ -393,7 +404,6 @@ TABLE {
 .story {
     text-indent: 0;
     min-height: 3em !important;
-    .wrappingText
 }
 
 .underlined {
@@ -402,7 +412,7 @@ TABLE {
     text-align: left;
     margin-bottom: 0;
     min-height: 3em !important;
-    .wrappingText
+    font-size: 200%; // font size in Story Primer is very weird! c.f. TABLE.primerTableMatrix
 }
 
 .wordBox {
@@ -423,10 +433,6 @@ TABLE {
 .wordworkInstructions {
     margin-top: -7px;
     margin-bottom: 7px;
-}
-
-.wrappingText {
-    overflow: visible;
 }
 
 .A4Portrait {
