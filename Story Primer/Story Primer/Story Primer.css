@@ -4,12 +4,16 @@ STARTLAYOUTS
 {"layouts":     ["A4Portrait"]  }
 ENDLAYOUTS
 */
-.bloom-page:not(.bloom-frontMatter) TABLE TD {
+.bloom-page:not(.bloom-frontMatter):not(.bloom-backMatter) TABLE TD {
   width: auto;
 }
-.bloom-page:not(.bloom-frontMatter) .bloom-editable {
+.bloom-page:not(.bloom-frontMatter):not(.bloom-backMatter) .normal-style {
+  font-size: 20pt;
+}
+.bloom-page:not(.bloom-frontMatter):not(.bloom-backMatter) .bloom-editable {
   min-height: 1.5em;
   overflow: visible;
+  line-height: 1.5;
 }
 .marginBox > .wordGrid TD {
   padding: 0px 0.5em;
@@ -17,6 +21,19 @@ ENDLAYOUTS
 .marginBox TABLE {
   max-width: 100%;
   width: 100%;
+}
+.KeyLetter-style {
+  font-size: 24pt;
+  font-weight: bold;
+}
+.LessonNumber-style {
+  font-size: 16pt;
+}
+.AlphabetChart-style {
+  font-size: 20pt;
+}
+.WordFind-style {
+  font-size: 20pt;
 }
 .bottom {
   border-bottom: 1pt solid #000000;
@@ -105,7 +122,7 @@ TD.keyWordsRight {
 }
 TD > .lessonNumber {
   font-size: 80% !important;
-  min-width: 80px;
+  min-width: 90px;
 }
 TD .sampleSentence {
   text-indent: 0;
@@ -306,7 +323,6 @@ TABLE.alphabet DIV.alphabet {
 .sampleLetter .soundInFocus {
   padding-bottom: 5px;
   padding-top: 5px;
-  font-size: 200% !important;
 }
 .space {
   height: 1cm;

@@ -5,13 +5,19 @@ STARTLAYOUTS
 ENDLAYOUTS
 */
 
-.bloom-page:not(.bloom-frontMatter) {
+.bloom-page:not(.bloom-frontMatter):not(.bloom-backMatter) {
     & TABLE TD {
         width: auto;
+    }
+    // Story Primer templates are for beginning readers, so start with a larger than normal font-size
+    & .normal-style {
+        font-size: 20pt;
     }
     & .bloom-editable {
         min-height: 1.5em;
         overflow: visible;
+        // Story Primer templates are for beginning readers, so start with a larger than normal line-height
+        line-height: 1.5;
     }
 }
 .marginBox {
@@ -24,6 +30,21 @@ ENDLAYOUTS
         max-width: 100%;
         width: 100%;
     }
+}
+
+// Add a few styles specific to parts of Story Primer
+.KeyLetter-style {
+    font-size: 24pt;
+    font-weight: bold;
+}
+.LessonNumber-style {
+    font-size: 16pt;
+}
+.AlphabetChart-style {
+    font-size: 20pt;
+}
+.WordFind-style {
+    font-size: 20pt;
 }
 
 .bottom {
@@ -139,7 +160,7 @@ TD {
     }
     & > .lessonNumber {
         font-size: 80% !important;
-        min-width: 80px;
+        min-width: 90px;
     }
     .sampleSentence {
         text-indent: 0;
@@ -389,7 +410,6 @@ TABLE {
     .soundInFocus {
         padding-bottom: 5px;
         padding-top: 5px;
-        font-size: 200% !important;
     }
 }
 
