@@ -39,25 +39,25 @@ html
 			div(data-book='copyright', lang='*') Copyright Literacy Association of the Solomon Islands (LASI) and SIL Australia 2014
 
 		// Template page #1
-		+a4page-choice('Full page picture')#1a98decc-55b9-5013-a0de-6512441b3783
+		+a4page-choice('Full page picture').fullPagePicturePage#1a98decc-55b9-5013-a0de-6512441b3783
 			+image.bloom-resizable
 				label.bubble.bloom-showOnlyWhenTargetHasFocus=imageImport
 
 		// Template page #2
-		+a4page-choice('Story start')#2233decc-25b9-4013-a0de-6512441b3783
+		+a4page-choice('Story start').storyStartPage#2233decc-25b9-4013-a0de-6512441b3783
 			+field-bubble-attributesOnChild(sTitle).mainTitle
 			+field-bubble-attributesOnChild(sSubtitle).title
 			+adjustableImageRight
 			+field-attributesOnChild.story
 
 		// Template page #3
-		+a4page-choice('Story continues & picture')#3298decc-55b9-4013-a0de-6512441b3783
+		+a4page-choice('Story continues & picture').storyContinuesAndPicturePage#3298decc-55b9-4013-a0de-6512441b3783
 			+field-attributesOnChild.story
 			+adjustableImageRight
 			+field-attributesOnChild.story
 
 		// Template page #4
-		+a4page-choice('Lesson - story page')#4298333c-45b9-4013-a0de-6512441b3783
+		+a4page-choice('Lesson - story page').lessonStoryPage#4298333c-45b9-4013-a0de-6512441b3783
 			table.primerTableTitleLine
 				tr.bloom-userCannotModifyStyles
 					td.boxLessonNumber.bloom-hideLanguageNameDisplay
@@ -74,7 +74,7 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #5
-		+a4page-choice('Lesson - word work page')#4b4b61d5-d232-437c-8290-9829b9be67cf
+		+a4page-choice('Lesson - word work page').wordWorkPage#4b4b61d5-d232-437c-8290-9829b9be67cf
 			.bloom-hideLanguageNameDisplay.thinpadded.box.bloom-userCannotModifyStyles
 				table.sampleHeader
 					tr
@@ -133,28 +133,28 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #6
-		+a4page-choice('Story continues & activity')#2222decc-55b9-4013-a0de-6512441b3783
+		+a4page-choice('Story continues & activity').storyContinuesAndActivityPage#2222decc-55b9-4013-a0de-6512441b3783
 			+field-bubble-attributesOnChild('Text continues here').story
 			.padded.box
 				+fixedIcon(actIcon, 'discussion.png').adjustedIcon
 				+field-attributesOnChild.activity
 
 		// Template page #7
-		+a4page-choice('Free text')#77cd48df-e9ab-4a07-afd4-6a24d0398382
+		+a4page-choice('Free text').freeTextPage#77cd48df-e9ab-4a07-afd4-6a24d0398382
 			+field.normal-style
 
 		// Template page #8
-		+a4page-choice('Picture & text')#6dcd422f-e9ab-4a07-afd4-6a24d0398382
+		+a4page-choice('Picture & text').pictureTextPage#6dcd422f-e9ab-4a07-afd4-6a24d0398382
 			+image.bloom-resizable
 			+field.normal-style
 
 		// Template page #9
-		+a4page-choice('Text & picture')#43c45351-8258-4545-86d0-11be2bc41d66
+		+a4page-choice('Text & picture').textAndPicturePage#43c45351-8258-4545-86d0-11be2bc41d66
 			+field.normal-style
 			+image.bloom-resizable
 
 		// Template page #10
-		+a4page-choice('Two activities')#1598decc-95b9-5015-a0de-6512441b3783
+		+a4page-choice('Two activities').twoActivitiesPage#1598decc-95b9-5015-a0de-6512441b3783
 			.padded.box
 				+fixedIcon(actIcon, 'discussion.png').adjustedIcon
 				+field-attributesOnChild.activity
@@ -163,7 +163,7 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #11
-		+a4page-choice('Three activities')#1598decc-55b9-5015-33de-6512441b3383
+		+a4page-choice('Three activities').threeActivitiesPage#1598decc-55b9-5015-33de-6512441b3383
 			.padded.box
 				+fixedIcon(actIcon, 'discussion.png').adjustedIcon
 				+field-attributesOnChild.activity
@@ -175,7 +175,7 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #12
-		+a4page-choice('Revision & box')#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+		+a4page-choice('Revision & box').revisionAndBoxPage#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
 			table.primerTableTitleLine
 				tr
 					td.boxIcon
@@ -219,7 +219,7 @@ html
 												label.placeholder='Q'
 
 		// Template page #13
-		+a4page-choice('Revision')#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
+		+a4page-choice('Revision').revisionPage#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
 			table.primerTableTitleLine
 				tr
 					td.boxIcon
@@ -254,7 +254,7 @@ html
 				+field-attributesOnChild.activity
 
 		// Template page #14
-		+a4page-choice('Wordfind')#9298decc-95b9-4013-a0de-6512441b3783
+		+a4page-choice('Wordfind').wordFindPage#9298decc-95b9-4013-a0de-6512441b3783
 			+field.instructionsNonItalic
 				label.bubble.bloom-showOnlyWhenTargetHasFocus Wordfind instructions
 			table.primerTableWordFind.bloom-hideLanguageNameDisplay.bloom-userCannotModifyStyles
@@ -274,25 +274,25 @@ html
 											+field-placeholder-attributesOnChild('Word')
 
 		// Template page #15
-		+a4page-choice('Alphabet chart (6x3)')#1298decc-55b9-5013-a0de-1812441b36a3
+		+a4page-choice('Alphabet chart (6x3)').alphabetChart6x3Page#1298decc-55b9-5013-a0de-1812441b36a3
 			+field-bubble-attributesOnChild(sounds).title
 			table.primerTableMatrixMedium.bloom-userCannotModifyStyles.letters6x3
 				+alphabetChart(6)
 
 		// Template page #16
-		+a4page-choice('Alphabet chart (7x3)')#1298decc-55b9-5013-a0de-2112441b37a3
+		+a4page-choice('Alphabet chart (7x3)').alphabetChart7x3Page#1298decc-55b9-5013-a0de-2112441b37a3
 			+field-bubble-attributesOnChild(sounds).title
 			table.primerTableMatrixMedium.bloom-userCannotModifyStyles.letters7x3
 				+alphabetChart(7)
 
 		// Template page #17
-		+a4page-choice('Alphabet chart (8x3)')#1298decc-55b9-5013-a0de-2412441ba8a3
+		+a4page-choice('Alphabet chart (8x3)').alphabetChart8x3Page#1298decc-55b9-5013-a0de-2412441ba8a3
 			+field-bubble-attributesOnChild(sounds).title
 			table.primerTableMatrixMedium.bloom-userCannotModifyStyles.letters8x3
 				+alphabetChart(8)
 
 		// Template page #18
-		+a4page-choice('Alphabet chart (9x3)')#1298decc-55b9-5013-a0de-2712441b39a3
+		+a4page-choice('Alphabet chart (9x3)').alphabetChart9x3Page#1298decc-55b9-5013-a0de-2712441b39a3
 			+field-bubble-attributesOnChild(sounds).title
 			table.primerTableMatrixMedium.bloom-userCannotModifyStyles.letters9x3
 				+alphabetChart(9)
