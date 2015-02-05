@@ -1,5 +1,5 @@
 # About Story Primers
-The story primer templates are based on primers developed by SIL Australia literacy consultants and the Literacy Association of the Solomon Islands (LASI). They reflect a focus on teaching literacy in a wholistic way in a group setting and integrate the learning of reading, writing, comprehension and critical thinking.
+The story primer templates are based on primers developed by SIL Australia literacy consultants and the Literacy Association of the Solomon Islands (LASI). They reflect a focus on teaching literacy in a holistic way in a group setting and integrate the learning of reading, writing, comprehension and critical thinking.
 
 In the Solomon's SILA literacy consultants and LASI have used adaptations of the story primer format to develop a set of 9 primers in Solomons Pijin. These books form the the basis of adult literacy programs which cater for illiterate women, men and out of school youth and cover the 5 phases or levels of a complete literacy program moving people from illiteracy to fluency. Most primers contain 3-5 topics of interest to Solomon Islanders. There is also a Women's Reproductive Health primer and a Men's Health primer. The texts used are specifically for adults. Some of the materials have also been adapted for use in more than a dozen vernacular languages.
 
