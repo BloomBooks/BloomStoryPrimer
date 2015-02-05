@@ -383,3 +383,6 @@ TABLE.alphabet DIV.alphabet {
 .A4Portrait .bloom-imageContainer.alphabet {
   width: 139px;
 }
+.fullPagePicturePage .bloom-imageContainer {
+  height: 100%;
+}
