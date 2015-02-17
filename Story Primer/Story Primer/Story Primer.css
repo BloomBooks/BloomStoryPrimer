@@ -4,6 +4,9 @@ STARTLAYOUTS
 {"layouts":     ["A4Portrait"]  }
 ENDLAYOUTS
 */
+.bloom-editable {
+  font-size: 20pt;
+}
 .bloom-page:not(.bloom-frontMatter):not(.bloom-backMatter) TABLE TD {
   width: auto;
 }
@@ -341,7 +344,6 @@ TABLE.alphabet DIV.alphabet {
   text-align: left;
   margin-bottom: 0;
   min-height: 3em !important;
-  font-size: 200%;
 }
 .wordBox TD {
   min-width: 5em;

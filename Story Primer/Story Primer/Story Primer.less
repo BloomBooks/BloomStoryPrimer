@@ -5,6 +5,12 @@ STARTLAYOUTS
 ENDLAYOUTS
 */
 
+
+.bloom-editable {
+    // Story Primer templates are for beginning readers, so start with a larger than normal font-size
+    font-size: 20pt; // sets a default size that overrides basepage.css
+}
+
 .bloom-page:not(.bloom-frontMatter):not(.bloom-backMatter) {
     & TABLE TD {
         width: auto;
@@ -166,7 +172,6 @@ TD {
     .sampleSentence {
         text-indent: 0;
         text-align: center;
-        //font-size: 93% !important;
         width: 100% !important;
     }
     &.alphabet {
@@ -433,7 +438,6 @@ TABLE {
     text-align: left;
     margin-bottom: 0;
     min-height: 3em !important;
-    font-size: 200%; // font size in Story Primer is very weird! c.f. TABLE.primerTableMatrix
 }
 
 .wordBox {
