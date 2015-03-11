@@ -176,29 +176,30 @@ html
 
 		// Template page #12
 		+a4page-choice('Revision & box').revisionAndBoxPage#16a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
-			table.primerTableTitleLine
-				tr
-					td.boxIcon
-						+fixedIcon(actIcon, 'word.png').bloom-imageContainer
-					td.boxLessonTitle
-						+field-bubble-attributesOnChild(reviewWork).lessonTitle
-					td.boxSampleLetterRight
-						.sampleLetterRight
-							table
-								tr
-									td
-										div(data-book='reviewWord').bloom-translationGroup
-											label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
-											+editable(kLanguageForPrototypeOnly)
-								tr
-									td
-										+field
-											label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
-			+form-6cells
-			.padded.box
-				+field.instructions
-					label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
-				+syllableTable
+			.thinpadded.box
+				table.primerTableTitleLine
+					tr
+						td.boxIcon
+							+fixedIcon(actIcon, 'word.png').bloom-imageContainer
+						td.boxLessonTitle
+							+field-bubble-attributesOnChild(reviewWork).lessonTitle
+						td.boxSampleLetterRight
+							.sampleLetterRight
+								table
+									tr
+										td
+											div(data-book='reviewWord').bloom-translationGroup
+												label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
+												+editable(kLanguageForPrototypeOnly)
+									tr
+										td
+											+field
+												label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
+				+form-6cells
+				.box
+					+field.instructions
+						label.bubble.bloom-showOnlyWhenTargetHasFocus Instructions
+					+syllableTable
 			.padded.box
 				+fixedIcon(actIcon, 'writing.png').adjustedIcon
 				+field.instructions
@@ -220,29 +221,30 @@ html
 
 		// Template page #13
 		+a4page-choice('Revision').revisionPage#17a8decc-55b9-5013-a0de-6512441b3783.bloom-hideLanguageNameDisplay
-			table.primerTableTitleLine
-				tr
-					td.boxIcon
-						+fixedIcon(actIcon, 'word.png').bloom-imageContainer
-					td.boxLessonTitle
-						+field-bubble-attributesOnChild(reviewWork).lessonTitle
-					td.boxSampleLetterRight
-						.sampleLetterRight
-							table
-								tr
-									td
-										div(data-book='reviewWord').bloom-translationGroup
-											label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
-											+editable(kLanguageForPrototypeOnly)
-								tr
-									td
-										+field
-											label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
-			+form-6cells
-			.padded.box
-				+field.instructions
-					label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions
-				+syllableTable
+			.thinpadded.box
+				table.primerTableTitleLine
+					tr
+						td.boxIcon
+							+fixedIcon(actIcon, 'word.png').bloom-imageContainer
+						td.boxLessonTitle
+							+field-bubble-attributesOnChild(reviewWork).lessonTitle
+						td.boxSampleLetterRight
+							.sampleLetterRight
+								table
+									tr
+										td
+											div(data-book='reviewWord').bloom-translationGroup
+												label.placeholder.bloom-showOnlyWhenTargetHasFocus="Review"
+												+editable(kLanguageForPrototypeOnly)
+									tr
+										td
+											+field
+												label.placeholder.bloom-showOnlyWhenTargetHasFocus=focusSound
+				+form-6cells
+				.box
+					+field.instructions
+						label.bubble.bloom-showOnlyWhenTargetHasFocus Syllable activity instructions
+					+syllableTable
 			.padded.box
 				+fixedIcon(actIcon, 'writing.png').adjustedIcon
 				+field.instructions
