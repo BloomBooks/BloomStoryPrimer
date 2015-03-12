@@ -5,6 +5,8 @@ In the Solomon's SILA literacy consultants and LASI have used adaptations of the
 
 The story primer templates are designed to be used with only one language at a time. They may produce unexpected results if used to create bilingual or trilingual books.
 
+If you create a book with these templates, you are encouraged to change the Copyright and License to fit your situation.
+
 For more information, see this [PDF from Glenys Waters](file:///HowToUseStoryPrimerTemplates.pdf).
 # Printing a Story Primer
 This template is set to A4 Portrait, to produce a newspaper-like format. If you prefer a different size, your printer
@@ -15,4 +17,4 @@ For this version, the help document "How to use the story primer templates", is 
 #Feedback
 Please give and vote on [suggestions](http://bloom.palaso.org/suggestions/)
 
-Please report problems to [issues@bloomremovelibrary.org](mailto:issues@bloomremovelibrary.org?subject=Big&nbsp;Book&nbsp;Problem).
+Please report problems to [issues@bloomremovelibrary.org](mailto:issues@bloomremovelibrary.org?subject=Story&nbsp;Primer&nbsp;Problem).
