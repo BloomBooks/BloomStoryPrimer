@@ -273,7 +273,8 @@ TABLE.alphabet DIV.alphabet {
 .primerTableWordFind TD .bloom-editable {
   border: 1pt solid #000000;
   text-align: center;
-  padding: 4px 4px 4px 0;
+  padding: 4px 0;
+  box-sizing: border-box;
   margin-left: 0;
   margin-right: 0;
 }
