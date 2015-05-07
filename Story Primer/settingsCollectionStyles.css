@@ -3,5 +3,10 @@
 
 BODY
 {
- font-family: 'Andika';
+ font-family: 'Andika New Basic';
+}
+
+[lang='en']
+{
+ font-family: 'Andika New Basic';
 }

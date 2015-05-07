@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Collection version="4.2">
-  <Language1Iso639Code>en</Language1Iso639Code>
+<Collection version="4.3">
   <Language1Name>English</Language1Name>
-  <DefaultLanguage1FontName>Andika</DefaultLanguage1FontName>
-  <Language2Iso639Code>en</Language2Iso639Code>
-  <Language3Iso639Code />
+  <Language1Iso639Code>en</Language1Iso639Code>
+  <Language2Iso639Code></Language2Iso639Code>
+  <Language3Iso639Code></Language3Iso639Code>
+  <DefaultLanguage1FontName>Andika New Basic</DefaultLanguage1FontName>
+  <DefaultLanguage2FontName>Andika New Basic</DefaultLanguage2FontName>
+  <DefaultLanguage3FontName>Andika New Basic</DefaultLanguage3FontName>
+  <OneTimeCheckVersionNumber>1</OneTimeCheckVersionNumber>
+  <IsLanguage1Rtl>false</IsLanguage1Rtl>
+  <IsLanguage2Rtl>false</IsLanguage2Rtl>
+  <IsLanguage3Rtl>false</IsLanguage3Rtl>
+  <Language1LineHeight>0</Language1LineHeight>
+  <Language2LineHeight>0</Language2LineHeight>
+  <Language3LineHeight>0</Language3LineHeight>
   <IsSourceCollection>True</IsSourceCollection>
   <XMatterPack>Factory</XMatterPack>
-  <Country />
-  <Province />
-  <District />
+  <Country></Country>
+  <Province></Province>
+  <District></District>
   <AllowNewBooks>True</AllowNewBooks>
 </Collection>
