@@ -102,6 +102,28 @@ ENDLAYOUTS
     margin-bottom: 7px;
 }
 
+.adjustedIcon ~ .bloom-translationGroup {
+    // override the default "flex" because these pages weren't designed for that, and the "float"
+    // needed to embed and wrap around icon images doesn't appear to work with "flex".  (BL-4490)
+    display: block;
+
+    .bloom-editable.bloom-visibility-code-on {
+        display: block;
+    }
+}
+
+.imageAdjustable {
+    &.floatRight ~ .bloom-translationGroup {
+        // override the default "flex" because these pages weren't designed for that, and the "float"
+        // needed to embed and wrap around images doesn't appear to work with "flex".  (BL-4490)
+        display: block;
+
+        .bloom-editable.bloom-visibility-code-on {
+            display: block;
+        }
+    }
+}
+
 .bloom-translationGroup {
     &.instructions {
         .bloom-editable {
@@ -211,7 +233,9 @@ TD {
 
 .imageAdjustable {
     &.floatRight {
-        height: auto;
+        // JT says Bloom has changed from limiting image size on the img element to the containing div
+        width: 50%;     // the pages using this seem to initialize with this width (BL-4499)
+        height: 33%;    // this keep the initial picture box size about square (A4 paper)
         float: right;
         vertical-align: top;
     }
