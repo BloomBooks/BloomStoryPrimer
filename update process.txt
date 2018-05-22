@@ -1,0 +1,10 @@
+How to update Story Primer from this repo
+1. Fix the book
+2. Update the version in the .bloomCollection file
+3. After review, get the new version tagged and pushed to origin
+4. If not already done, set StoryPrimer.pdf to read-only so it won't be overwritten on upload.
+5. Make sure the BloomSandbox environment variable is set false
+6. Use a recent installed BetaInternal (version as desired as long as it's installed, not dev)
+7. Open the Story Primer .bloomCollection file in Bloom as a collection
+8. Log in to BloomLibrary with gordon_martin@sil.org account
+9. Upload to website.
