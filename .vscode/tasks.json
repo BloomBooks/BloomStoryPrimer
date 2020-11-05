@@ -7,7 +7,7 @@
         {
             "label": "Less Compile",
             "type": "shell",
-            "command": "lessc 'Story Primer/Story Primer/Story Primer.less' 'Story Primer/Story Primer/Story Primer.css'",
+            "command": "yarn lessc 'Story Primer/Story Primer/Story Primer.less' 'Story Primer/Story Primer/Story Primer.css'",
             "group": "build",
             "problemMatcher": [
                 "$lessc"
