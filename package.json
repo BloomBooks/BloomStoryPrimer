@@ -1,0 +1,8 @@
+{
+    "devDependencies": {
+      "less": "^3.12.2"
+    },
+    "scripts": {
+        "less": "lessc \"Story Primer/Story Primer/Story Primer.less\" \"Story Primer/Story Primer/Story Primer.css\""
+    }
+}
